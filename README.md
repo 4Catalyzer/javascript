@@ -3,6 +3,25 @@ _An utterly unreasonable JavaScript style guide, mostly for trolling [@jquense](
 
 Use the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript), with the following additions:
 
+## Exceptions
+
+This guide is intended to present general guidelines. Most modules should follow this style guide. However, specific modules should feel free to use ESLint pragmas when relevant. Disable the relevant rule or rules with `eslint-disable`, and enable them again with `eslint-enable` when you're done.
+
+```js
+function renderApp() {
+  /* eslint-disable global-require */
+  const ClientApplication = require('./ClientApplication');
+  /* eslint-enable global-require */
+
+  ReactDOM.render(
+    <AppContainer>
+      <ClientApplication />
+    </AppContainer>,
+    document.getElementById('app')
+  );
+}
+```
+
 ## Directory layout
 
 Follow the [React Router huge-apps example](https://github.com/reactjs/react-router/tree/master/examples/huge-apps). Use `shared/` at the deepest possible level for shared modules.
