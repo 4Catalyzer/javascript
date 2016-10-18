@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "lint": "eslint packages/*/index.js"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "lerna": "2.0.0-beta.30"
+  }
+}
