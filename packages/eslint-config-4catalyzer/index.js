@@ -18,7 +18,6 @@ module.exports = {
       allowSamePrecedence: false,
     }],
     'no-plusplus': 'off',
-    'import/imports-first': 'off', // We put all styling imports at the end.
     'import/prefer-default-export': 'off',
   },
 };

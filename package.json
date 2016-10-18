@@ -4,6 +4,7 @@
     "lint": "eslint packages/*/index.js"
   },
   "devDependencies": {
+    "babel-eslint": "^7.0.0",
     "eslint": "^3.8.1",
     "eslint-config-airbnb-base": "^9.0.0",
     "eslint-plugin-import": "^2.0.1",
