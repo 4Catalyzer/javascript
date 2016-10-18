@@ -1,0 +1,27 @@
+{
+  "name": "eslint-config-4catalyzer",
+  "version": "0.0.0",
+  "description": "4Catalyzer ESLint config",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "repository": "https://github.com/4Catalyzer/javascript/tree/master/packages/eslint-config-4catalyzer",
+  "keywords": [
+    "eslint"
+  ],
+  "author": "4Catalyzer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/4Catalyzer/javascript/issues"
+  },
+  "homepage": "https://github.com/4Catalyzer/javascript#readme",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^8.0.0"
+  },
+  "peerDependencies": {
+    "babel-eslint": "^7.0.0",
+    "eslint": "^3.8.0",
+    "eslint-plugin-import": "^1.16.0"
+  }
+}

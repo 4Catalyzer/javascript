@@ -1,0 +1,28 @@
+{
+  "name": "eslint-config-4catalyzer-flow",
+  "version": "0.0.0",
+  "description": "4Catalyzer Flow ESLint config",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "repository": "https://github.com/4Catalyzer/javascript/tree/master/packages/eslint-config-4catalyzer-flow",
+  "keywords": [
+    "eslint"
+  ],
+  "author": "4Catalyzer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/4Catalyzer/javascript/issues"
+  },
+  "homepage": "https://github.com/4Catalyzer/javascript#readme",
+  "dependencies": {
+    "eslint-config-4catalyzer": "^0.0.0"
+  },
+  "peerDependencies": {
+    "babel-eslint": "^7.0.0",
+    "eslint": "^3.8.0",
+    "eslint-plugin-flowtype": "^2.20.0",
+    "eslint-plugin-import": "^1.16.0"
+  }
+}
