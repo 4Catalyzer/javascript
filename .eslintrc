@@ -1,3 +1,6 @@
 {
-  "extends": "./packages/eslint-config-4catalyzer/index.js"
+  "extends": "./packages/eslint-config-4catalyzer/index.js",
+  "rules": {
+    "global-require": "off"
+  }
 }
