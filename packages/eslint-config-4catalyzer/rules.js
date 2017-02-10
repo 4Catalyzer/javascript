@@ -12,6 +12,7 @@ module.exports = {
     ],
     allowSamePrecedence: false,
   }],
+  'no-param-reassign': 'off',
   'no-plusplus': 'off',
   'no-restricted-syntax': ['error',
     'ForInStatement',
