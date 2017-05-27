@@ -1,11 +1,11 @@
 # 4Catalyzer JavaScript Style Guide
 _An utterly unreasonable JavaScript style guide, mostly for trolling [@jquense](https://github.com/jquense)._
 
-Use the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript), with the following additions:
+Use the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript), with the following additions.
 
 ## Exceptions
 
-This guide is intended to present general guidelines. Most modules should follow this style guide. However, specific modules should feel free to use ESLint pragmas when relevant. Disable the relevant rule or rules with `eslint-disable`, and enable them again with `eslint-enable` when you're done.
+This guide is intended to present general guidelines. Most modules should follow this style guide and pass the associated lint checks. However, specific modules should freely disregard specific guidelines and use corresponding ESLint pragmas whenever necessary. Disable the relevant rule or rules with `eslint-disable`, and enable them again with `eslint-enable` when you're done.
 
 ```js
 function renderApp() {
