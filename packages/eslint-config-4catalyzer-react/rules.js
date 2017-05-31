@@ -7,7 +7,7 @@ module.exports = {
   'react/jsx-filename-extension': ['error', {
     extensions: ['.js'],
   }],
-  'react/no-unused-prop-types': ['error', {
-    skipShapeProps: true,
-  }],
+  // Taking undefined as implicit default is more consistent with the rest of
+  // JavaScript.
+  'react/require-default-props': 'off',
 };
