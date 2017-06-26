@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
@@ -7,14 +9,16 @@ const yargs = require('yargs');
 
 const style = require('./index.js');
 
+const cwd = process.cwd();
 const argv = yargs
   .usage('$0 <glob> [args]')
   .help()
   .argv;
 
 
-const files = glob.sync(argv._[0], { absolute: true });
-const cwd = process.cwd();
+const files = argv._.reduce((a, pattern) => (
+  a.concat(glob.sync(`${pattern}/**/*js`, { absolute: true }))
+), []);
 
 
 files.forEach((file) => {
@@ -25,8 +29,6 @@ files.forEach((file) => {
     parser,
     style
   );
-
-  console.log(code)
 
   if (changes.length) {
     console.log(`
