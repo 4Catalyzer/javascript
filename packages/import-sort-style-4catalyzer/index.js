@@ -86,5 +86,6 @@ const sort = (styleApi) => {
   ];
 };
 
+sort.default = sort;
+
 module.exports = sort;
-exports.default = sort;
