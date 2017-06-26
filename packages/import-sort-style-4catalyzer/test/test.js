@@ -1,6 +1,6 @@
-const fs = require('fs');
 const { sortImports } = require('import-sort');
 const parser = require('import-sort-parser-babylon');
+const fs = require('fs');
 
 const style = require('../index.js');
 

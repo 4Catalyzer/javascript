@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "sort-imports": "./sort-imports.js"
+  },
   "scripts": {
     "test": "node test/test.js",
     "lint": "eslint index.js test"
@@ -18,8 +21,10 @@
   },
   "homepage": "https://github.com/4Catalyzer/import-sort-order-4catalyzer#readme",
   "dependencies": {
+    "glob": "^7.1.2",
     "import-sort": "^3.2.0",
-    "import-sort-parser-babylon": "^3.2.0"
+    "import-sort-parser-babylon": "^3.2.0",
+    "yargs": "^8.0.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
