@@ -22,7 +22,7 @@ function isCssModule({ moduleName }) {
   return moduleName.includes('@qsi/ui-theme') || moduleName.includes('.css');
 }
 
-module.exports = (styleApi) => {
+const sort = (styleApi) => {
   const {
     alias,
     and,
@@ -81,3 +81,6 @@ module.exports = (styleApi) => {
     { match: isCssModule, sort: [dotSegmentCount, byModuleName] },
   ];
 };
+
+module.exports = sort;
+exports.default = sort;
