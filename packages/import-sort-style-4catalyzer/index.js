@@ -1,11 +1,16 @@
+const path = require('path');
+const pathSort = require('path-sort').standalone(path.sep);
+
 // this isn't great but we don't have any path info
 const aliased = [
   'components',
+  'config',
   'messages',
   'mutations',
   'queries',
   'routes',
   'schema',
+  'styles',
   'subscriptions',
   'utils',
 ];
@@ -32,11 +37,10 @@ const sort = (styleApi) => {
     isNodeModule,
     isRelativeModule,
     moduleName,
-    naturally,
     unicode,
   } = styleApi;
 
-  const byModuleName = moduleName(naturally);
+  const byModuleName = moduleName(pathSort);
   const isAbsoluteModule = and(
     not(isInternalModule),
     not(isAliasedModule),

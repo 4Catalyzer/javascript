@@ -4,7 +4,6 @@ const fs = require('fs');
 
 const style = require('../index.js');
 
-
 const code = fs.readFileSync(`${__dirname}/fixtures/file.js`, 'utf8');
 
 const sorted = sortImports(
