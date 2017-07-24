@@ -1,5 +1,19 @@
 const path = require('path');
-const pathSort = require('path-sort').standalone(path.sep);
+
+function pathSort(a, b) {
+  a = a.split(path.sep); // eslint-disable-line no-param-reassign
+  b = b.split(path.sep); // eslint-disable-line no-param-reassign
+  const l = Math.max(a.length, b.length);
+
+  for (let i = 0; i < l; i += 1) {
+    if (!(i in a)) return -1;
+    if (!(i in b)) return 1;
+    if (a[i].toUpperCase() > b[i].toUpperCase()) return 1;
+    if (a[i].toUpperCase() < b[i].toUpperCase()) return -1;
+  }
+  return 0;
+}
+
 
 // this isn't great but we don't have any path info
 const aliased = [
@@ -15,8 +29,8 @@ const aliased = [
   'utils',
 ];
 
-function isInternalModule({ moduleName }) {
-  return moduleName.startsWith('@qsi/');
+function isScopedModule({ moduleName }) {
+  return moduleName.startsWith('@');
 }
 
 function isAliasedModule({ moduleName }) {
@@ -24,7 +38,7 @@ function isAliasedModule({ moduleName }) {
 }
 
 function isCssModule({ moduleName }) {
-  return moduleName.includes('@qsi/ui-theme') || moduleName.includes('.css');
+  return moduleName.includes('.css');
 }
 
 const sort = (styleApi) => {
@@ -42,7 +56,7 @@ const sort = (styleApi) => {
 
   const byModuleName = moduleName(pathSort);
   const isAbsoluteModule = and(
-    not(isInternalModule),
+    not(isScopedModule),
     not(isAliasedModule),
     not(isRelativeModule)
   );
@@ -58,13 +72,13 @@ const sort = (styleApi) => {
       sort: byModuleName,
       sortNamedMembers: alias(unicode),
     },
-    { separator: true },
-
     {
-      match: and(isInternalModule, not(isCssModule)),
+      match: and(isScopedModule, not(isCssModule)),
       sort: byModuleName,
       sortNamedMembers: alias(unicode),
     },
+    { separator: true },
+
     {
       match: and(isAliasedModule, not(isCssModule)),
       sort: byModuleName,
@@ -80,7 +94,7 @@ const sort = (styleApi) => {
     // finally css
     { match: and(hasNoMember, isCssModule), sort: byModuleName },
     { match: and(isAbsoluteModule, isCssModule), sort: byModuleName },
-    { match: and(isInternalModule, isCssModule), sort: byModuleName },
+    { match: and(isScopedModule, isCssModule), sort: byModuleName },
     { match: and(isAliasedModule, isCssModule), sort: byModuleName },
     { match: isCssModule, sort: [dotSegmentCount, byModuleName] },
   ];
