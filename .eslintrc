@@ -7,7 +7,7 @@
       "objects": "always-multiline",
       "imports": "always-multiline",
       "exports": "always-multiline",
-      "functions": "never" // need to support editor's versions of node as well
+      "functions": "never" // Need to support editors' old versions of Node.
     }]
   }
 }
