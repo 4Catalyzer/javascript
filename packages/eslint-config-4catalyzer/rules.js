@@ -19,6 +19,12 @@ module.exports = {
     'LabeledStatement',
     'WithStatement',
   ],
+  'no-underscore-dangle': ['error', {
+    allow: [],
+    allowAfterThis: true,
+    allowAfterSuper: false,
+    enforceInMethodNames: false,
+  }],
   'no-unused-vars': ['error', {
     vars: 'all',
     args: 'after-used',
