@@ -17,7 +17,7 @@ function renderApp() {
     <AppContainer>
       <ClientApplication />
     </AppContainer>,
-    document.getElementById('app')
+    document.getElementById('app'),
   );
 }
 ```
