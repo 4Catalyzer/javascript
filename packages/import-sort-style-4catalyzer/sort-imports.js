@@ -12,8 +12,9 @@ const style = require('./index.js');
 
 const cwd = process.cwd();
 const argv = yargs
-  .usage('$0 <glob> [args]')
+  .usage('$0 [args]')
   .array('ignore')
+  .array('pattern')
   .help()
   .argv;
 
@@ -29,10 +30,13 @@ const ignoreFiles = (argv.ignore || []).map((val) => {
   return new RegExp(regex.source.slice(1, -1), 'i');
 });
 
-const files = argv._.reduce((a, pattern) => (
-  a.concat(glob.sync(`${pattern}/**/*js`, { absolute: true }))
-), []);
+const files = argv._;
 
+if (argv.pattern) {
+  argv.pattern.reduce((a, pattern) => (
+    a.concat(glob.sync(`${pattern}/**/*js`, { absolute: true }))
+  ), files);
+}
 
 files.forEach((file) => {
   if (ignoreFiles.some(r => !!file.match(r))) return;
