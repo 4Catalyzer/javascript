@@ -30,10 +30,9 @@ const ignoreFiles = (argv.ignore || []).map((val) => {
   return new RegExp(regex.source.slice(1, -1), 'i');
 });
 
-const files = argv._;
-
+let files = argv._;
 if (argv.pattern) {
-  argv.pattern.reduce((a, pattern) => (
+  files = argv.pattern.reduce((a, pattern) => (
     a.concat(glob.sync(`${pattern}/**/*js`, { absolute: true }))
   ), files);
 }
