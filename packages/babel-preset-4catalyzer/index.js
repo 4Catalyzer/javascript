@@ -7,7 +7,8 @@ const defaultOptions = {
   intl: false,
   loose: true,
   modules: 'commonjs',
-  useBuiltIns: false,
+  useBuiltIns: 'usage',
+  shippedProposals: true,
 };
 
 const defaultBrowsers = [
@@ -81,10 +82,6 @@ function preset(_, options = {}) {
   return {
     presets,
     plugins: [
-      // - stage 3 --
-      require.resolve('@babel/plugin-proposal-object-rest-spread'),
-      // -----
-
       // - stage 2 --
       require.resolve('@babel/plugin-syntax-dynamic-import'),
       require.resolve('@babel/plugin-proposal-class-properties'),
