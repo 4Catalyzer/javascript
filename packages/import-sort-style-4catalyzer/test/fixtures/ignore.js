@@ -1,4 +1,5 @@
-/*  eslint-disable */
+/* eslint-disable */
+/* import-sort-ignore */
 
 import { remove } from 'react-formal/lib/util/ErrorUtils';
 import React from 'react';
@@ -33,9 +34,3 @@ import analysisSchema, {
   setWorkflow,
 } from '../schemas/analysis';
 import messages from 'messages/analysis';
-
-const foo = (
-  <>
-    <div>foo</div>
-  </>
-);

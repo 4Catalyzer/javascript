@@ -1,12 +1,7 @@
 {
-  "extends": "4catalyzer",
+  "extends": ["4catalyzer", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
-    "comma-dangle": ["error", {
-      "arrays": "always-multiline",
-      "objects": "always-multiline",
-      "imports": "always-multiline",
-      "exports": "always-multiline",
-      "functions": "never"
-    }],
+    "prettier/prettier": "error"
   }
 }

@@ -14,7 +14,6 @@ function pathSort(a, b) {
   return 0;
 }
 
-
 // this isn't great but we don't have any path info
 const aliased = [
   'components',
@@ -41,7 +40,7 @@ function isCssModule({ moduleName }) {
   return moduleName.includes('.css');
 }
 
-const sort = (styleApi) => {
+const sort = styleApi => {
   const {
     alias,
     and,
@@ -58,7 +57,7 @@ const sort = (styleApi) => {
   const isAbsoluteModule = and(
     not(isScopedModule),
     not(isAliasedModule),
-    not(isRelativeModule)
+    not(isRelativeModule),
   );
 
   return [
