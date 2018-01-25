@@ -1,9 +1,9 @@
-const envPreset = require('babel-preset-env');
-const reactPreset = require('babel-preset-react');
+const envPreset = require('@babel/preset-env');
+const reactPreset = require('@babel/preset-react');
 const intlPreset = require('./intl-preset');
 
 const defaultOptions = {
-  target: 'web-app', // 'web' | 'node'
+  target: 'web', // 'web-app' | 'node'
   intl: false,
   loose: true,
   modules: 'commonjs',
@@ -19,26 +19,29 @@ const defaultBrowsers = [
 ];
 
 function preset(_, options = {}) {
-  const production = process.env.NODE_ENV === 'production';
+  const env = process.env.NODE_ENV || 'production'; // default to prod
   const opts = Object.assign({}, defaultOptions, options);
   const target = opts.target;
 
   const nodeTarget = {
-    node: production ? '8.3' : 'current',
+    node: env === 'production' ? '8.3' : 'current',
   };
 
   const webTargets = {
-    browsers: production
-      ? defaultBrowsers
-      : ['last 2 Chrome versions', 'last 2 Firefox versions'],
+    browsers:
+      env === 'production'
+        ? defaultBrowsers
+        : ['last 2 Chrome versions', 'last 2 Firefox versions'],
   };
 
   if (target === 'web' || target === 'web-app') {
     opts.targets = opts.targets || webTargets;
-    opts.modules = options.modules == null ? false : options.modules;
-  }
 
-  if (target === 'node') {
+    // in a web app assume we are using webpack to handle modules
+    if (target === 'web-app') {
+      opts.modules = options.modules == null ? false : options.modules;
+    }
+  } else if (target === 'node') {
     opts.targets = opts.targets || nodeTarget;
     opts.relay = false;
     opts.intl = false;
@@ -46,7 +49,7 @@ function preset(_, options = {}) {
 
   // unless the user explicitly set modules, change the default to
   // cjs in a TEST environment (jest)
-  if (process.env.NODE_ENV === 'test' && options.modules == null) {
+  if (env === 'test' && options.modules == null) {
     opts.modules = 'commonjs';
   }
 
@@ -66,33 +69,33 @@ function preset(_, options = {}) {
     }
     // production guard here so that the prefix warning occurs in development
     // as well as production
-    if (production) {
+    if (env === 'production') {
       presets.push([intlPreset, intlOpts]);
     }
   }
 
   // We don't use the stage presets because they contain duplicate plugins
-  // as the env preset,specifically things that have beein promoted to stage 4
+  // as the env preset, specifically things that have beein promoted to stage 4
   // since babel v6 was released. plugins in the stage-x presets won't be
   // removed per environment so we just include the ones we need here
   return {
     presets,
     plugins: [
       // - stage 3 --
-      require.resolve('babel-plugin-transform-object-rest-spread'),
+      require.resolve('@babel/plugin-proposal-object-rest-spread'),
       // -----
 
       // - stage 2 --
-      require.resolve('babel-plugin-syntax-dynamic-import'),
-      require.resolve('babel-plugin-transform-class-properties'),
+      require.resolve('@babel/plugin-syntax-dynamic-import'),
+      require.resolve('@babel/plugin-proposal-class-properties'),
       // -----
 
       // - stage 1 --
-      require.resolve('babel-plugin-transform-export-extensions'),
+      require.resolve('@babel/plugin-proposal-export-default-from'),
+      require.resolve('@babel/plugin-proposal-export-namespace-from'),
       // -----
 
       // - convenience plugins --
-      require.resolve('babel-plugin-jsx-fragment'),
       require.resolve('babel-plugin-dev-expression'),
     ].filter(Boolean),
   };
