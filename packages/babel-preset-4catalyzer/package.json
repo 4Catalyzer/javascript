@@ -1,0 +1,52 @@
+{
+  "name": "babel-preset-4catalyzer",
+  "version": "1.0.0",
+  "description": "4C babel preset",
+  "main": "index.js",
+  "repository": "https://github.com/4Catalyzer/babel-preset-4catalyzer.git",
+  "author": "Jason Quense <monastic.panic@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 79,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "css-literal-loader": "^0.2.0",
+    "eslint": "^4.16.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-config-4catalyzer": "^0.3.3",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.1",
+    "prettier": "^1.10.2"
+  },
+  "dependencies": {
+    "babel-plugin-dev-expression": "^0.2.1",
+    "babel-plugin-jsx-fragment": "^4.0.2",
+    "babel-plugin-react-intl": "^2.3.0",
+    "babel-plugin-relay": "^1.4.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.23.0"
+  }
+}
