@@ -20,7 +20,7 @@
     "eslint-config-airbnb-base": "^11.3.1"
   },
   "peerDependencies": {
-    "babel-eslint": ">=7.2.3",
+    "babel-eslint": "^8.2.1",
     "eslint": "^3.19.0 || ^4.3.0",
     "eslint-plugin-import": "^2.7.0"
   }
