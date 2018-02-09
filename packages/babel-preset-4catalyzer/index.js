@@ -7,7 +7,6 @@ const defaultOptions = {
   intl: false,
   loose: true,
   modules: 'commonjs',
-  useBuiltIns: 'usage',
   shippedProposals: true,
 };
 
@@ -84,7 +83,10 @@ function preset(_, options = {}) {
     plugins: [
       // - stage 2 --
       require.resolve('@babel/plugin-syntax-dynamic-import'),
-      require.resolve('@babel/plugin-proposal-class-properties'),
+      [
+        require.resolve('@babel/plugin-proposal-class-properties'),
+        { loose: opts.loose },
+      ],
       // -----
 
       // - stage 1 --
