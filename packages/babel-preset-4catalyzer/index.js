@@ -37,6 +37,10 @@ function preset(_, options = {}) {
   if (target === 'web' || target === 'web-app') {
     opts.targets = opts.targets || webTargets;
 
+    // Always include this because object rest/spread depends on it
+    // until the dev browsers natively support both
+    opts.include = ['plugin-transform-destructuring'];
+
     // in a web app assume we are using webpack to handle modules
     if (target === 'web-app') {
       opts.modules = options.modules == null ? false : options.modules;
