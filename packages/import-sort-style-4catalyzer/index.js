@@ -16,8 +16,10 @@ function pathSort(a, b) {
 
 // this isn't great but we don't have any path info
 const aliased = [
+  'assets',
   'components',
   'config',
+  'library',
   'messages',
   'mutations',
   'queries',
@@ -25,6 +27,7 @@ const aliased = [
   'schema',
   'styles',
   'subscriptions',
+  'types',
   'utils',
 ];
 
