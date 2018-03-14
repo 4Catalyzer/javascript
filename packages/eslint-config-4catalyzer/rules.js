@@ -27,8 +27,10 @@ module.exports = {
   }],
   'no-unused-vars': ['error', {
     vars: 'all',
+    varsIgnorePattern: '^_',
     args: 'after-used',
     ignoreRestSiblings: false,
+    argsIgnorePattern: '^_',
   }],
   'import/prefer-default-export': 'off',
 };
