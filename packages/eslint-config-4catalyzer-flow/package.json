@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-4catalyzer-flow",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "4Catalyzer Flow ESLint config",
   "files": [
     "*.js"
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/4Catalyzer/javascript#readme",
   "dependencies": {
-    "eslint-config-4catalyzer": "^0.4.0"
+    "eslint-config-4catalyzer": "^0.4.1"
   },
   "peerDependencies": {
     "babel-eslint": "^8.2.2",
