@@ -1,0 +1,23 @@
+{
+  "name": "example-package",
+  "version": "1.0.1",
+  "main": "lib/index.js",
+  "modules": "lib/es/index.js",
+  "author": "Jason Quense <monastic.panic@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^2.0.1",
+    "@semantic-release/git": "^4.0.1",
+    "@semantic-release/npm": "^3.2.2",
+    "jest": "^22.4.3",
+    "semantic-release": "^15.1.4",
+    "travis-deploy-once": "^4.4.1"
+  },
+  "release": {},
+  "dependencies": {
+    "cpy": "^6.0.0"
+  }
+}
