@@ -3,13 +3,15 @@ const fs = require('fs-extra')
 const cpy = require('cpy')
 
 async function prepare(pluginConfig = {}, { nextRelease: { version } }) {
-  const {
+  let {
     cwd = process.cwd(),
-    publishDir = 'lib',
+    publishDir,
+    pkgRoot = 'lib',
     assets = ['README.md', 'CHANGELOG.md'],
     parents = true,
   } = pluginConfig
 
+  pkgRoot = publishDir || pkgRoot
   const pkgPath = path.join(cwd, './package.json')
   const pkg = await fs.readJson(pkgPath)
 
@@ -22,14 +24,14 @@ async function prepare(pluginConfig = {}, { nextRelease: { version } }) {
   delete pkg.release // this also doesn't belong to output
   ;['main', 'modules', 'js:next'].forEach(key => {
     if (typeof pkg[key] !== 'string') return
-    pkg[key] = pkg[key].replace(new RegExp(publishDir + '\\/?'), '')
+    pkg[key] = pkg[key].replace(new RegExp(pkgRoot + '\\/?'), '')
   })
 
-  const patterns = [...assets, `!${publishDir}/**`]
-  await cpy(patterns, publishDir, { parents, cwd })
+  const patterns = [...assets, `!${pkgRoot}/**`]
+  await cpy(patterns, pkgRoot, { parents, cwd })
 
   await fs.outputJson(
-    path.join(cwd, publishDir, 'package.json'),
+    path.join(cwd, pkgRoot, 'package.json'),
     { ...pkg, version },
     { spaces: 2 }
   )
