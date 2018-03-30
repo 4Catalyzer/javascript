@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-alt-publish-dir",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "index.js",
   "author": "Jason Quense <monastic.panic@gmail.com>",
   "license": "MIT",
