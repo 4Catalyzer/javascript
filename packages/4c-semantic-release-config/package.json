@@ -1,6 +1,6 @@
 {
   "name": "@4c/semantic-release-config",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -22,7 +22,10 @@
     "trailingComma": "all"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
     "*.{json,css,md}": [
       "prettier --write --ignore-path .eslintignore",
       "git add"
