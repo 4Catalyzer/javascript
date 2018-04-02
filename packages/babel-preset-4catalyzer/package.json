@@ -1,6 +1,6 @@
 {
   "name": "@4c/babel-preset-4catalyzer",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "4C babel preset",
   "main": "index.js",
   "repository": "https://github.com/4Catalyzer/babel-preset-4catalyzer.git",
@@ -17,7 +17,10 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "prettier": {
     "printWidth": 79,
@@ -25,7 +28,9 @@
     "trailingComma": "all"
   },
   "release": {
-    "extends": ["@4c/semantic-release-config"]
+    "extends": [
+      "@4c/semantic-release-config"
+    ]
   },
   "devDependencies": {
     "@4c/semantic-release-config": "^1.0.1",
