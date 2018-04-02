@@ -22,14 +22,14 @@
     "trailingComma": "all"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
+    "*.js": ["eslint --fix", "git add"],
     "*.{json,css,md}": [
       "prettier --write --ignore-path .eslintignore",
       "git add"
     ]
+  },
+  "peerDependencies": {
+    "semantic-release": "^15.0.0"
   },
   "dependencies": {
     "@semantic-release/changelog": "^2.0.1",
