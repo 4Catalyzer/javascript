@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-alt-publish-dir",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "main": "index.js",
   "author": "Jason Quense <monastic.panic@gmail.com>",
   "license": "MIT",
@@ -19,12 +19,15 @@
   "bugs": {
     "url": "https://github.com/jquense/semantic-release-alt-publish-dir/issues"
   },
-  "homepage":
-    "https://github.com/jquense/semantic-release-alt-publish-dir#readme",
+  "homepage": "https://github.com/jquense/semantic-release-alt-publish-dir#readme",
   "description": "",
   "jest": {
-    "roots": ["<rootDir>/test"],
-    "watchPathIgnorePatterns": ["fixtures"]
+    "roots": [
+      "<rootDir>/test"
+    ],
+    "watchPathIgnorePatterns": [
+      "fixtures"
+    ]
   },
   "dependencies": {
     "cpy": "^6.0.0",
@@ -43,7 +46,12 @@
   "release": {
     "analyzeCommits": {
       "preset": "angular",
-      "releaseRules": [{ "type": "breaking", "release": "major" }]
+      "releaseRules": [
+        {
+          "type": "breaking",
+          "release": "major"
+        }
+      ]
     },
     "verifyConditions": [
       "@semantic-release/changelog",
