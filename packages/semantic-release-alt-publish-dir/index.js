@@ -1,6 +1,24 @@
 const path = require('path')
 const fs = require('fs-extra')
 const cpy = require('cpy')
+const npmPlugin = require('@semantic-release/npm')
+
+async function verifyConditions(pluginConfig, config) {
+  const { options: { publish, ...rest } } = config
+  const nextConfig = { ...config }
+  if (pluginConfig.pkgRoot && publish) {
+    const plugin = []
+      .concat(publish)
+      .find(({ path }) => path === '@semantic-release/npm')
+
+    nextConfig.options = {
+      ...rest,
+      publish: { ...plugin, pkgRoot: undefined },
+    }
+  }
+
+  await npmPlugin.verifyConditions(pluginConfig, nextConfig)
+}
 
 async function prepare(
   pluginConfig = {},
@@ -33,6 +51,8 @@ async function prepare(
   delete pkg.scripts
   delete pkg.devDependencies
   delete pkg.release // this also doesn't belong to output
+
+  //
   ;['main', 'modules', 'js:next'].forEach(key => {
     if (typeof pkg[key] !== 'string') return
     pkg[key] = pkg[key].replace(new RegExp(pkgRoot + '\\/?'), '')
@@ -50,4 +70,4 @@ async function prepare(
   )
 }
 
-module.exports = { prepare }
+module.exports = { prepare, verifyConditions }
