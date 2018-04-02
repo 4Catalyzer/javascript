@@ -1,6 +1,6 @@
 {
   "name": "example-package",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "modules": "lib/es/index.js",
   "author": "Jason Quense <monastic.panic@gmail.com>",

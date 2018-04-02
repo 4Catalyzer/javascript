@@ -6,9 +6,10 @@ const plugin = require('../index')
 const tempy = require('tempy')
 
 describe('Prepare', () => {
+  const logger = { log() {} }
+
   let tmps = []
   let fixtures = path.resolve(__dirname, 'fixtures')
-
   function setUpFixture(fixture) {
     const dir = tempy.directory()
     fs.copySync(path.join(fixtures, fixture), dir)
@@ -25,9 +26,15 @@ describe('Prepare', () => {
     const dir = setUpFixture('package')
     process.chdir(dir)
 
-    await plugin.prepare({}, { nextRelease: { version: '1.0.1' } })
+    await plugin.prepare(
+      { pkgRoot: 'lib' },
+      { nextRelease: { version: '1.0.1' }, logger }
+    )
 
     expect(await fs.readJson(`${dir}/lib/package.json`)).toMatchObject({
+      version: '1.0.1',
+    })
+    expect(await fs.readJson(`${dir}/package.json`)).toMatchObject({
       version: '1.0.1',
     })
 
@@ -41,5 +48,16 @@ describe('Prepare', () => {
 
     expect(libPkg.main).toEqual('index.js')
     expect(libPkg.modules).toEqual('es/index.js')
+  })
+
+  it('should skip when no pkgRoot is set', async () => {
+    const dir = setUpFixture('package')
+    process.chdir(dir)
+
+    await plugin.prepare({}, { nextRelease: { version: '1.0.1' }, logger })
+
+    expect(await fs.readJson(`${dir}/package.json`)).toMatchObject({
+      version: '1.0.0',
+    })
   })
 })

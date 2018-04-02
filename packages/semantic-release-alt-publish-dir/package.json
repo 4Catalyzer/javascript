@@ -19,15 +19,12 @@
   "bugs": {
     "url": "https://github.com/jquense/semantic-release-alt-publish-dir/issues"
   },
-  "homepage": "https://github.com/jquense/semantic-release-alt-publish-dir#readme",
+  "homepage":
+    "https://github.com/jquense/semantic-release-alt-publish-dir#readme",
   "description": "",
   "jest": {
-    "roots": [
-      "<rootDir>/test"
-    ],
-    "watchPathIgnorePatterns": [
-      "fixtures"
-    ]
+    "roots": ["<rootDir>/test"],
+    "watchPathIgnorePatterns": ["fixtures"]
   },
   "dependencies": {
     "cpy": "^6.0.0",
@@ -44,6 +41,10 @@
     "travis-deploy-once": "^4.4.1"
   },
   "release": {
+    "analyzeCommits": {
+      "preset": "angular",
+      "releaseRules": [{ "type": "breaking", "release": "major" }]
+    },
     "verifyConditions": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
