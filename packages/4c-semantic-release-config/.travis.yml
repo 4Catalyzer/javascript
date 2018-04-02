@@ -1,11 +1,11 @@
 sudo: false
 
+cache: yarn
 language: node_js
 node_js:
   - stable
-
-cache: yarn
-
+after_success:
+  - npm run travis-deploy-once "npm run semantic-release"
 branches:
   only:
     - master
