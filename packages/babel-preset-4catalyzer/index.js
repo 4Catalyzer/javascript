@@ -21,7 +21,7 @@ const defaultBrowsers = [
 function preset(_, options = {}) {
   const env = process.env.NODE_ENV || 'production'; // default to prod
   const opts = Object.assign({}, defaultOptions, options);
-  const target = opts.target;
+  const { target } = opts;
 
   const nodeTarget = {
     node: env === 'production' ? '8.3' : 'current',

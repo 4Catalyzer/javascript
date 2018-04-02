@@ -11,6 +11,7 @@
   },
   "scripts": {
     "lint": "eslint .",
+    "test": "npm run lint && node ./index.js",
     "precommit": "lint-staged",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
