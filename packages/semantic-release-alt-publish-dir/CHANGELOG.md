@@ -1,3 +1,11 @@
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/jquense/semantic-release-alt-publish-dir/compare/v2.0.0...v2.1.0) (2018-04-02)
+
+
+### Features
+
+* Add verify conditions plugin ([a8698ed](https://github.com/jquense/semantic-release-alt-publish-dir/commit/a8698ed))
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/jquense/semantic-release-alt-publish-dir/compare/v1.1.0...v2.0.0) (2018-04-02)
 
