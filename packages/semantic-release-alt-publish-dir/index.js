@@ -17,7 +17,10 @@ async function verifyConditions(pluginConfig, config) {
     }
   }
 
-  await npmPlugin.verifyConditions(pluginConfig, nextConfig)
+  await npmPlugin.verifyConditions(
+    { ...pluginConfig, pkgRoot: undefined },
+    nextConfig
+  )
 }
 
 async function prepare(
