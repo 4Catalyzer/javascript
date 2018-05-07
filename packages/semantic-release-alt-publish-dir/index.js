@@ -63,7 +63,14 @@ async function prepare(
   })
 
   const patterns = [...assets, `!${pkgRoot}/**`]
-  await cpy(patterns, pkgRoot, { parents, cwd })
+
+  logger.log(`copying assets to ${pkgRoot} with pattern: ${patterns}`)
+  try {
+    await cpy(patterns, pkgRoot, { parents, cwd })
+  } catch (err) {
+    console.err(err)
+    throw err
+  }
 
   logger.log(`Outputing ${pkgRoot}/package.json`)
   await fs.outputJson(

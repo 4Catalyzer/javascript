@@ -6,7 +6,7 @@ const plugin = require('../index')
 const tempy = require('tempy')
 
 describe('Prepare', () => {
-  const logger = { log() {} }
+  const logger = { log: console.log }
 
   let tmps = []
   let fixtures = path.resolve(__dirname, 'fixtures')
