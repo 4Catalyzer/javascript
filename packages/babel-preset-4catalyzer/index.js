@@ -47,7 +47,7 @@ function preset(_, explicitOptions = {}) {
     // and we want the runtime
     if (target === 'web-app') {
       options.runtime =
-        explicitOptions.runtime == null ? false : explicitOptions.runtime;
+        explicitOptions.runtime == null ? true : explicitOptions.runtime;
       options.modules =
         explicitOptions.modules == null ? false : explicitOptions.modules;
     }
@@ -91,7 +91,18 @@ function preset(_, explicitOptions = {}) {
   return {
     presets,
     plugins: [
+<<<<<<< HEAD
       options.runtime && require.resolve('@babel/plugin-transform-runtime'),
+=======
+      opts.runtime && [
+        require.resolve('@babel/plugin-transform-runtime'),
+        {
+          // leave polyfilling up to consumer, this should be a deliberate choice
+          useBuiltIns: true,
+          useESModules: opts.modules === false,
+        },
+      ],
+>>>>>>> fix update
 
       // - stage 2 --
       require.resolve('@babel/plugin-syntax-dynamic-import'),
