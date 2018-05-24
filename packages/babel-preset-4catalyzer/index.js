@@ -38,7 +38,10 @@ function preset(_, explicitOptions = {}) {
     options.targets = options.targets || webTargets;
 
     // Webpack's parser (acorn) can't object rest/spread
-    options.include = ['proposal-object-rest-spread'];
+    options.include = [
+      ...(options.include || []),
+      'proposal-object-rest-spread',
+    ];
 
     // in a web app assume we are using webpack to handle modules
     if (target === 'web-app') {
