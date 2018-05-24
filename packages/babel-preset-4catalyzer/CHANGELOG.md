@@ -1,3 +1,11 @@
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/4Catalyzer/babel-preset-4catalyzer/compare/v1.4.0...v1.5.0) (2018-05-24)
+
+
+### Features
+
+* Pass through explicit preset-env include ([c9afb91](https://github.com/4Catalyzer/babel-preset-4catalyzer/commit/c9afb91))
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/4Catalyzer/babel-preset-4catalyzer/compare/v1.3.0...v1.4.0) (2018-04-25)
 
