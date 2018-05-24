@@ -18,10 +18,10 @@ const defaultBrowsers = [
   'last 2 Safari versions',
 ];
 
-function preset(_, options = {}) {
+function preset(_, explicitOptions = {}) {
   const env = process.env.NODE_ENV || 'production'; // default to prod
-  const opts = Object.assign({}, defaultOptions, options);
-  const { target } = opts;
+  const options = Object.assign({}, defaultOptions, explicitOptions);
+  const { target } = options;
 
   const nodeTarget = {
     node: env === 'production' ? '8.3' : 'current',
@@ -35,35 +35,36 @@ function preset(_, options = {}) {
   };
 
   if (target === 'web' || target === 'web-app') {
-    opts.targets = opts.targets || webTargets;
+    options.targets = options.targets || webTargets;
 
     // Webpack's parser (acorn) can't object rest/spread
-    opts.include = ['proposal-object-rest-spread'];
+    options.include = ['proposal-object-rest-spread'];
 
     // in a web app assume we are using webpack to handle modules
     if (target === 'web-app') {
-      opts.modules = options.modules == null ? false : options.modules;
+      options.modules =
+        explicitOptions.modules == null ? false : explicitOptions.modules;
     }
   } else if (target === 'node') {
-    opts.targets = opts.targets || nodeTarget;
-    opts.relay = false;
-    opts.intl = false;
+    options.targets = options.targets || nodeTarget;
+    options.relay = false;
+    options.intl = false;
   }
 
   // unless the user explicitly set modules, change the default to
   // cjs in a TEST environment (jest)
-  if (env === 'test' && options.modules == null) {
-    opts.modules = 'commonjs';
+  if (env === 'test' && explicitOptions.modules == null) {
+    options.modules = 'commonjs';
   }
 
-  const presets = [[envPreset, opts], reactPreset];
+  const presets = [[envPreset, options], reactPreset];
 
-  if (opts.intl) {
+  if (options.intl) {
     const intlOpts =
-      typeof opts.intl === 'object'
-        ? opts.intl
+      typeof options.intl === 'object'
+        ? options.intl
         : {
-            prefix: options.prefix,
+            prefix: explicitOptions.prefix,
             messagesDir: 'build/messages',
           };
 
@@ -88,7 +89,7 @@ function preset(_, options = {}) {
       require.resolve('@babel/plugin-syntax-dynamic-import'),
       [
         require.resolve('@babel/plugin-proposal-class-properties'),
-        { loose: opts.loose },
+        { loose: options.loose },
       ],
       // -----
 
