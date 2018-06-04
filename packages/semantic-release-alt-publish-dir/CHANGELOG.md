@@ -1,4 +1,13 @@
 <a name="2.1.2"></a>
+## [2.1.2](https://github.com/jquense/semantic-release-alt-publish-dir/compare/v2.1.1...v2.1.2) (2018-06-04)
+
+
+### Bug Fixes
+
+* run on node 10 ([b4ce0b1](https://github.com/jquense/semantic-release-alt-publish-dir/commit/b4ce0b1))
+* try catching copy error? ([368dda2](https://github.com/jquense/semantic-release-alt-publish-dir/commit/368dda2))
+
+<a name="2.1.2"></a>
 ## [2.1.2](https://github.com/jquense/semantic-release-alt-publish-dir/compare/v2.1.1...v2.1.2) (2018-05-07)
 
 
