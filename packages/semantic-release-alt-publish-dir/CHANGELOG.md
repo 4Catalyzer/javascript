@@ -1,3 +1,11 @@
+<a name="2.1.3"></a>
+## [2.1.3](https://github.com/jquense/semantic-release-alt-publish-dir/compare/v2.1.2...v2.1.3) (2018-06-05)
+
+
+### Bug Fixes
+
+* Rewrite correct "module" pkg.json entry instead of "modules" ([795af9d](https://github.com/jquense/semantic-release-alt-publish-dir/commit/795af9d))
+
 <a name="2.1.2"></a>
 ## [2.1.2](https://github.com/jquense/semantic-release-alt-publish-dir/compare/v2.1.1...v2.1.2) (2018-06-04)
 
