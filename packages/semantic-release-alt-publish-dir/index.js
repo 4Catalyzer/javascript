@@ -56,7 +56,7 @@ async function prepare(
   delete pkg.release // this also doesn't belong to output
 
   //
-  ;['main', 'modules', 'js:next'].forEach(key => {
+  ;['main', 'module', 'js:next'].forEach(key => {
     if (typeof pkg[key] !== 'string') return
     pkg[key] = pkg[key].replace(new RegExp(pkgRoot + '\\/?'), '')
     logger.log(`Changing package mains: "${key}" to %s`, pkg[key])

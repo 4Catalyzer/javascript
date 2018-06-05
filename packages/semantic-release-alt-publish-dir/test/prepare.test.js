@@ -47,7 +47,7 @@ describe('Prepare', () => {
     expect(libPkg.release).not.toBeDefined()
 
     expect(libPkg.main).toEqual('index.js')
-    expect(libPkg.modules).toEqual('es/index.js')
+    expect(libPkg.module).toEqual('es/index.js')
   })
 
   it('should skip when no pkgRoot is set', async () => {
