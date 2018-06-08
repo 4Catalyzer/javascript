@@ -32,5 +32,7 @@ module.exports = {
     ignoreRestSiblings: false,
     argsIgnorePattern: '^_',
   }],
+  // We very seldom intentionally use async functions without await.
+  'require-await': 'error',
   'import/prefer-default-export': 'off',
 };

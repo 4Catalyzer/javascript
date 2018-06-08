@@ -15,6 +15,11 @@ module.exports = {
     },
     allowChildren: false,
   }],
+  // It's clearer to use required even on props with defaults to indicate
+  // non-nullability.
+  'react/default-props-match-prop-types': ['error', {
+    allowRequiredDefaults: true,
+  }],
   // `object` is used everywhere in Relay, and we use `any` deliberately.
   'react/forbid-prop-types': ['error', {
     forbid: ['array'],
