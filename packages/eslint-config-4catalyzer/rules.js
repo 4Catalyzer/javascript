@@ -13,6 +13,7 @@ module.exports = {
     allowSamePrecedence: false,
   }],
   'no-plusplus': 'off',
+  'no-void': 'off', // simplify early returns
   'no-restricted-syntax': ['error',
     'ForInStatement',
     // We use iterables, so allow for-of.
