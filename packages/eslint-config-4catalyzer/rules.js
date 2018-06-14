@@ -32,6 +32,20 @@ module.exports = {
     ignoreRestSiblings: false,
     argsIgnorePattern: '^_',
   }],
+  'prefer-destructuring': [
+    'error',
+    {
+      VariableDeclarator: {
+        array: false,
+        object: true,
+      },
+      AssignmentExpression: {
+        array: false,
+        object: false,
+      },
+    },
+    { enforceForRenamedProperties: false },
+  ],
   // We very seldom intentionally use async functions without await.
   'require-await': 'error',
   'import/prefer-default-export': 'off',
