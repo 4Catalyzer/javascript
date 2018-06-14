@@ -1,6 +1,22 @@
 const envPreset = require('@babel/preset-env');
 const reactPreset = require('@babel/preset-react');
+const pick = require('lodash/pick');
 const intlPreset = require('./intl-preset');
+
+const presetEnvOptions = [
+  'configPath',
+  'debug',
+  'exclude',
+  'forceAllTransforms',
+  'ignoreBrowserslistConfig',
+  'include',
+  'loose',
+  'modules',
+  'shippedProposals',
+  'spec',
+  'targets',
+  'useBuiltIns',
+];
 
 const defaultBrowsers = [
   'ie >= 11',
@@ -63,7 +79,7 @@ function preset(_, explicitOptions = {}) {
     options.modules = 'commonjs';
   }
 
-  const presets = [[envPreset, options], reactPreset];
+  const presets = [[envPreset, pick(options, presetEnvOptions)], reactPreset];
 
   if (options.intl) {
     const intlOpts =
@@ -91,18 +107,14 @@ function preset(_, explicitOptions = {}) {
   return {
     presets,
     plugins: [
-<<<<<<< HEAD
-      options.runtime && require.resolve('@babel/plugin-transform-runtime'),
-=======
-      opts.runtime && [
+      options.runtime && [
         require.resolve('@babel/plugin-transform-runtime'),
         {
           // leave polyfilling up to consumer, this should be a deliberate choice
           useBuiltIns: true,
-          useESModules: opts.modules === false,
+          useESModules: options.modules === false,
         },
       ],
->>>>>>> fix update
 
       // - stage 2 --
       require.resolve('@babel/plugin-syntax-dynamic-import'),
