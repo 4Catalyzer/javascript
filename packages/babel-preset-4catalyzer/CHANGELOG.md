@@ -1,3 +1,11 @@
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/4Catalyzer/babel-preset-4catalyzer/compare/v2.0.0...v2.1.0) (2018-07-14)
+
+
+### Features
+
+* bump babel deps ([a075b8e](https://github.com/4Catalyzer/babel-preset-4catalyzer/commit/a075b8e))
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/4Catalyzer/babel-preset-4catalyzer/compare/v1.5.0...v2.0.0) (2018-06-14)
 
