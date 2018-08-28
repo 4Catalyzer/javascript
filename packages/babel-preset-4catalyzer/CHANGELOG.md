@@ -1,3 +1,16 @@
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/4Catalyzer/babel-preset-4catalyzer/compare/v2.1.0...v3.0.0) (2018-08-28)
+
+
+### Features
+
+* bump babel to v7 final ([#13](https://github.com/4Catalyzer/babel-preset-4catalyzer/issues/13)) ([d4aeab5](https://github.com/4Catalyzer/babel-preset-4catalyzer/commit/d4aeab5))
+
+
+### BREAKING CHANGES
+
+* runtime doesn't polyfill corejs
+
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/4Catalyzer/babel-preset-4catalyzer/compare/v2.0.0...v2.1.0) (2018-07-14)
 
