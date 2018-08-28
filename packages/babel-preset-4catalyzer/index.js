@@ -33,6 +33,9 @@ const defaultOptions = {
   modules: 'commonjs',
   shippedProposals: true,
   runtime: false,
+  corejs: false,
+  debug: false,
+  ignoreBrowserslistConfig: true,
   browsers: defaultBrowsers,
 };
 
@@ -45,10 +48,10 @@ function preset(_, explicitOptions = {}) {
     node: env === 'production' ? '8.3' : 'current',
   };
 
-  const webTargets = {
-    browsers:
-      env === 'production' ? options.browsers : ['last 2 Chrome versions'],
-  };
+  const webTargets =
+    env === 'production'
+      ? { browsers: options.browsers }
+      : { esmodules: true };
 
   if (target === 'web' || target === 'web-app') {
     options.targets = options.targets || webTargets;
@@ -100,34 +103,25 @@ function preset(_, explicitOptions = {}) {
     }
   }
 
-  // We don't use the stage presets because they contain duplicate plugins
-  // as the env preset, specifically things that have beein promoted to stage 4
-  // since babel v6 was released. plugins in the stage-x presets won't be
-  // removed per environment so we just include the ones we need here
   return {
     presets,
     plugins: [
       options.runtime && [
         require.resolve('@babel/plugin-transform-runtime'),
         {
-          // leave polyfilling up to consumer, this should be a deliberate choice
-          useBuiltIns: true,
+          corejs: options.corejs,
           useESModules: options.modules === false,
         },
       ],
 
-      // - stage 2 --
       require.resolve('@babel/plugin-syntax-dynamic-import'),
       [
         require.resolve('@babel/plugin-proposal-class-properties'),
         { loose: options.loose },
       ],
-      // -----
 
-      // - stage 1 --
       require.resolve('@babel/plugin-proposal-export-default-from'),
       require.resolve('@babel/plugin-proposal-export-namespace-from'),
-      // -----
 
       // - convenience plugins --
       require.resolve('babel-plugin-dev-expression'),

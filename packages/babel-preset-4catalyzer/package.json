@@ -11,7 +11,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "npm run lint && node ./index.js",
+    "test": "npm run lint && jest --runInBand",
     "precommit": "lint-staged",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
@@ -57,13 +57,13 @@
     "travis-deploy-once": "^5.0.1"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.53",
-    "@babel/plugin-proposal-export-default-from": "^7.0.0-beta.53",
-    "@babel/plugin-proposal-export-namespace-from": "^7.0.0-beta.53",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0-beta.53",
-    "@babel/plugin-transform-runtime": "^7.0.0-beta.53",
-    "@babel/preset-env": "^7.0.0-beta.53",
-    "@babel/preset-react": "^7.0.0-beta.53",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "babel-plugin-dev-expression": "^0.2.1",
     "babel-plugin-react-intl": "^2.3.0",
     "lodash": "^4.17.10"

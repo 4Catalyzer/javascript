@@ -9,7 +9,7 @@ describe('Preset', () => {
 
   it('should be a valid config', () => {
     const opts = babel.loadOptions({
-      presets: [preset],
+      presets: [[preset, { debug: true }]],
       babelrc: false,
     });
 
