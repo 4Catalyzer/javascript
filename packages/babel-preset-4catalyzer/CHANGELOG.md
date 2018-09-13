@@ -1,3 +1,11 @@
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/4Catalyzer/babel-preset-4catalyzer/compare/v3.0.0...v3.1.0) (2018-09-13)
+
+
+### Features
+
+* add optional chaining ([#14](https://github.com/4Catalyzer/babel-preset-4catalyzer/issues/14)) ([8a3e74f](https://github.com/4Catalyzer/babel-preset-4catalyzer/commit/8a3e74f))
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/4Catalyzer/babel-preset-4catalyzer/compare/v2.1.0...v3.0.0) (2018-08-28)
 
