@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/4Catalyzer/javascript#readme",
   "dependencies": {
-    "eslint-config-airbnb-base": "^12.1.0"
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.0.1"
   },
   "peerDependencies": {
     "babel-eslint": "^8.2.2",
