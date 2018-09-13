@@ -125,6 +125,7 @@ function preset(_, explicitOptions = {}) {
 
       // - convenience plugins --
       require.resolve('babel-plugin-dev-expression'),
+      require.resolve('@babel/plugin-syntax-optional-chaining'),
     ].filter(Boolean),
   };
 }
