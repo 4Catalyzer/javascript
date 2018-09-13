@@ -18,7 +18,8 @@
   "homepage": "https://github.com/4Catalyzer/javascript#readme",
   "dependencies": {
     "eslint-config-4catalyzer-flow": "^0.4.4",
-    "eslint-config-4catalyzer-react": "^0.4.4"
+    "eslint-config-4catalyzer-react": "^0.4.4",
+    "eslint-config-prettier": "^3.0.1"
   },
   "peerDependencies": {
     "babel-eslint": "^8.2.2",
