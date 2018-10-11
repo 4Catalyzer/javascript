@@ -44,7 +44,8 @@ import SampleAssociationFormSection, {
 } from './SampleAssociationFormSection';
 
 import './styles.css';
-import otherStyles from '@qsi/ui/styles/text.css';
+import lessStyles from '@qsi/ui/styles/text.less';
+import sassStyles from '@qsi/ui/styles/text.scss';
 import styles from './foo.css';
 
 const foo = (

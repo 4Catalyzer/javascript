@@ -5,19 +5,21 @@ const {
   isImportNamespaceSpecifier,
   isImportSpecifier,
 } = require('@babel/types');
-const { parse } = require('babylon');
+const { parse } = require('@babel/core');
 const findLineColumn = require('find-line-column');
 
 const BABYLON_PLUGINS = [
   'jsx',
   'flow',
+  'flowComments',
   'doExpressions',
   'objectRestSpread',
-  'decorators2',
+  ['decorators', { decoratorsBeforeExport: true }],
   'classProperties',
   'classPrivateProperties',
   'classPrivateMethods',
-  'exportExtensions',
+  'exportDefaultFrom',
+  'exportNamespaceFrom',
   'asyncGenerators',
   'functionBind',
   'functionSent',
@@ -28,7 +30,7 @@ const BABYLON_PLUGINS = [
   'bigInt',
   'optionalCatchBinding',
   'throwExpressions',
-  'pipelineOperator',
+  ['pipelineOperator', { proposal: 'minimal' }],
   'nullishCoalescingOperator',
 ];
 
@@ -84,7 +86,7 @@ function formatNamedMembers(
 function parseImports(code) {
   const parsed = parse(code, {
     sourceType: 'module',
-    plugins: BABYLON_PLUGINS,
+    parserOpts: { plugins: BABYLON_PLUGINS },
   });
 
   const imports = [];
@@ -97,7 +99,7 @@ function parseImports(code) {
   traverse(parsed, {
     ImportDeclaration(path) {
       if (ignore) return;
-      const node = path.node;
+      const { node } = path;
 
       const importStart = node.start;
       const importEnd = node.end;
@@ -126,7 +128,7 @@ function parseImports(code) {
           }
 
           previous = current;
-          start = comments[previous].start;
+          start = comments[previous].start; // eslint-disable-line
           current--;
         }
       }
@@ -143,7 +145,7 @@ function parseImports(code) {
           }
 
           previous = current;
-          end = comments[previous].end;
+          end = comments[previous].end; // eslint-disable-line
           current++;
         }
       }
@@ -203,7 +205,7 @@ function formatImport(code, imported, eol = '\n') {
       let prefix;
 
       if (useMultipleLines) {
-        prefix = namedMembersString.split(eol)[1].match(/^\s*/)[0];
+        prefix = namedMembersString.split(eol)[1].match(/^\s*/)[0]; // eslint-disable-line
       }
 
       const useSpaces = namedMembersString.charAt(1) === ' ';

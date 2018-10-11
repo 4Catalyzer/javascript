@@ -21,15 +21,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/4Catalyzer/import-sort-order-4catalyzer.git"
+    "url": "git+https://github.com/4Catalyzer/import-sort-style-4catalyzer.git"
   },
   "author": "4Catalyzer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/4Catalyzer/import-sort-order-4catalyzer/issues"
+    "url": "https://github.com/4Catalyzer/import-sort-style-4catalyzer/issues"
   },
-  "homepage": "https://github.com/4Catalyzer/import-sort-order-4catalyzer#readme",
+  "homepage": "https://github.com/4Catalyzer/import-sort-style-4catalyzer#readme",
   "dependencies": {
+    "@babel/core": "^7.1.2",
     "@babel/traverse": "^7.0.0-beta.38",
     "@babel/types": "^7.0.0-beta.38",
     "babylon": "^7.0.0-beta.38",
@@ -43,8 +44,8 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.5.0",
     "husky": "^0.14.3",
-    "lint-staged": "^6.0.1",
     "import-sort": "^4.2.0",
+    "lint-staged": "^6.0.1",
     "prettier": "^1.10.2"
   }
 }

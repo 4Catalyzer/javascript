@@ -40,7 +40,7 @@ function isAliasedModule({ moduleName }) {
 }
 
 function isCssModule({ moduleName }) {
-  return moduleName.includes('.css');
+  return moduleName.match(/\.(css|s(a|c)ss|less)$/i);
 }
 
 const sort = styleApi => {
