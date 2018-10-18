@@ -1,6 +1,8 @@
 const envPreset = require('@babel/preset-env');
+const path = require('path');
 const reactPreset = require('@babel/preset-react');
 const pick = require('lodash/pick');
+const { loadConfig } = require('browserslist');
 const intlPreset = require('./intl-preset');
 
 const presetEnvOptions = [
@@ -35,27 +37,47 @@ const defaultOptions = {
   runtime: false,
   corejs: false,
   debug: false,
-  ignoreBrowserslistConfig: true,
+  ignoreBrowserslistConfig: false,
   browsers: defaultBrowsers,
+  include: [
+    // XXX: Workaround for babel/babel#8019.
+    'transform-classes',
+  ],
+  exclude: [
+    // Seems to be added by default with minimum benefit.
+    'web.dom.iterable',
+  ],
 };
+
+function getTargets(
+  env,
+  { target, targets, configPath, ignoreBrowserslistConfig },
+) {
+  if (env !== 'production') {
+    return target === 'node' ? { node: 'current' } : { esmodules: true };
+  }
+  // TODO: distinguish between app and libraries for node as well
+  if (target === 'node') return { node: '10.0' };
+  if (
+    ignoreBrowserslistConfig ||
+    !loadConfig({ path: configPath || path.resolve('.') })
+  )
+    return { browsers: targets.browsers || defaultBrowsers };
+
+  // we don't run browserslist ourself b/c that would require doing a bunch
+  // of additional transforms to get the output in a format preset-env would accept
+  return targets || undefined;
+}
 
 function preset(_, explicitOptions = {}) {
   const env = _.env() || 'production'; // default to prod
+
   const options = Object.assign({}, defaultOptions, explicitOptions);
   const { target } = options;
 
-  const nodeTarget = {
-    node: env === 'production' ? '8.3' : 'current',
-  };
-
-  const webTargets =
-    env === 'production'
-      ? { browsers: options.browsers }
-      : { esmodules: true };
+  options.targets = getTargets(env, options);
 
   if (target === 'web' || target === 'web-app') {
-    options.targets = options.targets || webTargets;
-
     // Webpack's parser (acorn) can't object rest/spread
     options.include = [
       ...(options.include || []),
@@ -71,8 +93,6 @@ function preset(_, explicitOptions = {}) {
         explicitOptions.modules == null ? false : explicitOptions.modules;
     }
   } else if (target === 'node') {
-    options.targets = options.targets || nodeTarget;
-    options.relay = false;
     options.intl = false;
   }
 
