@@ -1,3 +1,16 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/4Catalyzer/babel-preset-4catalyzer/compare/v3.1.1...v4.0.0) (2018-10-18)
+
+
+### Features
+
+* allow browserlist configs more easily ([#16](https://github.com/4Catalyzer/babel-preset-4catalyzer/issues/16)) ([f03ff28](https://github.com/4Catalyzer/babel-preset-4catalyzer/commit/f03ff28))
+
+
+### BREAKING CHANGES
+
+* browserlist configs will be used by default if they exist over the default browsers
+
 <a name="3.1.1"></a>
 ## [3.1.1](https://github.com/4Catalyzer/babel-preset-4catalyzer/compare/v3.1.0...v3.1.1) (2018-09-13)
 
