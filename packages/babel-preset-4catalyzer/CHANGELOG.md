@@ -1,3 +1,11 @@
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/4Catalyzer/babel-preset-4catalyzer/compare/v4.0.0...v4.1.0) (2018-10-19)
+
+
+### Features
+
+* support FormattedMessage intl components for namespaces ([#17](https://github.com/4Catalyzer/babel-preset-4catalyzer/issues/17)) ([e6fba0e](https://github.com/4Catalyzer/babel-preset-4catalyzer/commit/e6fba0e))
+
 <a name="4.0.0"></a>
 # [4.0.0](https://github.com/4Catalyzer/babel-preset-4catalyzer/compare/v3.1.1...v4.0.0) (2018-10-18)
 
