@@ -32,7 +32,7 @@ module.exports = function namespacePlugin({ types: t }) {
           idAttr
             .get('value')
             .replaceWith(
-              t.StringLiteral(`${prefix}{idAttr.node.value.value}`),
+              t.StringLiteral(`${prefix}${idAttr.node.value.value}`),
             );
         }
       },
@@ -58,7 +58,7 @@ module.exports = function namespacePlugin({ types: t }) {
 
           if (idProp && !idProp.node.value.startsWith(prefix)) {
             idProp.replaceWith(
-              t.StringLiteral(`${prefix}{idProp.node.value}`), // eslint-disable-line new-cap
+              t.StringLiteral(`${prefix}${idProp.node.value}`), // eslint-disable-line new-cap
             );
           }
         }
