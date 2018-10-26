@@ -3,6 +3,6 @@ module.exports = {
     return 'module.exports = {};';
   },
   getCacheKey() {
-    return 'style-transition';
+    return 'style-transform';
   },
 };
