@@ -3,8 +3,12 @@
   "name": "javascript",
   "scripts": {
     "lint": "eslint packages/*/*.js",
-    "precommit": "lint-staged",
     "test": "npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.js": [
