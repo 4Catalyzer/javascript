@@ -1,13 +1,6 @@
 {
-  "extends": "./packages/eslint-config-4catalyzer/index.js",
+  "extends": ["./packages/eslint-config-4catalyzer/index.js", "prettier"],
   "rules": {
-    "global-require": "off",
-    "comma-dangle": ["error", {
-      "arrays": "always-multiline",
-      "objects": "always-multiline",
-      "imports": "always-multiline",
-      "exports": "always-multiline",
-      "functions": "never" // Need to support editors' old versions of Node.
-    }]
+    "global-require": "off"
   }
 }
