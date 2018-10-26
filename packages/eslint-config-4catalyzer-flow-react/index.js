@@ -6,6 +6,6 @@ module.exports = {
     {},
     require('eslint-config-4catalyzer-flow/rules'),
     require('eslint-config-4catalyzer-react/rules'),
-    require('./rules')
+    require('./rules'),
   ),
 };

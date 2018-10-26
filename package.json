@@ -15,7 +15,7 @@
   },
   "prettier": {
     "singleQuote": true,
-    "trailingComma": "es5"
+    "trailingComma": "all"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

@@ -6,6 +6,6 @@ module.exports = {
   rules: Object.assign(
     {},
     require('eslint-config-4catalyzer/rules'),
-    require('./rules')
+    require('./rules'),
   ),
 };
