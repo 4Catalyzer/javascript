@@ -1,37 +1,57 @@
+const restirctedGlobals = require('./restrictedGlobals');
+
 module.exports = {
   'class-methods-use-this': 'off',
-  'max-len': ['error', 79, {
-    ignorePattern: ' // eslint-disable-line ',
-  }],
-  'no-mixed-operators': ['error', {
-    groups: [
-      ['&', '|', '^', '~', '<<', '>>', '>>>'],
-      ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
-      ['&&', '||'],
-      ['in', 'instanceof'],
-    ],
-    allowSamePrecedence: false,
-  }],
+  'max-len': [
+    'error',
+    79,
+    {
+      ignorePattern: ' // eslint-disable-line ',
+    },
+  ],
+  'no-continue': 'off',
+  'no-mixed-operators': [
+    'error',
+    {
+      groups: [
+        ['&', '|', '^', '~', '<<', '>>', '>>>'],
+        ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
+        ['&&', '||'],
+        ['in', 'instanceof'],
+      ],
+      allowSamePrecedence: false,
+    },
+  ],
   'no-plusplus': 'off',
-  'no-restricted-syntax': ['error',
+  'no-restricted-globals': ['error'].concat(restirctedGlobals),
+  'no-restricted-syntax': [
+    'error',
     'ForInStatement',
     // We use iterables, so allow for-of.
     'LabeledStatement',
     'WithStatement',
   ],
-  'no-underscore-dangle': ['error', {
-    allow: [],
-    allowAfterThis: true,
-    allowAfterSuper: false,
-    enforceInMethodNames: false,
-  }],
-  'no-unused-vars': ['error', {
-    vars: 'all',
-    varsIgnorePattern: '^_',
-    args: 'after-used',
-    ignoreRestSiblings: false,
-    argsIgnorePattern: '^_',
-  }],
+  'no-underscore-dangle': [
+    'error',
+    {
+      allow: [],
+      allowAfterThis: true,
+      allowAfterSuper: false,
+      enforceInMethodNames: false,
+    },
+  ],
+  'no-unused-vars': [
+    'error',
+    {
+      vars: 'all',
+      varsIgnorePattern: '^_',
+      args: 'after-used',
+      ignoreRestSiblings: false,
+      argsIgnorePattern: '^_',
+    },
+  ],
+  // allow `let foo, bar;`, but not `let foo = 1, bar ='hi';`
+  'one-var': ['error', { initialized: 'never' }],
   'prefer-destructuring': [
     'error',
     {

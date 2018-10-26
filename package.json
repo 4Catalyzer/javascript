@@ -1,15 +1,36 @@
 {
   "private": true,
+  "name": "javascript",
   "scripts": {
     "lint": "eslint packages/*/*.js",
-    "postinstall": "lerna bootstrap",
+    "precommit": "lint-staged",
     "test": "npm run lint"
   },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
-    "eslint": "^4.18.2",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.9.0",
-    "lerna": "^2.9.0"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.1.2",
+    "lerna": "^3.4.3",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   }
 }
