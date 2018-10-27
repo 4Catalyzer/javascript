@@ -1,0 +1,36 @@
+{
+  "name": "@4c/jest-preset",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4Catalyzer/jest-preset.git"
+  },
+  "author": "4Catalyzer",
+  "license": "MIT",
+  "scripts": {
+    "tdd": "jest --watch",
+    "test": "jest"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/test"
+    ],
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "babel-core": "^7.0.0-bridge.0",
+    "jest": "^23.5.0"
+  },
+  "peerDependencies": {
+    "jest": "^23.0.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "babel-plugin-istanbul": "^5.1.0",
+    "jest-config": "^23.6.0"
+  }
+}
