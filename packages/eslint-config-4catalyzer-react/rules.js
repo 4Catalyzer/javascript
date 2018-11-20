@@ -45,4 +45,5 @@ module.exports = {
   // Taking undefined as implicit default is more consistent with the rest of
   // JavaScript.
   'react/require-default-props': 'off',
+  'react/destructuring-assignment': 'off',
 };
