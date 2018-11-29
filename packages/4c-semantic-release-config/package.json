@@ -11,7 +11,6 @@
   "scripts": {
     "lint": "eslint .",
     "format": "eslint . --fix && prettier --write '**/*.{json,css,md}'",
-    "precommit": "lint-staged",
     "test": "npm run lint",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
@@ -20,6 +19,11 @@
     "printWidth": 79,
     "singleQuote": true,
     "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.js": [
@@ -35,24 +39,24 @@
     "semantic-release": "^15.0.0"
   },
   "dependencies": {
-    "@semantic-release/changelog": "^2.0.1",
-    "@semantic-release/git": "^4.0.1",
-    "@semantic-release/github": "^4.2.8",
-    "@semantic-release/npm": "^3.2.2",
-    "semantic-release-alt-publish-dir": "^2.1.1"
+    "@semantic-release/changelog": "^3.0.1",
+    "@semantic-release/git": "^7.0.5",
+    "@semantic-release/github": "^5.2.5",
+    "@semantic-release/npm": "^5.1.1",
+    "semantic-release-alt-publish-dir": "^3.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.16.0",
-    "eslint-config-4catalyzer": "^0.4.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jest": "^21.7.0",
-    "eslint-plugin-prettier": "^2.5.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.4",
-    "prettier": "^1.10.2",
-    "semantic-release": "^15.1.5",
-    "travis-deploy-once": "^4.4.1"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-4catalyzer": "^0.6.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.2",
+    "semantic-release": "^15.12.3",
+    "travis-deploy-once": "^5.0.9"
   }
 }
