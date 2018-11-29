@@ -44,7 +44,7 @@ describe('Prepare', () => {
 
     expect(libPkg.version).toEqual('1.0.1')
     expect(libPkg.devDependencies).not.toBeDefined()
-    expect(libPkg.release).not.toBeDefined()
+    // expect(libPkg.release).not.toBeDefined()
 
     expect(libPkg.main).toEqual('index.js')
     expect(libPkg.module).toEqual('es/index.js')

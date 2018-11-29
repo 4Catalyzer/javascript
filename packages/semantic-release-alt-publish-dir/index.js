@@ -2,9 +2,12 @@ const path = require('path')
 const fs = require('fs-extra')
 const cpy = require('cpy')
 const npmPlugin = require('@semantic-release/npm')
+const { createAltPublishDir } = require('@4c/file-butler')
 
 async function verifyConditions(pluginConfig, config) {
-  const { options: { publish, ...rest } } = config
+  const {
+    options: { publish, ...rest },
+  } = config
   const nextConfig = { ...config }
   if (pluginConfig.pkgRoot && publish) {
     const plugin = []
@@ -27,12 +30,7 @@ async function prepare(
   pluginConfig = {},
   { nextRelease: { version }, logger }
 ) {
-  let {
-    pkgRoot,
-    cwd = process.cwd(),
-    assets = ['README.md', 'CHANGELOG.md'],
-    parents = true,
-  } = pluginConfig
+  let { pkgRoot, cwd = process.cwd(), parents = true } = pluginConfig
 
   if (!pkgRoot) {
     logger.log(
@@ -50,34 +48,8 @@ async function prepare(
   await fs.writeJson(pkgPath, { ...pkg, version }, { spaces: 2 })
 
   logger.log(`Building alternative root package.json`)
-  delete pkg.files // because otherwise it would be wrong
-  delete pkg.scripts
-  delete pkg.devDependencies
-  delete pkg.release // this also doesn't belong to output
 
-  //
-  ;['main', 'module', 'js:next'].forEach(key => {
-    if (typeof pkg[key] !== 'string') return
-    pkg[key] = pkg[key].replace(new RegExp(pkgRoot + '\\/?'), '')
-    logger.log(`Changing package mains: "${key}" to %s`, pkg[key])
-  })
-
-  const patterns = [...assets, `!${pkgRoot}/**`]
-
-  logger.log(`copying assets to ${pkgRoot} with pattern: ${patterns}`)
-  try {
-    await cpy(patterns, pkgRoot, { parents, cwd })
-  } catch (err) {
-    console.err(err)
-    throw err
-  }
-
-  logger.log(`Outputing ${pkgRoot}/package.json`)
-  await fs.outputJson(
-    path.join(cwd, pkgRoot, 'package.json'),
-    { ...pkg, version },
-    { spaces: 2 }
-  )
+  await createAltPublishDir({ outDir: pkgRoot })
 }
 
 module.exports = { prepare, verifyConditions }
