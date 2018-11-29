@@ -1,3 +1,16 @@
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/jquense/semantic-release-alt-publish-dir/compare/v2.1.3...v3.0.0) (2018-11-29)
+
+
+### chore
+
+* standardize release logic ([fb41461](https://github.com/jquense/semantic-release-alt-publish-dir/commit/fb41461))
+
+
+### BREAKING CHANGES
+
+* remove assets option
+
 <a name="2.1.3"></a>
 ## [2.1.3](https://github.com/jquense/semantic-release-alt-publish-dir/compare/v2.1.2...v2.1.3) (2018-06-05)
 
