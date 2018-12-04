@@ -1,4 +1,5 @@
-/*  eslint-disable */
+/* eslint-disable */
+/* import-sort-ignore */
 
 import { remove } from 'react-formal/lib/util/ErrorUtils';
 import React from 'react';
@@ -16,8 +17,7 @@ import PageForm from '@qsi/ui-app/lib/PageForm';
 import Fieldset from '@qsi/ui/lib/Fieldset';
 import getNodes from '@qsi/common/lib/getNodes';
 import styles from './foo.css';
-import sassStyles from '@qsi/ui/styles/text.scss';
-import lessStyles from '@qsi/ui/styles/text.less';
+import otherStyles from '@qsi/ui/styles/text.css';
 import fetchWorkflowParams from 'utils/fetchWorkflowParams';
 import theme from '@qsi/ui-theme';
 import './styles.css';
@@ -33,14 +33,4 @@ import analysisSchema, {
   setParams,
   setWorkflow,
 } from '../schemas/analysis';
-import type messages from 'messages/analysis';
-
-const foo: string = (
-  <>
-    <div>foo</div>
-  </>
-);
-
-type Foo = {|
-  bar: boolean,
-|};
+import messages from 'messages/analysis';

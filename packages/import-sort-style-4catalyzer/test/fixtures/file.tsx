@@ -33,7 +33,7 @@ import analysisSchema, {
   setParams,
   setWorkflow,
 } from '../schemas/analysis';
-import type messages from 'messages/analysis';
+import messages from 'messages/analysis';
 
 const foo: string = (
   <>
@@ -41,6 +41,6 @@ const foo: string = (
   </>
 );
 
-type Foo = {|
-  bar: boolean,
-|};
+interface Foo {
+  bar: boolean;
+}

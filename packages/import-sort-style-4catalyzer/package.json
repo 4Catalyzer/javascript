@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "node test/test.js",
-    "precommit": "lint-staged",
     "lint": "eslint index.js test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.js": [
@@ -30,22 +34,23 @@
   },
   "homepage": "https://github.com/4Catalyzer/import-sort-style-4catalyzer#readme",
   "dependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/traverse": "^7.0.0-beta.38",
-    "@babel/types": "^7.0.0-beta.38",
+    "@babel/core": "^7.2.0",
+    "@babel/traverse": "^7.1.6",
+    "@babel/types": "^7.2.0",
     "babylon": "^7.0.0-beta.38",
-    "find-line-column": "^0.5.2"
+    "find-line-column": "^0.5.2",
+    "typescript": "^3.2.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.16.0",
-    "eslint-config-4catalyzer": "^0.3.3",
-    "eslint-config-prettier": "^2.9.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-4catalyzer": "^0.6.0",
+    "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-prettier": "^2.5.0",
-    "husky": "^0.14.3",
-    "import-sort": "^4.2.0",
-    "lint-staged": "^6.0.1",
-    "prettier": "^1.10.2"
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.2.0",
+    "import-sort": "^5.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3"
   }
 }
