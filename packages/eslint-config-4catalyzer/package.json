@@ -17,15 +17,14 @@
   },
   "homepage": "https://github.com/4Catalyzer/javascript#readme",
   "dependencies": {
-    "eslint-config-airbnb-base": "^13.1.0"
+    "eslint-config-airbnb-base": "^13.1.0",
+    "babel-eslint": "^10.0.1"
   },
   "peerDependencies": {
-    "babel-eslint": "^10.0.1",
     "eslint": "^5.7.0",
     "eslint-plugin-import": "^2.9.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
     "eslint": "^5.7.0",
     "eslint-plugin-import": "^2.9.0"
   }

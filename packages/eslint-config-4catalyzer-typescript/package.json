@@ -1,0 +1,21 @@
+{
+  "name": "eslint-config-4catalyzer-typescript",
+  "version": "0.6.0",
+  "main": "index.js",
+  "files": [
+    "*.js"
+  ],
+  "repository": "https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript",
+  "author": "4Catalyzer",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": "^5.7.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-typescript": "^1.0.0-rc.2"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "typescript-eslint-parser": "^21.0.2"
+  }
+}

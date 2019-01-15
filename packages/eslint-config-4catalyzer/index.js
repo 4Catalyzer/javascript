@@ -1,5 +1,5 @@
 module.exports = {
   extends: ['airbnb-base'],
-  parser: 'babel-eslint',
+  parser: require.resolve('babel-eslint'),
   rules: require('./rules'),
 };
