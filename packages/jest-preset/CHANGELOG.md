@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/4Catalyzer/jest-preset/compare/@4c/jest-preset@1.2.0...@4c/jest-preset@1.3.0) (2019-01-15)
+
+
+### Features
+
+* add typescript config. move babel-eslint to deps ([#30](https://github.com/4Catalyzer/jest-preset/issues/30)) ([aa03077](https://github.com/4Catalyzer/jest-preset/commit/aa03077))
+
+
+
+
+
 # 1.2.0 (2018-11-20)
 
 

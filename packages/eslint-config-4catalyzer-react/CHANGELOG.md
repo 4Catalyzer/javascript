@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/4Catalyzer/javascript/tree/master/packages/eslint-config-4catalyzer-react/compare/eslint-config-4catalyzer-react@0.6.0...eslint-config-4catalyzer-react@0.7.0) (2019-01-15)
+
+
+### Features
+
+* add typescript config. move babel-eslint to deps ([#30](https://github.com/4Catalyzer/javascript/tree/master/packages/eslint-config-4catalyzer-react/issues/30)) ([aa03077](https://github.com/4Catalyzer/javascript/tree/master/packages/eslint-config-4catalyzer-react/commit/aa03077))
+
+
+
+
+
 # 0.6.0 (2018-11-20)
 
 
