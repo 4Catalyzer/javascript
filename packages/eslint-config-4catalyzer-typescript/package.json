@@ -8,9 +8,6 @@
   "repository": "https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript",
   "author": "4Catalyzer",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "peerDependencies": {
     "eslint": "^5.7.0",
     "eslint-plugin-import": "^2.14.0",

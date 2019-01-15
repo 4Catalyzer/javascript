@@ -12,9 +12,6 @@
     "tdd": "jest --watch",
     "test": "jest"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "jest": {
     "roots": [
       "<rootDir>/test"
