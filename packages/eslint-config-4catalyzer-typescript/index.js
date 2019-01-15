@@ -7,6 +7,11 @@ module.exports = {
       // will be ts not babel-eslint for the host file
       [require.resolve('babel-eslint')]: ['.js'],
     },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts', '.tsx'],
+      },
+    },
   },
   overrides: [
     {
