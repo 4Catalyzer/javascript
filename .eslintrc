@@ -1,5 +1,9 @@
 {
-  "extends": ["./packages/eslint-config-4catalyzer/index.js", "prettier"],
+  "extends": [
+    "./packages/eslint-config-4catalyzer/index.js",
+    "./packages/eslint-config-4catalyzer-jest/index.js",
+    "prettier"
+  ],
   "rules": {
     "global-require": "off"
   }

@@ -1,6 +1,6 @@
 let hasReact = true;
 try {
-  // eslint-disable-next-line import/no-extraneous-dependencies
+  // eslint-disable-next-line
   require('eslint-plugin-react');
 } catch (err) {
   hasReact = false;
