@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/4Catalyzer/javascript/compare/eslint-import-resolver-workspaces@1.0.2...eslint-import-resolver-workspaces@1.0.3) (2019-01-17)
+
+
+### Bug Fixes
+
+* workspaces fallback to node resolution ([6bcd2c8](https://github.com/4Catalyzer/javascript/commit/6bcd2c8))
+
+
+
+
+
 ## [1.0.2](https://github.com/4Catalyzer/javascript/compare/eslint-import-resolver-workspaces@1.0.1...eslint-import-resolver-workspaces@1.0.2) (2019-01-17)
 
 
