@@ -1,4 +1,4 @@
-const { dirname } = require('path');
+const { extname, dirname } = require('path');
 const pkgUp = require('pkg-up');
 const fs = require('fs');
 const findWorkspaceRoot = require('find-yarn-workspace-root');
@@ -37,11 +37,19 @@ exports.resolve = (
   try {
     const path = matchPath(source, undefined, undefined, extensions);
     log('found workspace match', path);
+
     if (path) {
+      if (extname(path)) {
+        return { found: true, path: `${path}` };
+      }
+
+      // If the original request doesn't have an extension neither will the
+      // resolved path
       for (const ext of extensions) {
         const fullPath = `${path}${ext}`;
-        // tsconfig-paths doesn't return the file with the extension WAT.
-        if (fs.existsSync(fullPath)) return { found: true, path: fullPath };
+        if (!fs.existsSync(fullPath)) continue;
+
+        return { found: true, path: fullPath };
       }
     }
     return NOT_FOUND;
