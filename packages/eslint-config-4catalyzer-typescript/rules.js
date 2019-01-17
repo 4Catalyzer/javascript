@@ -31,6 +31,7 @@ module.exports = {
   ...(hasReact
     ? {
         'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
+        'react/prop-types': 'off',
       }
     : undefined),
 };

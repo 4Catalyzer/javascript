@@ -9,6 +9,7 @@
   "author": "4Catalyzer",
   "license": "MIT",
   "dependencies": {
+    "eslint-import-resolver-node": "^0.3.2",
     "find-yarn-workspace-root": "^1.2.1",
     "pkg-up": "^2.0.0",
     "tsconfig-paths": "^3.7.0"

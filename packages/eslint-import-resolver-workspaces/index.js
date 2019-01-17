@@ -3,26 +3,31 @@ const pkgUp = require('pkg-up');
 const fs = require('fs');
 const findWorkspaceRoot = require('find-yarn-workspace-root');
 const { createMatchPath } = require('tsconfig-paths');
+const resolver = require('eslint-import-resolver-node');
+
 const log = require('util').debuglog(
   'eslint-import-resolver-workspaces:resolver',
 );
 
 let matchPath;
-const NOT_FOUND = { found: false };
 const defaultExtensions = ['.mjs', '.js', '.ts', '.tsx', '.json'];
 
 exports.interfaceVersion = 2;
 
-exports.resolve = (
-  source,
-  file,
-  { sources, extensions = defaultExtensions } = {},
-) => {
+function resolveToWorkspaceSource(source, file, options) {
+  if (matchPath === false) return null;
+
+  // eslint-disable-next-line prefer-const
+  let { sources, extensions = defaultExtensions } = options || {};
+
   if (!matchPath) {
     const localRoot = pkgUp.sync(dirname(file));
     const root = localRoot && findWorkspaceRoot(dirname(localRoot));
 
-    if (!root) return NOT_FOUND;
+    if (!root) {
+      matchPath = false;
+      return null;
+    }
 
     log('workspace root identified', root);
 
@@ -30,7 +35,6 @@ exports.resolve = (
       // eslint-disable-next-line import/no-dynamic-require, no-param-reassign
       sources = require(`${root}/package.json`)['workspace-sources'];
     }
-
     matchPath = createMatchPath(root, sources);
   }
 
@@ -39,9 +43,7 @@ exports.resolve = (
     log('found workspace match', path);
 
     if (path) {
-      if (extname(path)) {
-        return { found: true, path: `${path}` };
-      }
+      if (extname(path)) return { found: true, path: `${path}` };
 
       // If the original request doesn't have an extension neither will the
       // resolved path
@@ -52,9 +54,19 @@ exports.resolve = (
         return { found: true, path: fullPath };
       }
     }
-    return NOT_FOUND;
   } catch (err) {
     log(err);
-    return NOT_FOUND;
   }
+
+  return null;
+}
+
+exports.resolve = (source, file, options) => {
+  // eslint-disable-next-line prefer-const
+  let { extensions = defaultExtensions } = options || {};
+
+  return (
+    resolveToWorkspaceSource(source, file, options) ||
+    resolver.resolve(source, file, { extensions })
+  );
 };
