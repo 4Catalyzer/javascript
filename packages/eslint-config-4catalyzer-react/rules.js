@@ -54,7 +54,7 @@ module.exports = {
         'type-annotations',
         'instance-variables',
         'lifecycle',
-        '/^handle.+$/',
+        '/^(on|handle).+$/',
         'everything-else',
         'rendering',
       ],
