@@ -1,0 +1,16 @@
+{
+  "name": "eslint-import-resolver-workspaces",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4Catalyzer/javascript.git"
+  },
+  "author": "4Catalyzer",
+  "license": "MIT",
+  "dependencies": {
+    "find-yarn-workspace-root": "^1.2.1",
+    "pkg-up": "^2.0.0",
+    "tsconfig-paths": "^3.7.0"
+  }
+}
