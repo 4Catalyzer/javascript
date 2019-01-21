@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript/compare/eslint-config-4catalyzer-typescript@0.9.1...eslint-config-4catalyzer-typescript@0.10.0) (2019-01-21)
+
+
+### Features
+
+* disable import rules for typescript ([01848e1](https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript/commit/01848e1))
+
+
+
+
+
 ## [0.9.1](https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript/compare/eslint-config-4catalyzer-typescript@0.9.0...eslint-config-4catalyzer-typescript@0.9.1) (2019-01-21)
 
 
