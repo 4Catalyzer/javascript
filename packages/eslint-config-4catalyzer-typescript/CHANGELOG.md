@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript/compare/eslint-config-4catalyzer-typescript@0.9.0...eslint-config-4catalyzer-typescript@0.9.1) (2019-01-21)
+
+
+### Bug Fixes
+
+* ts rule names ([0821ac0](https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript/commit/0821ac0))
+
+
+
+
+
 # [0.9.0](https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript/compare/eslint-config-4catalyzer-typescript@0.8.1...eslint-config-4catalyzer-typescript@0.9.0) (2019-01-21)
 
 
