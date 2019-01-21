@@ -1,0 +1,14 @@
+{
+  "name": "@4c/tsconfig",
+  "version": "0.1.0",
+  "main": "base.json",
+  "files": [
+    "*.json"
+  ],
+  "repository": "https://github.com/javascript/tree/master/packages/tsconfig-4catalyzer",
+  "author": "4Catalyzer",
+  "license": "MIT",
+  "dependencies": {
+    "typescript-workspace-plugin": "^2.0.1"
+  }
+}
