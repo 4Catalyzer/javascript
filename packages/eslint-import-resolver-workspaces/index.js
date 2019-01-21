@@ -12,6 +12,20 @@ const log = require('util').debuglog(
 let matchPath;
 const defaultExtensions = ['.mjs', '.js', '.ts', '.tsx', '.json'];
 
+const getConcretePath = (path, extensions) => {
+  if (extname(path)) return path;
+
+  // If the original request doesn't have an extension neither will the
+  // resolved path
+  for (const ext of extensions) {
+    const fullPath = `${path}${ext}`;
+    const fullIndexPath = `${path}/index${ext}`;
+    if (fs.existsSync(fullPath)) return fullPath;
+    if (fs.existsSync(fullIndexPath)) return fullIndexPath;
+  }
+  return null;
+};
+
 exports.interfaceVersion = 2;
 
 function resolveToWorkspaceSource(source, file, options) {
@@ -43,16 +57,8 @@ function resolveToWorkspaceSource(source, file, options) {
     log('found workspace match', path);
 
     if (path) {
-      if (extname(path)) return { found: true, path: `${path}` };
-
-      // If the original request doesn't have an extension neither will the
-      // resolved path
-      for (const ext of extensions) {
-        const fullPath = `${path}${ext}`;
-        if (!fs.existsSync(fullPath)) continue;
-
-        return { found: true, path: fullPath };
-      }
+      const concretePath = getConcretePath(path, extensions);
+      return concretePath && { found: true, path: concretePath };
     }
   } catch (err) {
     log(err);
