@@ -24,7 +24,16 @@ module.exports = {
   'typescript/no-parameter-properties': 'error',
   'typescript/no-triple-slash-reference': 'error',
   'no-unused-vars': 'off',
-  'typescript/no-unused-vars': 'error',
+  'typescript/no-unused-vars': [
+    'error',
+    {
+      vars: 'all',
+      varsIgnorePattern: '^_',
+      args: 'after-used',
+      ignoreRestSiblings: false,
+      argsIgnorePattern: '^_',
+    },
+  ],
   'typescript/no-use-before-define': 'error',
   'typescript/no-var-requires': 'error',
   'typescript/prefer-namespace-keyword': 'error',
