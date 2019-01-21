@@ -2,7 +2,7 @@ module.exports = {
   settings: {
     'import/extensions': ['.js', '.ts', '.tsx'],
     'import/parsers': {
-      [require.resolve('typescript-eslint-parser')]: ['.ts', '.tsx'],
+      [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx'],
       // needed for typescript files importing js, since the configured parser
       // will be ts not babel-eslint for the host file
       [require.resolve('babel-eslint')]: ['.js'],
@@ -16,11 +16,11 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
-      parser: require.resolve('eslint-plugin-typescript/parser'),
+      parser: require.resolve('@typescript-eslint/parser'),
       parserOptions: {
         sourceType: 'module',
       },
-      plugins: ['typescript'],
+      plugins: ['@typescript-eslint'],
       rules: require('./rules'),
     },
     {
