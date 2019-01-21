@@ -7,6 +7,10 @@ try {
 }
 
 module.exports = {
+  'import/named': 'off',
+  'import/no-unresolved': 'off',
+  'import/default': 'off',
+  'import/namespace': 'off',
   '@typescript-eslint/adjacent-overload-signatures': 'error',
   '@typescript-eslint/ban-types': 'error',
   camelcase: 'off',
