@@ -7,6 +7,13 @@ try {
 }
 
 module.exports = {
+  // The tsc typechecking will take care of this 
+  // more thoroughly and the plugin doesn't 
+  // understand type exports well
+  'import/named': 'off',
+  'import/no-unresolved': 'off',
+  'import/default': 'off',
+  'import/namespace': 'off',
   '@typescript-eslint/adjacent-overload-signatures': 'error',
   '@typescript-eslint/ban-types': 'error',
   camelcase: 'off',
