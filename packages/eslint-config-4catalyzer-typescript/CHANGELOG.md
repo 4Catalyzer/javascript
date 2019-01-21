@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript/compare/eslint-config-4catalyzer-typescript@0.8.1...eslint-config-4catalyzer-typescript@0.9.0) (2019-01-21)
+
+
+### Bug Fixes
+
+* ts no-unused has same ingore pattern as js rule ([#35](https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript/issues/35)) ([a33b770](https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript/commit/a33b770))
+
+
+### Features
+
+* bump to new ts packages ([#36](https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript/issues/36)) ([9f732f0](https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript/commit/9f732f0))
+
+
+
+
+
 ## [0.8.1](https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript/compare/eslint-config-4catalyzer-typescript@0.8.0...eslint-config-4catalyzer-typescript@0.8.1) (2019-01-17)
 
 
