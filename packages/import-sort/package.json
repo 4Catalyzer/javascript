@@ -1,0 +1,25 @@
+{
+  "name": "@4c/import-sort",
+  "version": "4.3.0",
+  "description": "",
+  "main": "style.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": "https://github.com/javascript/tree/master/packages/import-sort",
+  "author": "4Catalyzer",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/traverse": "^7.1.6",
+    "@babel/types": "^7.2.0",
+    "find-line-column": "^0.5.2",
+    "typescript": "^3.2.1"
+  },
+  "devDependencies": {
+    "import-sort": "^5.2.0"
+  }
+}
