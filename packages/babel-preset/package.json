@@ -1,45 +1,27 @@
 {
-  "name": "@4c/babel-preset-4catalyzer",
+  "name": "@4c/babel-preset",
   "version": "4.1.0",
-  "description": "4C babel preset",
+  "description": "4Catalyzer babel preset",
   "main": "index.js",
-  "repository": "https://github.com/4Catalyzer/babel-preset-4catalyzer.git",
-  "author": "Jason Quense <monastic.panic@gmail.com>",
+  "repository": "https://github.com/4Catalyzer/javascript/tree/master/packages/babel-preset",
+  "author": "4Catalyzer",
   "license": "MIT",
   "engines": {
     "node": ">= 8.3.0"
   },
   "scripts": {
-    "lint": "eslint .",
-    "test": "npm run lint && jest --runInBand",
-    "precommit": "lint-staged",
-    "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
-  "prettier": {
-    "printWidth": 79,
-    "singleQuote": true,
-    "trailingComma": "all"
-  },
-  "release": {
-    "extends": [
-      "@4c/semantic-release-config"
-    ]
+    "roots": [
+      "test"
+    ],
+    "test": "jest --runInBand"
   },
   "jest": {
-    "roots": [
-      "<rootDir>/test"
-    ],
     "testEnvironment": "node"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
-    "@4c/semantic-release-config": "^1.0.2",
     "@babel/cli": "^7.0.0-beta.53",
     "@babel/core": "^7.0.0-beta.53",
     "babel-eslint": "^8.2.6",
@@ -49,12 +31,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-prettier": "^2.6.2",
-    "husky": "^0.14.3",
-    "jest-cli": "^23.4.1",
-    "lint-staged": "^7.2.0",
-    "prettier": "^1.13.7",
-    "semantic-release": "^15.7.1",
-    "travis-deploy-once": "^5.0.1"
+    "jest-cli": "^23.4.1"
   },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.0.0",

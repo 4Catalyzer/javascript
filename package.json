@@ -3,7 +3,7 @@
   "name": "javascript",
   "scripts": {
     "lint": "eslint packages/*/*.js",
-    "test": "npm run lint"
+    "test": "npm run lint && lerna run test"
   },
   "husky": {
     "hooks": {
@@ -29,7 +29,7 @@
     "eslint-plugin-import": "^2.14.0",
     "find-yarn-workspace-root": "^1.2.1",
     "husky": "^1.1.2",
-    "lerna": "^3.4.3",
+    "lerna": "^3.10.7",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3"
   },
