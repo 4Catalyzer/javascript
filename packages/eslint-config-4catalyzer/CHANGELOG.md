@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/4Catalyzer/javascript/tree/master/packages/eslint-config-4catalyzer/compare/eslint-config-4catalyzer@0.7.0...eslint-config-4catalyzer@0.7.1) (2019-01-29)
+
+**Note:** Version bump only for package eslint-config-4catalyzer
+
+
+
+
+
 # [0.7.0](https://github.com/4Catalyzer/javascript/tree/master/packages/eslint-config-4catalyzer/compare/eslint-config-4catalyzer@0.6.0...eslint-config-4catalyzer@0.7.0) (2019-01-15)
 
 
