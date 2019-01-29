@@ -19,15 +19,12 @@
     "testEnvironment": "node"
   },
   "devDependencies": {
-    "babel-core": "^7.0.0-bridge.0",
-    "jest": "^23.5.0"
+    "jest": "^24.0.0"
   },
   "peerDependencies": {
-    "jest": "^23.0.0"
+    "jest": "^24.0.0"
   },
   "dependencies": {
-    "@babel/core": "^7.2.2",
-    "babel-plugin-istanbul": "^5.1.0",
-    "jest-config": "^23.6.0"
+    "babel-jest": "^24.0.0"
   }
 }
