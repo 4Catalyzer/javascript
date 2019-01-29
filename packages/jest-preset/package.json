@@ -8,16 +8,6 @@
   },
   "author": "4Catalyzer",
   "license": "MIT",
-  "scripts": {
-    "tdd": "jest --watch",
-    "test": "jest"
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/test"
-    ],
-    "testEnvironment": "node"
-  },
   "devDependencies": {
     "jest": "^24.0.0"
   },
