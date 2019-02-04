@@ -3,7 +3,11 @@
   "version": "4.1.2",
   "description": "4Catalyzer babel preset",
   "main": "index.js",
-  "repository": "https://github.com/4Catalyzer/javascript/tree/master/packages/babel-preset",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4Catalyzer/javascript",
+    "directory": "packages/babel-preset"
+  },
   "author": "4Catalyzer",
   "license": "MIT",
   "engines": {

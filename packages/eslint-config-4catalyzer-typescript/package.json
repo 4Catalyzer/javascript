@@ -5,7 +5,11 @@
   "files": [
     "*.js"
   ],
-  "repository": "https://github.com/javascript/tree/master/packages/eslint-config-4catalyzer-typescript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4Catalyzer/javascript",
+    "directory": "packages/eslint-config-4catalyzer-typescript"
+  },
   "author": "4Catalyzer",
   "license": "MIT",
   "peerDependencies": {

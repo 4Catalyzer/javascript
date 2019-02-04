@@ -6,7 +6,11 @@
     "*.js"
   ],
   "main": "index.js",
-  "repository": "https://github.com/4Catalyzer/javascript/tree/master/packages/eslint-config-4catalyzer-flow-react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4Catalyzer/javascript",
+    "directory": "packages/eslint-config-4catalyzer-flow-react"
+  },
   "keywords": [
     "eslint"
   ],
