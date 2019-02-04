@@ -6,7 +6,11 @@
   "scripts": {
     "test": "node test/test.js"
   },
-  "repository": "https://github.com/javascript/tree/master/packages/import-sort",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4Catalyzer/javascript",
+    "directory": "packages/import-sort"
+  },
   "author": "4Catalyzer",
   "license": "MIT",
   "publishConfig": {
