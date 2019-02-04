@@ -4,18 +4,16 @@ module.exports = {
     releaseRules: [{ type: 'breaking', release: 'major' }],
   },
 
-  // no verify for npm, it breaks in the pkgRoot case, always expecting a package.json
-  // file but semantic-release-alt-publish-dir will create it automatically.
-  // the npm package will verify itself again anyway in the prepare step.
+  // no verify for npm, semantic-release-alt-publish-dir will run it internally
   verifyConditions: [
     '@semantic-release/changelog',
-    'semantic-release-alt-publish-dir',
+    '@4c/semantic-release-alt-publish-dir',
     '@semantic-release/git',
     '@semantic-release/github',
   ],
   prepare: [
     '@semantic-release/changelog',
-    'semantic-release-alt-publish-dir',
+    '@4c/semantic-release-alt-publish-dir',
     '@semantic-release/npm',
     '@semantic-release/git',
   ],

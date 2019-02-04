@@ -1,5 +1,5 @@
 {
-  "name": "semantic-release-alt-publish-dir",
+  "name": "@4c/semantic-release-alt-publish-dir",
   "version": "3.0.0",
   "main": "index.js",
   "author": "Jason Quense <monastic.panic@gmail.com>",
@@ -9,17 +9,13 @@
   },
   "scripts": {
     "test": "jest --runInBand",
-    "semantic-release": "semantic-release",
-    "travis-deploy-once": "travis-deploy-once"
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jquense/semantic-release-alt-publish-dir.git"
+    "url": "https://github.com/4Catalyzer/javascript",
+    "directory": "packages/semantic-release-alt-publish-dir"
   },
-  "bugs": {
-    "url": "https://github.com/jquense/semantic-release-alt-publish-dir/issues"
-  },
-  "homepage": "https://github.com/jquense/semantic-release-alt-publish-dir#readme",
   "description": "",
   "jest": {
     "roots": [
@@ -31,38 +27,14 @@
   },
   "dependencies": {
     "@4c/file-butler": "^2.1.0",
-    "cpy": "^7.0.0",
-    "fs-extra": "^6.0.1"
+    "@semantic-release/npm": "^5.1.4"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^2.0.2",
-    "@semantic-release/git": "^5.0.0",
-    "@semantic-release/npm": "^3.3.1",
-    "jest": "^23.1.0",
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
+    "jest": "^24.0.0",
     "rimraf": "^2.6.2",
     "semantic-release": "^15.5.0",
-    "tempy": "^0.2.1",
-    "travis-deploy-once": "^5.0.0"
-  },
-  "release": {
-    "analyzeCommits": {
-      "preset": "angular",
-      "releaseRules": [
-        {
-          "type": "breaking",
-          "release": "major"
-        }
-      ]
-    },
-    "verifyConditions": [
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/git"
-    ],
-    "prepare": [
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/git"
-    ]
+    "tempy": "^0.2.1"
   }
 }
