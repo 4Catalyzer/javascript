@@ -39,10 +39,7 @@ const defaultOptions = {
   debug: false,
   ignoreBrowserslistConfig: false,
   browsers: defaultBrowsers,
-  include: [
-    // XXX: Workaround for babel/babel#8019.
-    'transform-classes',
-  ],
+  include: [],
   exclude: [
     // Seems to be added by default with minimum benefit.
     'web.dom.iterable',
@@ -78,9 +75,11 @@ function preset(_, explicitOptions = {}) {
   options.targets = getTargets(env, options);
 
   if (target === 'web' || target === 'web-app') {
-    // Webpack's parser (acorn) can't object rest/spread
     options.include = [
-      ...(options.include || []),
+      ...options.include,
+      // XXX: Workaround for babel/babel#8019.
+      'transform-classes',
+      // Webpack's parser (acorn) can't handle object rest/spread
       'proposal-object-rest-spread',
     ];
 
