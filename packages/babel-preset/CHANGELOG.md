@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.3](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@4.1.2...@4c/babel-preset@4.1.3) (2019-02-11)
+
+
+### Bug Fixes
+
+* Only exclude transform-classes on web ([#47](https://github.com/4Catalyzer/javascript/issues/47)) ([435093f](https://github.com/4Catalyzer/javascript/commit/435093f))
+
+
+
+
+
 ## [4.1.2](https://github.com/4Catalyzer/javascript/tree/master/packages/babel-preset/compare/@4c/babel-preset@4.1.1...@4c/babel-preset@4.1.2) (2019-01-29)
 
 **Note:** Version bump only for package @4c/babel-preset

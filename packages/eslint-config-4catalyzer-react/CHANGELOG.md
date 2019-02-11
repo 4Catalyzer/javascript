@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.3](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@0.8.2...eslint-config-4catalyzer-react@0.8.3) (2019-02-11)
+
+**Note:** Version bump only for package eslint-config-4catalyzer-react
+
+
+
+
+
 ## [0.8.2](https://github.com/4Catalyzer/javascript/tree/master/packages/eslint-config-4catalyzer-react/compare/eslint-config-4catalyzer-react@0.8.1...eslint-config-4catalyzer-react@0.8.2) (2019-01-29)
 
 **Note:** Version bump only for package eslint-config-4catalyzer-react
