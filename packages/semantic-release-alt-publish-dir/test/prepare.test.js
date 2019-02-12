@@ -1,5 +1,5 @@
 const path = require('path');
-const fs = require('fs');
+const fs = require('fs-extra');
 const tempy = require('tempy');
 const plugin = require('../index');
 
@@ -15,6 +15,10 @@ describe('Prepare', () => {
     return dir;
   }
 
+  beforeEach(() => {
+    jest.resetModules();
+  });
+
   afterEach(() => {
     tmps.forEach(dir => fs.removeSync(dir));
     tmps = [];
@@ -29,9 +33,12 @@ describe('Prepare', () => {
       { nextRelease: { version: '1.0.1' }, logger },
     );
 
+    jest.resetModules();
+
     expect(require(`${dir}/lib/package.json`)).toMatchObject({
       version: '1.0.1',
     });
+
     expect(require(`${dir}/package.json`)).toMatchObject({
       version: '1.0.1',
     });
