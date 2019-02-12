@@ -1,0 +1,41 @@
+{
+  "name": "@4c/semantic-release-alt-publish-dir",
+  "version": "3.0.0",
+  "main": "index.js",
+  "author": "Jason Quense <monastic.panic@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "scripts": {
+    "test": "jest --runInBand",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4Catalyzer/javascript",
+    "directory": "packages/semantic-release-alt-publish-dir"
+  },
+  "description": "",
+  "jest": {
+    "roots": [
+      "<rootDir>/test"
+    ],
+    "watchPathIgnorePatterns": [
+      "fixtures"
+    ]
+  },
+  "dependencies": {
+    "@4c/file-butler": "^2.1.0",
+    "@semantic-release/npm": "^5.1.4"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
+    "jest": "^24.0.0",
+    "fs-extra": "^7.0.1",
+    "rimraf": "^2.6.2",
+    "semantic-release": "^15.5.0",
+    "tempy": "^0.2.1"
+  }
+}
