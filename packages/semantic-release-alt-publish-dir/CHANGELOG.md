@@ -1,3 +1,43 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 4.0.0 (2019-02-12)
+
+
+### Bug Fixes
+
+* fake out the npm plugin verify a bit better ([a11cae9](https://github.com/4Catalyzer/javascript/commit/a11cae9))
+* Rewrite correct "module" pkg.json entry instead of "modules" ([0c0850d](https://github.com/4Catalyzer/javascript/commit/0c0850d))
+* run on node 10 ([1b37ba7](https://github.com/4Catalyzer/javascript/commit/1b37ba7))
+* tests ([e0c826e](https://github.com/4Catalyzer/javascript/commit/e0c826e))
+* try catching copy error? ([5b4bce4](https://github.com/4Catalyzer/javascript/commit/5b4bce4))
+
+
+### chore
+
+* standardize release logic ([77e4219](https://github.com/4Catalyzer/javascript/commit/77e4219))
+
+
+### Features
+
+* Add verify conditions plugin ([fb192b2](https://github.com/4Catalyzer/javascript/commit/fb192b2))
+* Auto support pkgRoot option for npm ([38e8def](https://github.com/4Catalyzer/javascript/commit/38e8def))
+* Auto support pkgRoot option for npm (again) ([d0a011a](https://github.com/4Catalyzer/javascript/commit/d0a011a))
+* logic is skipped when pkgRoot is not not set ([dec9453](https://github.com/4Catalyzer/javascript/commit/dec9453))
+
+
+### BREAKING CHANGES
+
+* remove assets option
+* publishRoot was removed
+* pkgRoot does not default to anything
+
+
+
+
+
 <a name="3.0.0"></a>
 # [3.0.0](https://github.com/jquense/semantic-release-alt-publish-dir/compare/v2.1.3...v3.0.0) (2018-11-29)
 
