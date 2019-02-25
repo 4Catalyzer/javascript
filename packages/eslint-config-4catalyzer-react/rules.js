@@ -21,6 +21,8 @@ module.exports = {
       allowChildren: false,
     },
   ],
+  'react-hooks/rules-of-hooks': 'error',
+  'react-hooks/exhaustive-deps': 'warn',
   // It's clearer to use required even on props with defaults to indicate
   // non-nullability.
   'react/default-props-match-prop-types': [

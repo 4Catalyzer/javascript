@@ -2,6 +2,7 @@ module.exports = {
   // airbnb needs to take precedence; otherwise rules from airbnb-base via
   // 4catalyzer messes up some JSX linting.
   extends: ['4catalyzer', 'airbnb'],
+  plugins: ['react-hooks'],
   // We still want the 4catalyzer rules to take precedence over airbnb rules.
   rules: Object.assign(
     {},
