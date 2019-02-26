@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@0.8.3...eslint-config-4catalyzer-react@0.9.0) (2019-02-26)
+
+
+### Features
+
+* add hooks plugin ([#48](https://github.com/4Catalyzer/javascript/issues/48)) ([d73d5f9](https://github.com/4Catalyzer/javascript/commit/d73d5f9))
+
+
+
+
+
 ## [0.8.3](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@0.8.2...eslint-config-4catalyzer-react@0.8.3) (2019-02-11)
 
 **Note:** Version bump only for package eslint-config-4catalyzer-react

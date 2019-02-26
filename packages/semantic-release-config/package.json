@@ -1,6 +1,6 @@
 {
   "name": "@4c/semantic-release-config",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
     "semantic-release": "^15.0.0"
   },
   "dependencies": {
-    "@4c/semantic-release-alt-publish-dir": "^4.0.0",
+    "@4c/semantic-release-alt-publish-dir": "^4.0.1",
     "@semantic-release/changelog": "^3.0.1",
     "@semantic-release/git": "^7.0.5",
     "@semantic-release/github": "^5.2.5",

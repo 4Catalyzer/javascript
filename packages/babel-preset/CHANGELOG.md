@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.4](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@4.1.3...@4c/babel-preset@4.1.4) (2019-02-26)
+
+
+### Bug Fixes
+
+* Remove no-longer-necessary workaround ([#50](https://github.com/4Catalyzer/javascript/issues/50)) ([7b004b9](https://github.com/4Catalyzer/javascript/commit/7b004b9))
+
+
+
+
+
 ## [4.1.3](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@4.1.2...@4c/babel-preset@4.1.3) (2019-02-11)
 
 
