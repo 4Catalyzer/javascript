@@ -77,8 +77,6 @@ function preset(_, explicitOptions = {}) {
   if (target === 'web' || target === 'web-app') {
     options.include = [
       ...options.include,
-      // XXX: Workaround for babel/babel#8019.
-      'transform-classes',
       // Webpack's parser (acorn) can't handle object rest/spread
       'proposal-object-rest-spread',
     ];
