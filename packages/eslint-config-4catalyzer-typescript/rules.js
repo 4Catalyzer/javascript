@@ -7,13 +7,17 @@ try {
 }
 
 module.exports = {
-  // The tsc typechecking will take care of this 
-  // more thoroughly and the plugin doesn't 
+  // The tsc typechecking will take care of this
+  // more thoroughly and the plugin doesn't
   // understand type exports well
   'import/named': 'off',
   'import/no-unresolved': 'off',
   'import/default': 'off',
   'import/namespace': 'off',
+
+  // doesn't make sense with overloads
+  'no-dupe-class-members': 'off',
+
   '@typescript-eslint/adjacent-overload-signatures': 'error',
   '@typescript-eslint/ban-types': 'error',
   camelcase: 'off',
@@ -28,7 +32,6 @@ module.exports = {
   '@typescript-eslint/no-misused-new': 'error',
   '@typescript-eslint/no-namespace': 'error',
   '@typescript-eslint/no-object-literal-type-assertion': 'error',
-  '@typescript-eslint/no-parameter-properties': 'error',
   '@typescript-eslint/no-triple-slash-reference': 'error',
   'no-unused-vars': 'off',
   '@typescript-eslint/no-unused-vars': [
