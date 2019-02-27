@@ -30,6 +30,8 @@ module.exports = {
   '@typescript-eslint/no-object-literal-type-assertion': 'error',
   '@typescript-eslint/no-parameter-properties': 'error',
   '@typescript-eslint/no-triple-slash-reference': 'error',
+  'no-useless-constructor': 'off',
+  '@typescript-eslint/no-useless-constructor': 'error',
   'no-unused-vars': 'off',
   '@typescript-eslint/no-unused-vars': [
     'error',
