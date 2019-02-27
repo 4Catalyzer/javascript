@@ -28,6 +28,8 @@ module.exports = {
       rules: {
         'import/no-duplicates': 'off',
         'import/export': 'off',
+        // this isn't needed in a type def
+        'react/prefer-stateless-function': 'off',
       },
     },
   ],
