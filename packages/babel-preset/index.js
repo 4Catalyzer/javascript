@@ -1,8 +1,9 @@
-const envPreset = require('@babel/preset-env');
-const path = require('path');
-const reactPreset = require('@babel/preset-react');
-const pick = require('lodash/pick');
 const { loadConfig } = require('browserslist');
+const pick = require('lodash/pick');
+const path = require('path');
+const envPreset = require('@babel/preset-env');
+const reactPreset = require('@babel/preset-react');
+
 const intlPreset = require('./intl-preset');
 
 const presetEnvOptions = [
@@ -37,8 +38,9 @@ const defaultOptions = {
   runtime: false,
   corejs: false,
   debug: false,
+  targets: undefined, // Targets for @babel/preset-env.
   ignoreBrowserslistConfig: false,
-  browsers: defaultBrowsers,
+  configPath: '.',
   include: [],
   exclude: [
     // Seems to be added by default with minimum benefit.
@@ -53,21 +55,27 @@ function getTargets(
   if (env !== 'production') {
     return target === 'node' ? { node: 'current' } : { esmodules: true };
   }
-  // TODO: distinguish between app and libraries for node as well
+
+  // TODO: Distinguish between app and libraries for node as well.
   if (target === 'node') return { node: '10.0' };
+
   if (
     ignoreBrowserslistConfig ||
-    !loadConfig({ path: configPath || path.resolve('.') })
-  )
-    return { browsers: targets.browsers || defaultBrowsers };
+    !loadConfig({ path: path.resolve(configPath) })
+  ) {
+    return targets || defaultBrowsers;
+  }
 
-  // we don't run browserslist ourself b/c that would require doing a bunch
-  // of additional transforms to get the output in a format preset-env would accept
+  // We don't run browserslist ourself b/c that would require doing a bunch
+  // of additional transforms to get the output in a format preset-env would
+  // accept.
   return targets || undefined;
 }
 
-function preset(_, explicitOptions = {}) {
-  const env = _.env() || 'production'; // default to prod
+function preset(api, explicitOptions = {}) {
+  // FIXME: This is meant to default to production, but Babel actually defaults
+  //  us to development.
+  const env = api.env(); // || 'production';
 
   const options = Object.assign({}, defaultOptions, explicitOptions);
   const { target } = options;

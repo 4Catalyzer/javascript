@@ -25,17 +25,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.3.4",
-    "eslint": "^5.14.1",
-    "eslint-config-4catalyzer": "^0.7.2",
-    "eslint-config-prettier": "^4.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-jest": "^22.3.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "jest-cli": "^24.1.0"
-  },
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-proposal-export-default-from": "^7.0.0",
@@ -49,5 +38,16 @@
     "babel-plugin-react-intl": "^3.0.1",
     "browserslist": "^4.4.2",
     "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.3.4",
+    "eslint": "^5.14.1",
+    "eslint-config-4catalyzer": "^0.7.2",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jest": "^22.3.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest-cli": "^24.1.0"
   }
 }
