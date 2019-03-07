@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.5](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@4.1.4...@4c/babel-preset@4.1.5) (2019-03-07)
+
+
+### Bug Fixes
+
+* Fix targets handling in Babel preset ([#68](https://github.com/4Catalyzer/javascript/issues/68)) ([05dfb6a](https://github.com/4Catalyzer/javascript/commit/05dfb6a))
+
+
+
+
+
 ## [4.1.4](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@4.1.3...@4c/babel-preset@4.1.4) (2019-02-26)
 
 
