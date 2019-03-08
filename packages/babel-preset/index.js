@@ -33,6 +33,7 @@ const defaultOptions = {
   target: 'web', // 'web-app' | 'node'
   intl: false,
   loose: true,
+  development: false,
   modules: 'commonjs',
   shippedProposals: true,
   runtime: false,
@@ -48,11 +49,14 @@ const defaultOptions = {
   ],
 };
 
-function getTargets(
-  env,
-  { target, targets, configPath, ignoreBrowserslistConfig },
-) {
-  if (env !== 'production') {
+function getTargets({
+  development,
+  target,
+  targets,
+  configPath,
+  ignoreBrowserslistConfig,
+}) {
+  if (development) {
     return target === 'node' ? { node: 'current' } : { esmodules: true };
   }
 
@@ -73,22 +77,12 @@ function getTargets(
 }
 
 function preset(api, explicitOptions = {}) {
-  // FIXME: This is meant to default to production, but Babel actually defaults
-  //  us to development.
-  const env = api.env(); // || 'production';
-
   const options = Object.assign({}, defaultOptions, explicitOptions);
-  const { target } = options;
+  const { target, development } = options;
 
-  options.targets = getTargets(env, options);
+  options.targets = getTargets(options);
 
   if (target === 'web' || target === 'web-app') {
-    options.include = [
-      ...options.include,
-      // Webpack's parser (acorn) can't handle object rest/spread
-      'proposal-object-rest-spread',
-    ];
-
     // in a web app assume we are using webpack to handle modules
     // and we want the runtime
     if (target === 'web-app') {
@@ -103,11 +97,14 @@ function preset(api, explicitOptions = {}) {
 
   // unless the user explicitly set modules, change the default to
   // cjs in a TEST environment (jest)
-  if (env === 'test' && explicitOptions.modules == null) {
+  if (api.env() === 'test' && explicitOptions.modules == null) {
     options.modules = 'commonjs';
   }
 
-  const presets = [[envPreset, pick(options, presetEnvOptions)], reactPreset];
+  const presets = [
+    [envPreset, pick(options, presetEnvOptions)],
+    [reactPreset, { development }],
+  ];
 
   if (options.intl) {
     const intlOpts =
@@ -123,7 +120,7 @@ function preset(api, explicitOptions = {}) {
     }
     // production guard here so that the prefix warning occurs in development
     // as well as production
-    if (env === 'production') {
+    if (!development) {
       presets.push([intlPreset, intlOpts]);
     }
   }
