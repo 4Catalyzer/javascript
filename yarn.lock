@@ -5256,7 +5256,7 @@ jest-changed-files@^24.3.0:
     execa "^1.0.0"
     throat "^4.0.0"
 
-jest-cli@^24.1.0, jest-cli@^24.3.1:
+jest-cli@^24.1.0, jest-cli@^24.4.0:
   version "24.4.0"
   resolved "https://registry.yarnpkg.com/jest-cli/-/jest-cli-24.4.0.tgz#3297c2f817611b86ce1250fb5703a28bca201034"
   integrity sha512-QQOgpRpXoDqpxhEux/AGyI9XJzVOJ5ppz4Kb9MlA5PvzsyYD3DRk/uiyJgmvBhCCXvcA1CKEl/g/LH0kbKg10Q==
@@ -5590,12 +5590,12 @@ jest-worker@^24.4.0:
     supports-color "^6.1.0"
 
 jest@^24.0.0:
-  version "24.3.1"
-  resolved "https://registry.yarnpkg.com/jest/-/jest-24.3.1.tgz#81959de0d57b2df923510f4fafe266712d37dcca"
-  integrity sha512-SqZguEbYNcZ3r0KUUBN+IkKfyPS1VBbIUiK4Wrc0AiGUR52gJa0fmlWSOCL3x25908QrfoQwkVDu5jCsfXb2ig==
+  version "24.4.0"
+  resolved "https://registry.yarnpkg.com/jest/-/jest-24.4.0.tgz#688b71a2dadd41e26d0cfc04e1ddcacf30a1efbb"
+  integrity sha512-gAGfjvu8hHN0N6/aDyCBpncWWBcpY6wq69Msq/I6Xd763q/ZYBEMh0SKUomrViFoJ/dyistA6b4aJh8e+5QMyw==
   dependencies:
     import-local "^2.0.0"
-    jest-cli "^24.3.1"
+    jest-cli "^24.4.0"
 
 js-levenshtein@^1.1.3:
   version "1.1.6"
