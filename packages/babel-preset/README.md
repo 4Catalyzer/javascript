@@ -49,10 +49,7 @@ With options;
 
 In addition to the options below, all [preset-env](https://babeljs.io/docs/en/babel-preset-env#modules) are
 accepted to be overridden when the defaults aren't sufficient. By default the preset
-picks a set of known safe combinations tailored to the chosen `target`. In
-additional `production` vs `dev` enviroments are set automatically depending on
-the value of the `NODE_ENV` environment variable or explict `--env-name` option passed to
-_babel_ (not a preset option).
+picks a set of known safe combinations tailored to the chosen `target`.
 
 ### `target`
 
@@ -78,9 +75,16 @@ configure the `preset-env` targets.
 - defaults `modules` to `false`
 - defaults `runtime` to `true`
 
+### `development`
+
+`boolean`, defaults to `false`
+
+Uses a more development friendly set of `targets` as well as toggles development plugins for react ([see](https://babeljs.io/docs/en/babel-preset-react#development). When `true` the `current` version of node for node targets and
+`esmodules` for web targets. You can read more [here](https://babeljs.io/docs/en/babel-preset-env#targetsesmodules).
+
 ### `modules`
 
-`"commonjs' | false`, defaults to false except when `target` is `'web-app'` and `'commonjs'` otherwise
+`"commonjs' | false`, defaults to `false` except when `target` is `'web-app'` and `'commonjs'` otherwise
 
 The [preset-env](https://babeljs.io/docs/en/babel-preset-env#modules) modules option. controls the output module format
 
