@@ -11,16 +11,17 @@ module.exports = {
       aspects: ['noHref', 'invalidHref', 'preferButton'],
     },
   ],
-  'jsx-a11y/label-has-for': [
+  'jsx-a11y/label-has-associated-control': [
     'error',
     {
-      components: [],
-      required: {
-        some: ['nesting', 'id'],
-      },
-      allowChildren: false,
+      labelComponents: [],
+      labelAttributes: [],
+      controlComponents: [],
+      assert: 'either',
+      depth: 25,
     },
   ],
+  'jsx-a11y/label-has-for': 'off',
   'react-hooks/rules-of-hooks': 'error',
   'react-hooks/exhaustive-deps': 'warn',
   // It's clearer to use required even on props with defaults to indicate
