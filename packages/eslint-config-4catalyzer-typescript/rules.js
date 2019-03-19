@@ -2,20 +2,19 @@ let hasReact = true;
 try {
   // eslint-disable-next-line
   require('eslint-plugin-react');
-} catch (err) {
+} catch (e) {
   hasReact = false;
 }
 
 module.exports = {
-  // The tsc typechecking will take care of this
-  // more thoroughly and the plugin doesn't
-  // understand type exports well
+  // The tsc typechecking will take care of this more thoroughly and the plugin
+  // doesn't understand type exports well.
   'import/named': 'off',
   'import/no-unresolved': 'off',
   'import/default': 'off',
   'import/namespace': 'off',
 
-  // doesn't make sense with overloads
+  // Doesn't make sense with overloads.
   'no-dupe-class-members': 'off',
 
   '@typescript-eslint/adjacent-overload-signatures': 'error',
@@ -49,10 +48,8 @@ module.exports = {
   '@typescript-eslint/no-use-before-define': 'error',
   '@typescript-eslint/no-var-requires': 'error',
   '@typescript-eslint/prefer-namespace-keyword': 'error',
-  ...(hasReact
-    ? {
-        'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
-        'react/prop-types': 'off',
-      }
-    : undefined),
+  ...(hasReact && {
+    'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
+    'react/prop-types': 'off',
+  }),
 };
