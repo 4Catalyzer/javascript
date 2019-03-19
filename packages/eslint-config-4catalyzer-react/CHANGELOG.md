@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@0.9.0...eslint-config-4catalyzer-react@0.9.1) (2019-03-19)
+
+
+### Bug Fixes
+
+* Update jsx-a11y overrides ([#85](https://github.com/4Catalyzer/javascript/issues/85)) ([9aa515a](https://github.com/4Catalyzer/javascript/commit/9aa515a))
+
+
+
+
+
 # [0.9.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@0.8.3...eslint-config-4catalyzer-react@0.9.0) (2019-02-26)
 
 

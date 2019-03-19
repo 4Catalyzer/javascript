@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@4.1.5...@4c/babel-preset@5.0.0) (2019-03-19)
+
+
+### Features
+
+* change env handling to explicit development option ([#73](https://github.com/4Catalyzer/javascript/issues/73)) ([dab06cc](https://github.com/4Catalyzer/javascript/commit/dab06cc))
+
+
+### BREAKING CHANGES
+
+* env is not used to determine targets anymore
+
+
+
+
+
 ## [4.1.5](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@4.1.4...@4c/babel-preset@4.1.5) (2019-03-07)
 
 
