@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@0.11.0...eslint-config-4catalyzer-typescript@0.12.0) (2019-03-19)
+
+
+### Features
+
+* Add more convenience things in linting ([#87](https://github.com/4Catalyzer/javascript/issues/87)) ([a61258c](https://github.com/4Catalyzer/javascript/commit/a61258c))
+
+
+
+
+
 # [0.11.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@0.10.3...eslint-config-4catalyzer-typescript@0.11.0) (2019-03-04)
 
 

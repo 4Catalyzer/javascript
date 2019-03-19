@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-flow@0.8.0...eslint-config-4catalyzer-flow@0.8.1) (2019-03-19)
+
+**Note:** Version bump only for package eslint-config-4catalyzer-flow
+
+
+
+
+
 # [0.8.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-flow@0.7.2...eslint-config-4catalyzer-flow@0.8.0) (2019-02-26)
 
 

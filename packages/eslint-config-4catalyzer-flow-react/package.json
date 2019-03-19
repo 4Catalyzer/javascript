@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-4catalyzer-flow-react",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "4Catalyzer Flow React ESLint config",
   "files": [
     "*.js"
@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/4Catalyzer/javascript#readme",
   "dependencies": {
-    "eslint-config-4catalyzer-flow": "^0.8.0",
-    "eslint-config-4catalyzer-react": "^0.9.1"
+    "eslint-config-4catalyzer-flow": "^0.8.1",
+    "eslint-config-4catalyzer-react": "^0.9.2"
   },
   "peerDependencies": {
     "eslint": "^5.7.0",
