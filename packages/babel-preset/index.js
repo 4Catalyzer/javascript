@@ -8,7 +8,6 @@ const intlPreset = require('./intl-preset');
 
 const PRESET_ENV_OPTIONS = [
   'configPath',
-  'corejs',
   'debug',
   'exclude',
   'forceAllTransforms',
@@ -50,14 +49,12 @@ function addDefaultOptions(explicitOptions) {
     explicitOptions,
   );
 
-  if (options.useBuiltIns && !options.corejs) {
-    // Stay with core-js v2.x for now.
-    options.corejs = 2;
-  }
+  // By default, stay with core-js v2.x for now.
+  options.envCorejs = options.corejs || 2;
 
   if (!options.exclude) {
     options.exclude =
-      options.corejs === 2
+      options.envCorejs === 2
         ? [
             // Seems to be added by default with minimum benefit.
             'web.dom.iterable',
@@ -121,7 +118,13 @@ function preset(api, explicitOptions = {}) {
   }
 
   const presets = [
-    [envPreset, pick(options, PRESET_ENV_OPTIONS)],
+    [
+      envPreset,
+      {
+        ...pick(options, PRESET_ENV_OPTIONS),
+        corejs: options.envCorejs,
+      },
+    ],
     [reactPreset, { development }],
   ];
 
