@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.4](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@5.0.3...@4c/babel-preset@5.0.4) (2019-03-20)
+
+
+### Bug Fixes
+
+* Only set env-preset core-js when using built-ins ([#97](https://github.com/4Catalyzer/javascript/issues/97)) ([08d0b77](https://github.com/4Catalyzer/javascript/commit/08d0b77))
+
+
+
+
+
 ## [5.0.3](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@5.0.2...@4c/babel-preset@5.0.3) (2019-03-20)
 
 
