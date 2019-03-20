@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.3](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@0.9.2...eslint-config-4catalyzer-react@0.9.3) (2019-03-20)
+
+
+### Bug Fixes
+
+* Fix excludes for preset-env ([#95](https://github.com/4Catalyzer/javascript/issues/95)) ([c2dd0ea](https://github.com/4Catalyzer/javascript/commit/c2dd0ea))
+
+
+
+
+
 ## [0.9.2](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@0.9.1...eslint-config-4catalyzer-react@0.9.2) (2019-03-19)
 
 **Note:** Version bump only for package eslint-config-4catalyzer-react

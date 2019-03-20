@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-config@1.0.4...@4c/semantic-release-config@1.0.5) (2019-03-20)
+
+
+### Bug Fixes
+
+* Fix excludes for preset-env ([#95](https://github.com/4Catalyzer/javascript/issues/95)) ([c2dd0ea](https://github.com/4Catalyzer/javascript/commit/c2dd0ea))
+
+
+
+
+
 ## [1.0.4](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-config@1.0.3...@4c/semantic-release-config@1.0.4) (2019-02-26)
 
 **Note:** Version bump only for package @4c/semantic-release-config

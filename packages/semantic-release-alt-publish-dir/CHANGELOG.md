@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-alt-publish-dir@4.0.1...@4c/semantic-release-alt-publish-dir@4.0.2) (2019-03-20)
+
+
+### Bug Fixes
+
+* Fix excludes for preset-env ([#95](https://github.com/4Catalyzer/javascript/issues/95)) ([c2dd0ea](https://github.com/4Catalyzer/javascript/commit/c2dd0ea))
+
+
+
+
+
 ## [4.0.1](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-alt-publish-dir@4.0.0...@4c/semantic-release-alt-publish-dir@4.0.1) (2019-02-26)
 
 **Note:** Version bump only for package @4c/semantic-release-alt-publish-dir

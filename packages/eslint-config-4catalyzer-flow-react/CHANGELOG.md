@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.8](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-flow-react@0.7.7...eslint-config-4catalyzer-flow-react@0.7.8) (2019-03-20)
+
+
+### Bug Fixes
+
+* Fix excludes for preset-env ([#95](https://github.com/4Catalyzer/javascript/issues/95)) ([c2dd0ea](https://github.com/4Catalyzer/javascript/commit/c2dd0ea))
+
+
+
+
+
 ## [0.7.7](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-flow-react@0.7.6...eslint-config-4catalyzer-flow-react@0.7.7) (2019-03-19)
 
 **Note:** Version bump only for package eslint-config-4catalyzer-flow-react

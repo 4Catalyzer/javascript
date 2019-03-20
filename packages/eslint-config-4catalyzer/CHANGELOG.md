@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer@0.8.0...eslint-config-4catalyzer@0.8.1) (2019-03-20)
+
+
+### Bug Fixes
+
+* Fix excludes for preset-env ([#95](https://github.com/4Catalyzer/javascript/issues/95)) ([c2dd0ea](https://github.com/4Catalyzer/javascript/commit/c2dd0ea))
+
+
+
+
+
 # [0.8.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer@0.7.2...eslint-config-4catalyzer@0.8.0) (2019-03-19)
 
 

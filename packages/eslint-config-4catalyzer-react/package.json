@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-4catalyzer-react",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "4Catalyzer React ESLint config",
   "files": [
     "*.js"
@@ -28,7 +28,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "eslint-config-4catalyzer": "^0.8.0",
+    "eslint-config-4catalyzer": "^0.8.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-react-hooks": "^1.5.1"
   },
@@ -39,7 +39,7 @@
     "eslint-plugin-react": "^7.12.4"
   },
   "devDependencies": {
-    "@4c/jest-preset": "^1.4.1",
+    "@4c/jest-preset": "^1.4.2",
     "eslint": "^5.12.1",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.0",

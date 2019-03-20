@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.2](https://github.com/4Catalyzer/jest-preset/compare/@4c/jest-preset@1.4.1...@4c/jest-preset@1.4.2) (2019-03-20)
+
+
+### Bug Fixes
+
+* Fix excludes for preset-env ([#95](https://github.com/4Catalyzer/jest-preset/issues/95)) ([c2dd0ea](https://github.com/4Catalyzer/jest-preset/commit/c2dd0ea))
+
+
+
+
+
 ## [1.4.1](https://github.com/4Catalyzer/jest-preset/compare/@4c/jest-preset@1.4.0...@4c/jest-preset@1.4.1) (2019-02-26)
 
 **Note:** Version bump only for package @4c/jest-preset

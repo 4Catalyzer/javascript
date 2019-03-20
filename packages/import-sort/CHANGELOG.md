@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.3.4](https://github.com/4Catalyzer/javascript/compare/@4c/import-sort@4.3.3...@4c/import-sort@4.3.4) (2019-03-20)
+
+
+### Bug Fixes
+
+* Fix excludes for preset-env ([#95](https://github.com/4Catalyzer/javascript/issues/95)) ([c2dd0ea](https://github.com/4Catalyzer/javascript/commit/c2dd0ea))
+
+
+
+
+
 ## [4.3.3](https://github.com/4Catalyzer/javascript/compare/@4c/import-sort@4.3.2...@4c/import-sort@4.3.3) (2019-03-04)
 
 **Note:** Version bump only for package @4c/import-sort
