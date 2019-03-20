@@ -6,8 +6,9 @@ const reactPreset = require('@babel/preset-react');
 
 const intlPreset = require('./intl-preset');
 
-const presetEnvOptions = [
+const PRESET_ENV_OPTIONS = [
   'configPath',
+  'corejs',
   'debug',
   'exclude',
   'forceAllTransforms',
@@ -21,7 +22,7 @@ const presetEnvOptions = [
   'useBuiltIns',
 ];
 
-const defaultBrowsers = [
+const DEFAULT_BROWSERS = [
   'ie >= 11',
   'last 2 Edge versions',
   'last 4 Chrome versions',
@@ -29,25 +30,43 @@ const defaultBrowsers = [
   'last 2 Safari versions',
 ];
 
-const defaultOptions = {
-  target: 'web', // 'web-app' | 'node'
-  intl: false,
-  loose: true,
-  development: false,
-  modules: 'commonjs',
-  shippedProposals: true,
-  runtime: false,
-  corejs: false,
-  debug: false,
-  targets: undefined, // Targets for @babel/preset-env.
-  ignoreBrowserslistConfig: false,
-  configPath: '.',
-  include: [],
-  exclude: [
-    // Seems to be added by default with minimum benefit.
-    'web.dom.iterable',
-  ],
-};
+function addDefaultOptions(explicitOptions) {
+  const options = Object.assign(
+    {
+      target: 'web', // 'web-app' | 'node'
+      intl: false,
+      loose: true,
+      development: false,
+      modules: 'commonjs',
+      shippedProposals: true,
+      runtime: false,
+      corejs: false,
+      debug: false,
+      targets: undefined, // Targets for @babel/preset-env.
+      ignoreBrowserslistConfig: false,
+      configPath: '.',
+      include: [],
+    },
+    explicitOptions,
+  );
+
+  if (options.useBuiltIns && !options.corejs) {
+    // Stay with core-js v2.x for now.
+    options.corejs = 2;
+  }
+
+  if (!options.exclude) {
+    options.exclude =
+      options.corejs === 2
+        ? [
+            // Seems to be added by default with minimum benefit.
+            'web.dom.iterable',
+          ]
+        : [];
+  }
+
+  return options;
+}
 
 function getTargets({
   development,
@@ -67,7 +86,7 @@ function getTargets({
     ignoreBrowserslistConfig ||
     !loadConfig({ path: path.resolve(configPath) })
   ) {
-    return targets || defaultBrowsers;
+    return targets || DEFAULT_BROWSERS;
   }
 
   // We don't run browserslist ourself b/c that would require doing a bunch
@@ -77,7 +96,7 @@ function getTargets({
 }
 
 function preset(api, explicitOptions = {}) {
-  const options = Object.assign({}, defaultOptions, explicitOptions);
+  const options = addDefaultOptions(explicitOptions);
   const { target, development } = options;
 
   options.targets = getTargets(options);
@@ -102,7 +121,7 @@ function preset(api, explicitOptions = {}) {
   }
 
   const presets = [
-    [envPreset, pick(options, presetEnvOptions)],
+    [envPreset, pick(options, PRESET_ENV_OPTIONS)],
     [reactPreset, { development }],
   ];
 
