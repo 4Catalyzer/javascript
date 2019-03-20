@@ -13,9 +13,9 @@
   "author": "4Catalyzer",
   "license": "MIT",
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.0.0",
-    "eslint": "^5.7.0",
-    "eslint-plugin-import": "^2.14.0"
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "eslint": "^5.15.3",
+    "eslint-plugin-import": "^2.16.0"
   },
   "dependencies": {
     "@typescript-eslint/parser": "^1.4.2",
