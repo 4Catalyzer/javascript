@@ -49,8 +49,10 @@ function addDefaultOptions(explicitOptions) {
     explicitOptions,
   );
 
-  // By default, stay with core-js v2.x for now.
-  options.envCorejs = options.corejs || 2;
+  if (options.useBuiltIns) {
+    // By default, stay with core-js v2.x for now.
+    options.envCorejs = options.corejs || 2;
+  }
 
   if (!options.exclude) {
     options.exclude =
