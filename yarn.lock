@@ -7485,12 +7485,12 @@ pkg-dir@^3.0.0:
   dependencies:
     find-up "^3.0.0"
 
-pkg-up@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-2.0.0.tgz#c819ac728059a461cab1c3889a2be3c49a004d7f"
-  integrity sha1-yBmscoBZpGHKscOImivjxJoATX8=
+pkg-up@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-3.0.0.tgz#c0caa5c1066ffbd7a1f70ef6a70fe2a6ee6fe009"
+  integrity sha512-JZNq7+1YrLBearPABHE5XWK+wvUvUz71u/0ZEeUkmVXz5hBYpzTzsIApseSeYQuFyp2o+SaW90Z+uU15O6OZgA==
   dependencies:
-    find-up "^2.1.0"
+    find-up "^3.0.0"
 
 please-upgrade-node@^3.0.2, please-upgrade-node@^3.1.1:
   version "3.1.1"
