@@ -35,7 +35,7 @@ function resolveToWorkspaceSource(source, file, options) {
   let { sources, extensions = defaultExtensions } = options || {};
 
   if (!matchPath) {
-    const localRoot = pkgUp.sync(dirname(file));
+    const localRoot = pkgUp.sync({ cwd: dirname(file) });
     const root = localRoot && findWorkspaceRoot(dirname(localRoot));
 
     if (!root) {
