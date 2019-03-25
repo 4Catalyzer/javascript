@@ -7486,9 +7486,9 @@ pkg-dir@^3.0.0:
     find-up "^3.0.0"
 
 pkg-up@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-3.0.0.tgz#c0caa5c1066ffbd7a1f70ef6a70fe2a6ee6fe009"
-  integrity sha512-JZNq7+1YrLBearPABHE5XWK+wvUvUz71u/0ZEeUkmVXz5hBYpzTzsIApseSeYQuFyp2o+SaW90Z+uU15O6OZgA==
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-3.0.1.tgz#91ea5597c5585fe438d32689ac8943f1b5f17900"
+  integrity sha512-M8N4levGL4P4tHD+l9/glzZuRJqDhwnL5hAMoz7dIpgHhw0NmOjrcvF2plRCy/c7hkylftdehtnJZNkkBeKpzQ==
   dependencies:
     find-up "^3.0.0"
 
