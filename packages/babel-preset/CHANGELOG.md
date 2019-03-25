@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@5.0.4...@4c/babel-preset@5.1.0) (2019-03-25)
+
+
+### Features
+
+* Don't require PREFIX ([#105](https://github.com/4Catalyzer/javascript/issues/105)) ([ec381c1](https://github.com/4Catalyzer/javascript/commit/ec381c1))
+
+
+
+
+
 ## [5.0.4](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@5.0.3...@4c/babel-preset@5.0.4) (2019-03-20)
 
 
