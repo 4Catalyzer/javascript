@@ -139,11 +139,6 @@ function preset(api, explicitOptions = {}) {
             messagesDir: 'build/messages',
           };
 
-    if (!intlOpts.prefix) {
-      throw new Error('Must include a `prefix` option when using i18n');
-    }
-    // production guard here so that the prefix warning occurs in development
-    // as well as production
     if (!development) {
       presets.push([intlPreset, intlOpts]);
     }

@@ -1,10 +1,13 @@
+const { dirname } = require('path');
+const readPkgUp = require('read-pkg-up');
+
 const DEFINE_MESSAGES = 'defineMessages';
 
 const COMPONENT_NAMES = ['FormattedMessage', 'FormattedHTMLMessage'];
 
 function getPrefix(state) {
   let { prefix } = state.opts;
-  if (!prefix.endsWith(':')) prefix = `${prefix}:`;
+  if (prefix && !prefix.endsWith(':')) prefix = `${prefix}:`;
   return prefix;
 }
 
@@ -15,14 +18,42 @@ function referencesImport(path) {
   );
 }
 
+const PREFIXES = new Map();
+
+const PREFIX = Symbol('namespace prefix');
+
+function getPrefixFromPackage(filename) {
+  for (const [root, prefix] of PREFIXES.entries()) {
+    if (filename.startsWith(root)) {
+      return prefix;
+    }
+  }
+
+  const { path, pkg } = readPkgUp.sync({ cwd: dirname(filename) }) || {};
+  console.log(path, filename);
+
+  if (!path) return '';
+  const prefix = `${pkg.name}:`;
+  PREFIXES.set(dirname(path), prefix);
+  return '';
+}
+
 module.exports = function namespacePlugin({ types: t }) {
   return {
+    pre(file) {
+      const prefix =
+        getPrefix(this) || getPrefixFromPackage(file.opts.filename);
+
+      // console.log(prefix, getPrefixFromPackage(file.opts.filename))
+
+      file.set(PREFIX, prefix);
+    },
     visitor: {
       JSXOpeningElement(path, state) {
         const name = path.get('name');
         if (!referencesImport(name)) return;
 
-        const prefix = getPrefix(state);
+        const prefix = state.file.get(PREFIX);
 
         const idAttr = path
           .get('attributes')
@@ -44,7 +75,7 @@ module.exports = function namespacePlugin({ types: t }) {
           return;
         }
 
-        const prefix = getPrefix(state);
+        const prefix = state.file.get(PREFIX);
 
         function processMessageObject(messageObj) {
           if (!messageObj || !messageObj.isObjectExpression()) {
