@@ -35,10 +35,6 @@ describe('Prepare', () => {
 
     jest.resetModules();
 
-    expect(require(`${dir}/lib/package.json`)).toMatchObject({
-      version: '1.0.1',
-    });
-
     expect(require(`${dir}/package.json`)).toMatchObject({
       version: '1.0.1',
     });
@@ -47,7 +43,9 @@ describe('Prepare', () => {
 
     const libPkg = require(`${dir}/lib/package.json`);
 
-    expect(libPkg.version).toEqual('1.0.1');
+    // Don't bump the version here; @semantic-release/npm will take care of
+    // that for us.
+    expect(libPkg.version).toEqual('1.0.0');
     expect(libPkg.devDependencies).not.toBeDefined();
     // expect(libPkg.release).not.toBeDefined()
 
