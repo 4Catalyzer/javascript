@@ -38,18 +38,16 @@ async function prepare(
     return;
   }
 
+  logger.log(`Building alternative root package.json`);
+  await createAltPublishDir({ outDir: pkgRoot });
+
   const pkgPath = join(cwd, './package.json');
   // eslint-disable-next-line import/no-dynamic-require
   const pkg = require(pkgPath);
 
-  logger.log('Updating root package.json file to version %s', version);
-
   // update the root package since @semantic-release/npm won't;
+  logger.log('Updating root package.json file to version %s', version);
   await fs.writeFile(pkgPath, JSON.stringify({ ...pkg, version }, null, 2));
-
-  logger.log(`Building alternative root package.json`);
-
-  await createAltPublishDir({ outDir: pkgRoot });
 }
 
 module.exports = { prepare, verifyConditions };
