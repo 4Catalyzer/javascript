@@ -7540,9 +7540,9 @@ pkg-dir@^3.0.0:
     find-up "^3.0.0"
 
 pkg-up@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-3.0.1.tgz#91ea5597c5585fe438d32689ac8943f1b5f17900"
-  integrity sha512-M8N4levGL4P4tHD+l9/glzZuRJqDhwnL5hAMoz7dIpgHhw0NmOjrcvF2plRCy/c7hkylftdehtnJZNkkBeKpzQ==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-3.1.0.tgz#100ec235cc150e4fd42519412596a28512a0def5"
+  integrity sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==
   dependencies:
     find-up "^3.0.0"
 
