@@ -36,6 +36,6 @@
     "jest": "^24.5.0",
     "rimraf": "^2.6.3",
     "semantic-release": "^15.13.3",
-    "tempy": "^0.2.1"
+    "tempy": "^0.3.0"
   }
 }
