@@ -34,7 +34,7 @@ module.exports = {
   '@typescript-eslint/no-triple-slash-reference': 'error',
   'no-useless-constructor': 'off',
   // allow the TS auto assign syntax
-  'no-empty-function': ["error", { "allow": ["constructors"] }]
+  'no-empty-function': ["error", { "allow": ["constructors"] }],
   '@typescript-eslint/no-useless-constructor': 'error',
   'no-unused-vars': 'off',
   '@typescript-eslint/no-unused-vars': [
