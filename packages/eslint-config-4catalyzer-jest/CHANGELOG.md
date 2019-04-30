@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-jest@1.2.1...eslint-config-4catalyzer-jest@1.3.0) (2019-04-30)
+
+
+### Features
+
+* add __tests__ folders to jest config ([#154](https://github.com/4Catalyzer/javascript/issues/154)) ([a82503f](https://github.com/4Catalyzer/javascript/commit/a82503f))
+
+
+
+
+
 ## [1.2.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-jest@1.2.0...eslint-config-4catalyzer-jest@1.2.1) (2019-03-20)
 
 

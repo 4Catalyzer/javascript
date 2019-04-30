@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.2](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@0.12.1...eslint-config-4catalyzer-typescript@0.12.2) (2019-04-30)
+
+
+### Bug Fixes
+
+* allow TS constructor property syntax ([#139](https://github.com/4Catalyzer/javascript/issues/139)) ([0848d38](https://github.com/4Catalyzer/javascript/commit/0848d38))
+
+
+
+
+
 ## [0.12.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@0.12.0...eslint-config-4catalyzer-typescript@0.12.1) (2019-03-20)
 
 
