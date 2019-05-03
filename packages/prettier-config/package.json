@@ -1,0 +1,15 @@
+{
+  "name": "@4c/prettier-config",
+  "version": "1.0.0",
+  "main": "index.json",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4Catalyzer/javascript",
+    "directory": "packages/prettier-config"
+  },
+  "author": "4Catalyzer",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
