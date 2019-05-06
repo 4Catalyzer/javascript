@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@5.1.0...@4c/babel-preset@5.2.0) (2019-05-06)
+
+
+### Features
+
+* add prettier-config ([#158](https://github.com/4Catalyzer/javascript/issues/158)) ([17071b7](https://github.com/4Catalyzer/javascript/commit/17071b7))
+
+
+
+
+
 # [5.1.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@5.0.4...@4c/babel-preset@5.1.0) (2019-03-25)
 
 

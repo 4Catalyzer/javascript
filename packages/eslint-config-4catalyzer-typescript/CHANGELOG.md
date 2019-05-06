@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.3](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@0.12.2...eslint-config-4catalyzer-typescript@0.12.3) (2019-05-06)
+
+
+### Bug Fixes
+
+* Allow other empty functions again ([#156](https://github.com/4Catalyzer/javascript/issues/156)) ([626969a](https://github.com/4Catalyzer/javascript/commit/626969a))
+
+
+
+
+
 ## [0.12.2](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@0.12.1...eslint-config-4catalyzer-typescript@0.12.2) (2019-04-30)
 
 
