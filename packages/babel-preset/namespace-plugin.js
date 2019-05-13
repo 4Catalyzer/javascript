@@ -29,12 +29,12 @@ function getPrefixFromPackage(filename) {
     }
   }
 
-  const { path, pkg } = readPkgUp.sync({ cwd: dirname(filename) }) || {};
-  console.log(path, filename);
+  const result = readPkgUp.sync({ cwd: dirname(filename) }) || {};
+  console.log(result.path, filename);
 
-  if (!path) return '';
-  const prefix = `${pkg.name}:`;
-  PREFIXES.set(dirname(path), prefix);
+  if (!result.path) return '';
+  const prefix = `${result.package.name}:`;
+  PREFIXES.set(dirname(result.path), prefix);
   return '';
 }
 
