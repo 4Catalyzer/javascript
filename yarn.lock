@@ -2308,9 +2308,9 @@ babel-plugin-jest-hoist@^24.6.0:
     "@types/babel__traverse" "^7.0.6"
 
 babel-plugin-react-intl@^3.0.1:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-react-intl/-/babel-plugin-react-intl-3.1.0.tgz#54206251482bf9fe8e5ae5f09421ff829a595f5c"
-  integrity sha512-xsW98dx2XUIdkCZmDjpM2znzQLsTAFiHzaWNoWRlmGsYduwWAFE0x24XXMmKLaP0XxgqXuLJcbPNkXPOGugNIQ==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-react-intl/-/babel-plugin-react-intl-3.1.1.tgz#efa400dbba14b38361f70c2b11bb2eda6c206f95"
+  integrity sha512-Ih5pzsd7AQ+iT1GhxDdTpXtdMgO2ZvyjBcLIfrDK19D0AswtCEgpnuZd+Wue2gD9N8YfmVBJszONpPwR3bcYOg==
   dependencies:
     fs-extra "^8.0.1"
     intl-messageformat-parser "^1.6.3"
