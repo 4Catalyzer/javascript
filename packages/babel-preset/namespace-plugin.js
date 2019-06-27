@@ -30,7 +30,6 @@ function getPrefixFromPackage(filename) {
   }
 
   const { path, pkg } = readPkgUp.sync({ cwd: dirname(filename) }) || {};
-  console.log(path, filename);
 
   if (!path) return '';
   const prefix = `${pkg.name}:`;
