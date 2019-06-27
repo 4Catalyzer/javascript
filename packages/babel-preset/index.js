@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const { loadConfig } = require('browserslist');
 const pick = require('lodash/pick');
 const path = require('path');
@@ -40,6 +41,7 @@ function addDefaultOptions(explicitOptions) {
       shippedProposals: true,
       runtime: false,
       corejs: false,
+      envCorejs: false,
       debug: false,
       targets: undefined, // Targets for @babel/preset-env.
       ignoreBrowserslistConfig: false,
@@ -50,8 +52,15 @@ function addDefaultOptions(explicitOptions) {
   );
 
   if (options.useBuiltIns) {
-    // By default, stay with core-js v2.x for now.
-    options.envCorejs = options.corejs || 2;
+    options.envCorejs = options.envCorejs || options.corejs || 3;
+  }
+
+  if (options.corejs && options.envCorejs !== options.corejs) {
+    console.warn(
+      '@4c/babel-preset: You have a mismatch between requested core-js versions.\n' +
+        `preset-env requests v${options.envCorejs} while runtime is v${options.corejs}. ` +
+        'Make sure both `options.corejs` is empty or matches envCorejs',
+    );
   }
 
   if (!options.exclude) {
