@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [6.0.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@5.2.0...@4c/babel-preset@6.0.0) (2019-06-27)
+
+
+### Features
+
+* split corejs options for runtime and env ([#238](https://github.com/4Catalyzer/javascript/issues/238)) ([111e305](https://github.com/4Catalyzer/javascript/commit/111e305))
+
+
+### BREAKING CHANGES
+
+* corejs has been split into envCorejs and corejs, generally only use the former
+
+
+
+
+
 # [5.2.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@5.1.0...@4c/babel-preset@5.2.0) (2019-05-06)
 
 
