@@ -1847,9 +1847,9 @@
   integrity sha512-9Tj/qn+y2j+sjCI3Jd+qseGtHjOAeg7dU2/lVcqIQ9TV3QDaDXDYXcoOHU+7o2Hwh8L8ymL4gfuO7KxDs3q2zg==
 
 "@semantic-release/git@^7.0.8":
-  version "7.0.15"
-  resolved "https://registry.yarnpkg.com/@semantic-release/git/-/git-7.0.15.tgz#7a6d2c728367a3db7810c84adfe0e673c0d77335"
-  integrity sha512-fH0KWSLjEqNu6bUanYPtS+cAlQtf9anM9Q+2uEjfrXYuxegQ8e/CYTWXm0DfpGN3GA/dUuxKogFKOtVaM4UJvw==
+  version "7.0.16"
+  resolved "https://registry.yarnpkg.com/@semantic-release/git/-/git-7.0.16.tgz#19921d2fdc75d712ae1706330dba8ebec8ced52d"
+  integrity sha512-Bw/npxTVTeFPnQZmuczWRGRdxqJpWOOFZENx38ykyp42InwDFm4n72bfcCwmP/J4WqkPmMR4p+IracWruz/RUw==
   dependencies:
     "@semantic-release/error" "^2.1.0"
     aggregate-error "^3.0.0"
@@ -1857,7 +1857,7 @@
     dir-glob "^3.0.0"
     execa "^1.0.0"
     fs-extra "^8.0.0"
-    globby "^9.0.0"
+    globby "^10.0.0"
     lodash "^4.17.4"
     micromatch "^4.0.0"
     p-reduce "^2.0.0"
