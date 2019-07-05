@@ -41,7 +41,7 @@ function addDefaultOptions(explicitOptions) {
       shippedProposals: true,
       runtime: false,
       corejs: false,
-      envCorejs: false,
+      envCorejs: null,
       debug: false,
       targets: undefined, // Targets for @babel/preset-env.
       ignoreBrowserslistConfig: false,
@@ -51,6 +51,10 @@ function addDefaultOptions(explicitOptions) {
     explicitOptions,
   );
 
+  if (options.envCorejs === null) {
+    options.envCorejs = options.corejs;
+  }
+
   if (options.useBuiltIns) {
     options.envCorejs = options.envCorejs || options.corejs || 3;
   }
@@ -58,8 +62,10 @@ function addDefaultOptions(explicitOptions) {
   if (options.corejs && options.envCorejs !== options.corejs) {
     console.warn(
       '@4c/babel-preset: You have a mismatch between requested core-js versions.\n' +
-        `preset-env requests v${options.envCorejs} while runtime is v${options.corejs}. ` +
-        'Make sure both `options.corejs` is empty or matches envCorejs',
+        `preset-env requests v${options.envCorejs} while runtime is v${
+          options.corejs
+        }. ` +
+        'Make sure `options.corejs` is empty or matches `options.envCorejs`.',
     );
   }
 
