@@ -2434,15 +2434,15 @@ babel-plugin-jest-hoist@^24.6.0:
     "@types/babel__traverse" "^7.0.6"
 
 babel-plugin-react-intl@^3.0.1:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-react-intl/-/babel-plugin-react-intl-3.5.0.tgz#ad3d347ebf8dc554cd06d70da113d5e33815cbbe"
-  integrity sha512-PMNCjrMEJPGHPk98Bj61bAvSFfvrxMO18+FeE2tZkrGX3ET1cbDg1B9Q6Ymfi2oNRD3h7U5p4p2abd1aCHTIyQ==
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-react-intl/-/babel-plugin-react-intl-3.5.1.tgz#57d22cae27238b4020403b13de9e763267937648"
+  integrity sha512-1jlEJCSmLaJM4tjIKpu64UZ833COCHmwR77bFJDOye+zlwf80uR1b8p41l4tClx1QsrfI+qV6w/5AiPYQgaMUQ==
   dependencies:
     "@babel/core" "^7.4.5"
     "@babel/helper-plugin-utils" "^7.0.0"
     "@types/babel__core" "^7.1.2"
     fs-extra "^8.0.1"
-    intl-messageformat-parser "^1.8.0"
+    intl-messageformat-parser "^1.8.1"
 
 babel-preset-jest@^24.6.0:
   version "24.6.0"
@@ -5004,10 +5004,10 @@ inquirer@^6.2.0, inquirer@^6.2.2:
     strip-ansi "^5.0.0"
     through "^2.3.6"
 
-intl-messageformat-parser@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-1.8.0.tgz#6a87d232003e73819bbc6a41777b558f175168ce"
-  integrity sha512-Mb4oWtUbMKeri20kDmhGwtE54gjV2gtKWZSEdKo3dztxhCwrZdMWorzSzq6n59DX2CjZJrGtsSDVbrmhubsBpA==
+intl-messageformat-parser@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/intl-messageformat-parser/-/intl-messageformat-parser-1.8.1.tgz#0eb14c5618333be4c95c409457b66c8c33ddcc01"
+  integrity sha512-IMSCKVf0USrM/959vj3xac7s8f87sc+80Y/ipBzdKy4ifBv5Gsj2tZ41EAaURVg01QU71fYr77uA8Meh6kELbg==
 
 into-stream@^4.0.0:
   version "4.0.0"
