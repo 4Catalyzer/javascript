@@ -9,6 +9,7 @@ module.exports = {
       ignorePattern: ' // eslint-disable-line ',
     },
   ],
+  'no-await-in-loop': 'off',
   'no-continue': 'off',
   'no-mixed-operators': [
     'error',
