@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-jest@1.3.0...eslint-config-4catalyzer-jest@1.4.0) (2019-08-02)
+
+
+### Features
+
+* Add override for jest mocks ([#317](https://github.com/4Catalyzer/javascript/issues/317)) ([8d25c4b](https://github.com/4Catalyzer/javascript/commit/8d25c4b))
+
+
+
+
+
 # [1.3.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-jest@1.2.1...eslint-config-4catalyzer-jest@1.3.0) (2019-04-30)
 
 

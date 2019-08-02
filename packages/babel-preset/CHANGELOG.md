@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.2](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@6.0.1...@4c/babel-preset@6.0.2) (2019-08-02)
+
+
+### Bug Fixes
+
+* Default envCorejs from corejs ([#262](https://github.com/4Catalyzer/javascript/issues/262)) ([1faa93d](https://github.com/4Catalyzer/javascript/commit/1faa93d))
+
+
+
+
+
 ## [6.0.1](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@6.0.0...@4c/babel-preset@6.0.1) (2019-06-27)
 
 
