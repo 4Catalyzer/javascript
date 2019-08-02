@@ -29,12 +29,12 @@ function getPrefixFromPackage(filename) {
     }
   }
 
-  const { path, pkg } = readPkgUp.sync({ cwd: dirname(filename) }) || {};
+  const pkgUpResult = readPkgUp.sync({ cwd: dirname(filename) });
+  if (!pkgUpResult) return '';
 
-  if (!path) return '';
-  const prefix = `${pkg.name}:`;
-  PREFIXES.set(dirname(path), prefix);
-  return '';
+  const prefix = `${pkgUpResult.package.name}:`;
+  PREFIXES.set(dirname(pkgUpResult.path), prefix);
+  return prefix;
 }
 
 module.exports = function namespacePlugin({ types: t }) {
@@ -42,8 +42,6 @@ module.exports = function namespacePlugin({ types: t }) {
     pre(file) {
       const prefix =
         getPrefix(this) || getPrefixFromPackage(file.opts.filename);
-
-      // console.log(prefix, getPrefixFromPackage(file.opts.filename))
 
       file.set(PREFIX, prefix);
     },
