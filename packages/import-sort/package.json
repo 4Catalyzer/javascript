@@ -17,11 +17,11 @@
     "access": "public"
   },
   "dependencies": {
-    "@babel/core": "^7.4.0",
-    "@babel/traverse": "^7.4.0",
-    "@babel/types": "^7.4.0",
+    "@babel/core": "^7.5.5",
+    "@babel/traverse": "^7.5.5",
+    "@babel/types": "^7.5.5",
     "find-line-column": "^0.5.2",
-    "typescript": "^3.3.4000"
+    "typescript": "^3.5.3"
   },
   "devDependencies": {
     "import-sort": "^6.0.0"
