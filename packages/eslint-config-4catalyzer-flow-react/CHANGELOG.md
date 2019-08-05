@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.9](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-flow-react@0.7.8...eslint-config-4catalyzer-flow-react@0.7.9) (2019-08-05)
+
+
+### Bug Fixes
+
+* Update dependencies ([#318](https://github.com/4Catalyzer/javascript/issues/318)) ([cb09966](https://github.com/4Catalyzer/javascript/commit/cb09966))
+
+
+
+
+
 ## [0.7.8](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-flow-react@0.7.7...eslint-config-4catalyzer-flow-react@0.7.8) (2019-03-20)
 
 

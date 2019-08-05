@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://github.com/4Catalyzer/javascript/compare/eslint-import-resolver-workspaces@1.0.7...eslint-import-resolver-workspaces@1.0.8) (2019-08-05)
+
+
+### Bug Fixes
+
+* Update dependencies ([#318](https://github.com/4Catalyzer/javascript/issues/318)) ([cb09966](https://github.com/4Catalyzer/javascript/commit/cb09966))
+
+
+
+
+
 ## [1.0.7](https://github.com/4Catalyzer/javascript/compare/eslint-import-resolver-workspaces@1.0.6...eslint-import-resolver-workspaces@1.0.7) (2019-03-25)
 
 
