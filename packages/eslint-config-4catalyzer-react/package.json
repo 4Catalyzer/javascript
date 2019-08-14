@@ -29,20 +29,21 @@
   },
   "dependencies": {
     "eslint-config-4catalyzer": "^0.8.2",
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-plugin-react-hooks": "^1.6.1"
+    "eslint-config-airbnb": "^18.0.1"
   },
   "peerDependencies": {
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3"
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0"
   },
   "devDependencies": {
     "@4c/jest-preset": "^1.4.3",
-    "eslint": "^5.16.0",
+    "eslint": "^6.1.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "jest": "^24.8.0",
     "lodash": "^4.17.15"
   }

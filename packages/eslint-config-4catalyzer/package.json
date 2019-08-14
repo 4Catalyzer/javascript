@@ -22,7 +22,7 @@
   "homepage": "https://github.com/4Catalyzer/javascript#readme",
   "dependencies": {
     "babel-eslint": "^10.0.2",
-    "eslint-config-airbnb-base": "^13.2.0"
+    "eslint-config-airbnb-base": "^14.0.0"
   },
   "peerDependencies": {
     "eslint-plugin-import": "^2.18.2"

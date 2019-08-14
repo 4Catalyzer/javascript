@@ -10,9 +10,9 @@
   "author": "4Catalyzer",
   "license": "MIT",
   "peerDependencies": {
-    "eslint-plugin-jest": "^22.14.1"
+    "eslint-plugin-jest": "^22.15.1"
   },
   "devDependencies": {
-    "eslint-plugin-jest": "^22.14.1"
+    "eslint-plugin-jest": "^22.15.1"
   }
 }

@@ -1,5 +1,3 @@
-const restirctedGlobals = require('./restrictedGlobals');
-
 module.exports = {
   'class-methods-use-this': 'off',
   'max-len': [
@@ -23,7 +21,6 @@ module.exports = {
     },
   ],
   'no-plusplus': 'off',
-  'no-restricted-globals': ['error'].concat(restirctedGlobals),
   'no-restricted-syntax': [
     'error',
     'ForInStatement',
