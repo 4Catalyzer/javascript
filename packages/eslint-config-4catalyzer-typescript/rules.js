@@ -14,42 +14,22 @@ module.exports = {
   'import/default': 'off',
   'import/namespace': 'off',
 
-  // Doesn't make sense with overloads.
-  'no-dupe-class-members': 'off',
-
-  '@typescript-eslint/adjacent-overload-signatures': 'error',
-  '@typescript-eslint/ban-types': 'error',
-  camelcase: 'off',
-  '@typescript-eslint/camelcase': 'error',
-  '@typescript-eslint/class-name-casing': 'error',
+  // Allow explicit use.
+  '@typescript-eslint/ban-ts-ignore': 'off',
   '@typescript-eslint/consistent-type-assertions': [
     'error',
     {
       assertionStyle: 'as',
+      // Be stricter than the base rule.
       objectLiteralTypeAssertions: 'never',
     },
   ],
-  '@typescript-eslint/interface-name-prefix': 'error',
-  'no-array-constructor': 'off',
-  '@typescript-eslint/no-array-constructor': 'error',
-  '@typescript-eslint/no-empty-interface': 'error',
-  '@typescript-eslint/no-inferrable-types': 'error',
-  '@typescript-eslint/no-misused-new': 'error',
-  '@typescript-eslint/no-namespace': 'error',
-  'no-useless-constructor': 'off',
-  'no-empty-function': [
-    'error',
-    {
-      allow: [
-        'arrowFunctions',
-        'constructors', // Allow the TS auto assign syntax.
-        'functions',
-        'methods',
-      ],
-    },
-  ],
-  '@typescript-eslint/no-useless-constructor': 'error',
-  'no-unused-vars': 'off',
+  // This seems too verbose.
+  '@typescript-eslint/explicit-function-return-type': 'off',
+  // Allow explicit use.
+  '@typescript-eslint/no-explicit-any': 'off',
+  // Allow explicit use.
+  '@typescript-eslint/no-non-null-assertion': 'off',
   '@typescript-eslint/no-unused-vars': [
     'error',
     {
@@ -60,9 +40,9 @@ module.exports = {
       argsIgnorePattern: '^_',
     },
   ],
-  '@typescript-eslint/no-use-before-define': 'error',
-  '@typescript-eslint/no-var-requires': 'error',
-  '@typescript-eslint/prefer-namespace-keyword': 'error',
+  'no-useless-constructor': 'off',
+  '@typescript-eslint/no-useless-constructor': 'error',
+  // Don't allow any sort of triple slash use here.
   '@typescript-eslint/triple-slash-reference': [
     'error',
     {
