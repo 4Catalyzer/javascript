@@ -12,6 +12,7 @@ module.exports = {
     'error',
     {
       groups: [
+        // Allow arithmetic operator grouping given well-known precedence.
         ['&', '|', '^', '~', '<<', '>>', '>>>'],
         ['==', '!=', '===', '!==', '>', '>=', '<', '<='],
         ['&&', '||'],

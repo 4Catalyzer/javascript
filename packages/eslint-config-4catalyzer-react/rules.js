@@ -43,14 +43,15 @@ module.exports = {
     {
       order: [
         'static-methods',
-        'type-annotations',
+        'type-annotations', // This is added.
         'instance-variables',
         'lifecycle',
         '/^(on|handle).+$/',
         'getters',
         'setters',
         '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
-        'instance-methods',
+        // Don't require grouping methods and arrows function properties.
+        // 'instance-methods',
         'everything-else',
         'rendering',
       ],
