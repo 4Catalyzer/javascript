@@ -1,16 +1,6 @@
 module.exports = {
   // We put all styling imports at the end.
   'import/first': 'off',
-  // Allow <Link to>.
-  // TODO: Remove this when airbnb includes this in next release.
-  'jsx-a11y/anchor-is-valid': [
-    'error',
-    {
-      components: ['Link'],
-      specialLink: ['to'],
-      aspects: ['noHref', 'invalidHref', 'preferButton'],
-    },
-  ],
   'jsx-a11y/label-has-associated-control': [
     'error',
     {
@@ -21,9 +11,6 @@ module.exports = {
       depth: 25,
     },
   ],
-  'jsx-a11y/label-has-for': 'off',
-  'react-hooks/rules-of-hooks': 'error',
-  'react-hooks/exhaustive-deps': 'warn',
   // It's clearer to use required even on props with defaults to indicate
   // non-nullability.
   'react/default-props-match-prop-types': [
@@ -45,6 +32,8 @@ module.exports = {
       extensions: ['.js'],
     },
   ],
+  // This would be nice to have but it's such a pain.
+  'react/jsx-props-no-spreading': 'off',
   // Taking undefined as implicit default is more consistent with the rest of
   // JavaScript.
   'react/require-default-props': 'off',
@@ -54,13 +43,15 @@ module.exports = {
     {
       order: [
         'static-methods',
-        'type-annotations',
+        'type-annotations', // This is added.
         'instance-variables',
         'lifecycle',
         '/^(on|handle).+$/',
         'getters',
         'setters',
         '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
+        // Don't require grouping methods and arrows function properties.
+        // 'instance-methods',
         'everything-else',
         'rendering',
       ],
@@ -78,16 +69,26 @@ module.exports = {
           'getInitialState',
           'state',
           'getChildContext',
+          'getDerivedStateFromProps',
           'componentWillMount',
+          'UNSAFE_componentWillMount',
           'componentDidMount',
           'componentWillReceiveProps',
+          'UNSAFE_componentWillReceiveProps',
           'shouldComponentUpdate',
           'componentWillUpdate',
+          'UNSAFE_componentWillUpdate',
+          'getSnapshotBeforeUpdate',
           'componentDidUpdate',
+          'componentDidCatch',
           'componentWillUnmount',
+          'componentDidCatch',
         ],
         rendering: ['/^render.+$/', 'render'],
       },
     },
   ],
+  // This seems too fiddly to enforce. Plus the airbnb rule entry has a comment
+  // saying that they'll eventually flip the value anyway.
+  'react/state-in-constructor': 'off',
 };

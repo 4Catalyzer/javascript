@@ -34,8 +34,8 @@
     "@semantic-release/git": "^7.0.16",
     "fs-extra": "^8.1.0",
     "jest": "^24.8.0",
-    "rimraf": "^2.6.3",
-    "semantic-release": "^15.13.19",
+    "rimraf": "^2.7.0",
+    "semantic-release": "^15.13.21",
     "tempy": "^0.3.0"
   }
 }

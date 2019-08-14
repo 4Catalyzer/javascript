@@ -17,6 +17,6 @@
     "@semantic-release/npm": "^5.1.13"
   },
   "peerDependencies": {
-    "semantic-release": "^15.13.19"
+    "semantic-release": "^15.13.21"
   }
 }

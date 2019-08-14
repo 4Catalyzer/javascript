@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+
 const { loadConfig } = require('browserslist');
 const pick = require('lodash/pick');
 const path = require('path');
@@ -31,25 +32,23 @@ const DEFAULT_BROWSERS = [
 ];
 
 function addDefaultOptions(explicitOptions) {
-  const options = Object.assign(
-    {
-      target: 'web', // 'web-app' | 'node'
-      intl: false,
-      loose: true,
-      development: false,
-      modules: 'commonjs',
-      shippedProposals: true,
-      runtime: false,
-      corejs: false,
-      envCorejs: null,
-      debug: false,
-      targets: undefined, // Targets for @babel/preset-env.
-      ignoreBrowserslistConfig: false,
-      configPath: '.',
-      include: [],
-    },
-    explicitOptions,
-  );
+  const options = {
+    target: 'web', // 'web-app' | 'node'
+    intl: false,
+    loose: true,
+    development: false,
+    modules: 'commonjs',
+    shippedProposals: true,
+    runtime: false,
+    corejs: false,
+    envCorejs: null,
+    debug: false,
+    targets: undefined, // Targets for @babel/preset-env.
+    ignoreBrowserslistConfig: false,
+    configPath: '.',
+    include: [],
+    ...explicitOptions,
+  };
 
   if (options.envCorejs === null) {
     options.envCorejs = options.corejs;
@@ -62,9 +61,7 @@ function addDefaultOptions(explicitOptions) {
   if (options.corejs && options.envCorejs !== options.corejs) {
     console.warn(
       '@4c/babel-preset: You have a mismatch between requested core-js versions.\n' +
-        `preset-env requests v${options.envCorejs} while runtime is v${
-          options.corejs
-        }. ` +
+        `preset-env requests v${options.envCorejs} while runtime is v${options.corejs}. ` +
         'Make sure `options.corejs` is empty or matches `options.envCorejs`.',
     );
   }

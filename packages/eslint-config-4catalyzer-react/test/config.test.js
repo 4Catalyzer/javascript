@@ -1,5 +1,5 @@
-const configTester = require('../../../tools/config-tester');
 const pick = require('lodash/pick');
+const configTester = require('../../../tools/config-tester');
 const config = require('..');
 
 describe('react-config', () => {
@@ -45,7 +45,6 @@ export default Foo;
 `,
     );
 
-    console.log(result);
     expect(result.errorCount).toEqual(0);
   });
 });
