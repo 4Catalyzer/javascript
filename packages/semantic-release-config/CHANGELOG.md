@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-config@1.0.8...@4c/semantic-release-config@2.0.0) (2019-08-14)
+
+
+### chore
+
+* Upgrade ESLint config dependencies ([#331](https://github.com/4Catalyzer/javascript/issues/331)) ([a59c6d5](https://github.com/4Catalyzer/javascript/commit/a59c6d5))
+
+
+### BREAKING CHANGES
+
+* This probably breaks something.
+
+
+
+
+
 ## [1.0.8](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-config@1.0.7...@4c/semantic-release-config@1.0.8) (2019-08-05)
 
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-alt-publish-dir@4.0.5...@4c/semantic-release-alt-publish-dir@5.0.0) (2019-08-14)
+
+
+### chore
+
+* Upgrade ESLint config dependencies ([#331](https://github.com/4Catalyzer/javascript/issues/331)) ([a59c6d5](https://github.com/4Catalyzer/javascript/commit/a59c6d5))
+
+
+### BREAKING CHANGES
+
+* This probably breaks something.
+
+
+
+
+
 ## [4.0.5](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-alt-publish-dir@4.0.4...@4c/semantic-release-alt-publish-dir@4.0.5) (2019-08-05)
 
 
