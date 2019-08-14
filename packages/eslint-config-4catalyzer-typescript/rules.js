@@ -22,16 +22,20 @@ module.exports = {
   camelcase: 'off',
   '@typescript-eslint/camelcase': 'error',
   '@typescript-eslint/class-name-casing': 'error',
+  '@typescript-eslint/consistent-type-assertions': [
+    'error',
+    {
+      assertionStyle: 'as',
+      objectLiteralTypeAssertions: 'never',
+    },
+  ],
   '@typescript-eslint/interface-name-prefix': 'error',
-  '@typescript-eslint/no-angle-bracket-type-assertion': 'error',
   'no-array-constructor': 'off',
   '@typescript-eslint/no-array-constructor': 'error',
   '@typescript-eslint/no-empty-interface': 'error',
   '@typescript-eslint/no-inferrable-types': 'error',
   '@typescript-eslint/no-misused-new': 'error',
   '@typescript-eslint/no-namespace': 'error',
-  '@typescript-eslint/no-object-literal-type-assertion': 'error',
-  '@typescript-eslint/no-triple-slash-reference': 'error',
   'no-useless-constructor': 'off',
   'no-empty-function': [
     'error',
@@ -59,6 +63,14 @@ module.exports = {
   '@typescript-eslint/no-use-before-define': 'error',
   '@typescript-eslint/no-var-requires': 'error',
   '@typescript-eslint/prefer-namespace-keyword': 'error',
+  '@typescript-eslint/triple-slash-reference': [
+    'error',
+    {
+      lib: 'never',
+      path: 'never',
+      types: 'never',
+    },
+  ],
   ...(hasReact && {
     'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'react/prop-types': 'off',
