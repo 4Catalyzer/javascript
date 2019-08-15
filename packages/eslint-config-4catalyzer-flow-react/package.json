@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-4catalyzer-flow-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "4Catalyzer Flow React ESLint config",
   "files": [
     "*.js"

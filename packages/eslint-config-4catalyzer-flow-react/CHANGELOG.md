@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-flow-react@1.0.1...eslint-config-4catalyzer-flow-react@1.0.2) (2019-08-15)
+
+
+### Bug Fixes
+
+* Use static defaultProps with Flow ([#339](https://github.com/4Catalyzer/javascript/issues/339)) ([5f4cba0](https://github.com/4Catalyzer/javascript/commit/5f4cba0))
+
+
+
+
+
 ## [1.0.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-flow-react@1.0.0...eslint-config-4catalyzer-flow-react@1.0.1) (2019-08-15)
 
 **Note:** Version bump only for package eslint-config-4catalyzer-flow-react
