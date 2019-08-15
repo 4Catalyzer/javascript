@@ -5,12 +5,7 @@ module.exports = {
 
   overrides: [
     {
-      files: [
-        '**/*.test.*',
-        '**/test/**',
-        '**/__tests__/**',
-        '**/__mocks__/**',
-      ],
+      files: ['*.test.*', '**/test/**', '**/__tests__/**', '**/__mocks__/**'],
       rules: {
         'flowtype/require-valid-file-annotation': 'off',
       },
