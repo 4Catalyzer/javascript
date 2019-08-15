@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-alt-publish-dir@5.0.0...@4c/semantic-release-alt-publish-dir@5.0.1) (2019-08-15)
+
+**Note:** Version bump only for package @4c/semantic-release-alt-publish-dir
+
+
+
+
+
 # [5.0.0](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-alt-publish-dir@4.0.5...@4c/semantic-release-alt-publish-dir@5.0.0) (2019-08-14)
 
 

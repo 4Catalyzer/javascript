@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-jest@2.0.0...eslint-config-4catalyzer-jest@2.0.1) (2019-08-15)
+
+
+### Bug Fixes
+
+* Fix rules after upgrade ([#338](https://github.com/4Catalyzer/javascript/issues/338)) ([826ba6c](https://github.com/4Catalyzer/javascript/commit/826ba6c))
+
+
+
+
+
 # [2.0.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-jest@1.4.1...eslint-config-4catalyzer-jest@2.0.0) (2019-08-14)
 
 
