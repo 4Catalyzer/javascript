@@ -8,6 +8,7 @@ try {
 
 module.exports = {
   'global-require': 'off',
+  'max-classes-per-file': 'off',
   'no-await-in-loop': 'off',
   'no-console': 'off',
   'import/no-dynamic-require': 'off',

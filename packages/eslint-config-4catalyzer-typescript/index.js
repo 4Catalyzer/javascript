@@ -1,4 +1,5 @@
 module.exports = {
+  extends: 'plugin:@typescript-eslint/eslint-recommended',
   settings: {
     'import/extensions': ['.js', '.ts', '.tsx'],
     'import/parsers': {
@@ -15,15 +16,12 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.ts', '**/*.tsx'],
-      extends: [
-        'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended',
-      ],
+      files: ['*.ts', '*.tsx'],
+      extends: 'plugin:@typescript-eslint/recommended',
       rules: require('./rules'),
     },
     {
-      files: ['**/*.d.ts'],
+      files: ['*.d.ts'],
       rules: {
         'import/export': 'off',
         'import/no-duplicates': 'off',
