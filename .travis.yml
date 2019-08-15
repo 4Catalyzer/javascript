@@ -1,17 +1,10 @@
-sudo: false
-
 language: node_js
 node_js:
-  - 10
+  - node
 
 cache:
   yarn: true
-
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH=$HOME/.yarn/bin:$PATH
-
-install: yarn --non-interactive --frozen-lockfile
+  npm: true
 
 branches:
   only:
