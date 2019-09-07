@@ -1,7 +1,7 @@
-const { join } = require('path');
 const { promises: fs } = require('fs');
-const npmPlugin = require('@semantic-release/npm');
+const { join } = require('path');
 const { createAltPublishDir } = require('@4c/file-butler');
+const npmPlugin = require('@semantic-release/npm');
 
 async function verifyConditions(pluginConfig, config) {
   const {
@@ -39,7 +39,7 @@ async function prepare(
   }
 
   logger.log(`Building alternative root package.json`);
-  await createAltPublishDir({ outDir: pkgRoot });
+  await createAltPublishDir({ publishDir: pkgRoot });
 
   const pkgPath = join(cwd, './package.json');
   // eslint-disable-next-line import/no-dynamic-require
