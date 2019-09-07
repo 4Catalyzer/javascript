@@ -1,6 +1,7 @@
-const path = require('path');
 const fs = require('fs-extra');
+const path = require('path');
 const tempy = require('tempy');
+
 const plugin = require('../index');
 
 describe('Prepare', () => {

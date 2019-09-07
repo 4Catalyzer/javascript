@@ -26,7 +26,7 @@
     ]
   },
   "dependencies": {
-    "@4c/file-butler": "^2.3.0",
+    "@4c/file-butler": "^3.0.1",
     "@semantic-release/npm": "^5.1.13"
   },
   "devDependencies": {
