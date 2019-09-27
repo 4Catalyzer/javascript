@@ -44,15 +44,12 @@ function addDefaultOptions(explicitOptions) {
     envCorejs: null,
     debug: false,
     targets: undefined, // Targets for @babel/preset-env.
+    useBuiltIns: false,
     ignoreBrowserslistConfig: false,
     configPath: '.',
     include: [],
     ...explicitOptions,
   };
-
-  if (options.envCorejs === null) {
-    options.envCorejs = options.corejs;
-  }
 
   if (options.useBuiltIns) {
     options.envCorejs = options.envCorejs || options.corejs || 3;
@@ -112,15 +109,13 @@ function preset(api, explicitOptions = {}) {
 
   options.targets = getTargets(options);
 
-  if (target === 'web' || target === 'web-app') {
-    // in a web app assume we are using webpack to handle modules
-    // and we want the runtime
-    if (target === 'web-app') {
-      options.runtime =
-        explicitOptions.runtime == null ? true : explicitOptions.runtime;
-      options.modules =
-        explicitOptions.modules == null ? false : explicitOptions.modules;
-    }
+  // In a web app, assume we are using Webpack to handle modules, and use the
+  // runtime for Babel helpers.
+  if (target === 'web-app') {
+    options.runtime =
+      explicitOptions.runtime == null ? true : explicitOptions.runtime;
+    options.modules =
+      explicitOptions.modules == null ? false : explicitOptions.modules;
   } else if (target === 'node') {
     options.intl = false;
   }
