@@ -9,18 +9,20 @@ const reactPreset = require('@babel/preset-react');
 const intlPreset = require('./intl-preset');
 
 const PRESET_ENV_OPTIONS = [
-  'configPath',
-  'debug',
-  'exclude',
-  'forceAllTransforms',
-  'ignoreBrowserslistConfig',
-  'include',
+  'targets',
+  'spec',
   'loose',
   'modules',
-  'shippedProposals',
-  'spec',
-  'targets',
+  'debug',
+  'include',
+  'exclude',
   'useBuiltIns',
+  // For this, we use envCorejs below.
+  // 'corejs',
+  'forceAllTransforms',
+  'configPath',
+  'ignoreBrowserslistConfig',
+  'shippedProposals',
 ];
 
 const DEFAULT_BROWSERS = [
@@ -34,25 +36,28 @@ const DEFAULT_BROWSERS = [
 function addDefaultOptions(explicitOptions) {
   const options = {
     target: 'web', // 'web-app' | 'node'
-    intl: false,
-    loose: true,
     development: false,
+
+    targets: undefined,
+    spec: false,
+    loose: true,
     modules: 'commonjs',
+    debug: false,
+    include: [],
+    exclude: null, // Defaulted below.
+    useBuiltIns: false,
+    envCorejs: null,
+    forceAllTransforms: false,
+    configPath: '.',
+    ignoreBrowserslistConfig: false,
     shippedProposals: true,
+
     runtime: false,
     corejs: false,
-    envCorejs: null,
-    debug: false,
-    targets: undefined, // Targets for @babel/preset-env.
-    ignoreBrowserslistConfig: false,
-    configPath: '.',
-    include: [],
+    intl: false,
+
     ...explicitOptions,
   };
-
-  if (options.envCorejs === null) {
-    options.envCorejs = options.corejs;
-  }
 
   if (options.useBuiltIns) {
     options.envCorejs = options.envCorejs || options.corejs || 3;
@@ -100,8 +105,8 @@ function getTargets({
     return targets || DEFAULT_BROWSERS;
   }
 
-  // We don't run browserslist ourself b/c that would require doing a bunch
-  // of additional transforms to get the output in a format preset-env would
+  // We don't run browserslist ourself b/c that would require doing a bunch of
+  // additional transforms to get the output in a format preset-env would
   // accept.
   return targets || undefined;
 }
@@ -112,15 +117,13 @@ function preset(api, explicitOptions = {}) {
 
   options.targets = getTargets(options);
 
-  if (target === 'web' || target === 'web-app') {
-    // in a web app assume we are using webpack to handle modules
-    // and we want the runtime
-    if (target === 'web-app') {
-      options.runtime =
-        explicitOptions.runtime == null ? true : explicitOptions.runtime;
-      options.modules =
-        explicitOptions.modules == null ? false : explicitOptions.modules;
-    }
+  // In a web app, assume we are using Webpack to handle modules, and use the
+  // runtime for Babel helpers.
+  if (target === 'web-app') {
+    options.runtime =
+      explicitOptions.runtime == null ? true : explicitOptions.runtime;
+    options.modules =
+      explicitOptions.modules == null ? false : explicitOptions.modules;
   } else if (target === 'node') {
     options.intl = false;
   }
