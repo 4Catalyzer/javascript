@@ -32,7 +32,7 @@ function getPrefixFromPackage(filename) {
   const pkgUpResult = readPkgUp.sync({ cwd: dirname(filename) });
   if (!pkgUpResult) return '';
 
-  const prefix = `${pkgUpResult.package.name}:`;
+  const prefix = `${pkgUpResult.packageJson.name}:`;
   PREFIXES.set(dirname(pkgUpResult.path), prefix);
   return prefix;
 }
