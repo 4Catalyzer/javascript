@@ -1,4 +1,4 @@
-# `@4c/import-sort
+# `@4c/import-sort`
 
 An [import-sort](https://github.com/renke/import-sort#import-sort) style config and
 custom parser for Javascript and Typescript (using babel).
@@ -17,12 +17,12 @@ In a `package.json`:
 {
   "importSort": {
     ".js": {
-      "style": "@4c/import-sort",
-      "parser": "@4c/import-sort/parser"
+      "parser": "@4c/import-sort/parser",
+      "style": "@4c/import-sort"
     },
     ".ts, .tsx": {
-      "style": "@4c/import-sort",
-      "parser": "@4c/import-sort/parser-ts"
+      "parser": "@4c/import-sort/parser-ts",
+      "style": "@4c/import-sort"
     }
   }
 }
