@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/javascript/tree/master/packages/tsconfig-4catalyzer/compare/@4c/tsconfig@0.2.0...@4c/tsconfig@0.3.0) (2019-10-08)
+
+
+### Features
+
+* Allow ES2019 features ([#419](https://github.com/javascript/tree/master/packages/tsconfig-4catalyzer/issues/419)) ([d335c16](https://github.com/javascript/tree/master/packages/tsconfig-4catalyzer/commit/d335c16))
+
+
+
+
+
 # [0.2.0](https://github.com/javascript/tree/master/packages/tsconfig-4catalyzer/compare/@4c/tsconfig@0.1.2...@4c/tsconfig@0.2.0) (2019-09-09)
 
 

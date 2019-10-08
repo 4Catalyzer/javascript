@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@1.0.1...eslint-config-4catalyzer-typescript@1.1.0) (2019-10-08)
+
+
+### Features
+
+* turn off some rules for type defs ([#418](https://github.com/4Catalyzer/javascript/issues/418)) ([509a85d](https://github.com/4Catalyzer/javascript/commit/509a85d))
+
+
+
+
+
 ## [1.0.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@1.0.0...eslint-config-4catalyzer-typescript@1.0.1) (2019-08-15)
 
 

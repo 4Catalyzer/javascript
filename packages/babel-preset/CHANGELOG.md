@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.0.1](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.0.0...@4c/babel-preset@7.0.1) (2019-10-08)
+
+
+### Bug Fixes
+
+* Clean up Babel preset a bit ([ec17308](https://github.com/4Catalyzer/javascript/commit/ec17308))
+
+
+
+
+
 # [7.0.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@6.0.3...@4c/babel-preset@7.0.0) (2019-08-14)
 
 
