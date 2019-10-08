@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.1.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.0.2...@4c/babel-preset@7.1.0) (2019-10-08)
+
+
+### Features
+
+* passthroguh all intl options ([#426](https://github.com/4Catalyzer/javascript/issues/426)) ([f3daa55](https://github.com/4Catalyzer/javascript/commit/f3daa55))
+
+
+
+
+
 ## [7.0.2](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.0.1...@4c/babel-preset@7.0.2) (2019-10-08)
 
 
