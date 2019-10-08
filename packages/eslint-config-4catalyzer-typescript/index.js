@@ -25,8 +25,10 @@ module.exports = {
       rules: {
         'import/export': 'off',
         'import/no-duplicates': 'off',
+        'max-classes-per-file': 'off',
         // This isn't needed in a type def.
         'react/prefer-stateless-function': 'off',
+        'react/static-property-placement': 'off',
       },
     },
   ],
