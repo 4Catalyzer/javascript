@@ -124,8 +124,6 @@ function preset(api, explicitOptions = {}) {
       explicitOptions.runtime == null ? true : explicitOptions.runtime;
     options.modules =
       explicitOptions.modules == null ? false : explicitOptions.modules;
-  } else if (target === 'node') {
-    options.intl = false;
   }
 
   // unless the user explicitly set modules, change the default to
