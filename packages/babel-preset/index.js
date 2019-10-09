@@ -96,7 +96,7 @@ function getTargets({
   }
 
   // TODO: Distinguish between app and libraries for node as well.
-  if (target === 'node') return { node: '10.0' };
+  if (target === 'node') return { node: '12.0' };
 
   if (
     ignoreBrowserslistConfig ||
