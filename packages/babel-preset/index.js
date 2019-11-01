@@ -180,6 +180,7 @@ function preset(api, explicitOptions = {}) {
       // - convenience plugins --
       require.resolve('babel-plugin-dev-expression'),
       require.resolve('@babel/plugin-proposal-optional-chaining'),
+      require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
     ].filter(Boolean),
   };
 }
