@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.2.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.1.0...@4c/babel-preset@7.2.0) (2019-11-02)
+
+
+### Features
+
+* add @babel/plugin-proposal-nullish-coalescing-operator ([#470](https://github.com/4Catalyzer/javascript/issues/470)) ([14c5d47](https://github.com/4Catalyzer/javascript/commit/14c5d47))
+* Bump Node version in Babel preset ([#427](https://github.com/4Catalyzer/javascript/issues/427)) ([7af012b](https://github.com/4Catalyzer/javascript/commit/7af012b))
+
+
+
+
+
 # [7.1.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.0.2...@4c/babel-preset@7.1.0) (2019-10-08)
 
 
