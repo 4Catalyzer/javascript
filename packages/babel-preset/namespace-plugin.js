@@ -37,6 +37,36 @@ function getPrefixFromPackage(filename) {
   return prefix;
 }
 
+function getMessagesObjectFromExpression(nodePath) {
+  let currentPath = nodePath;
+  while (
+    currentPath.isTSAsExpression() ||
+    currentPath.isTSTypeAssertion() ||
+    currentPath.isTypeCastExpression()
+  ) {
+    currentPath = currentPath.get('expression');
+  }
+  return currentPath;
+}
+
+function isFormatMessageCall(callee) {
+  if (!callee.isMemberExpression()) {
+    return false;
+  }
+  const object = callee.get('object');
+  const property = callee.get('property');
+
+  return (
+    property.isIdentifier() &&
+    property.node.name === 'formatMessage' &&
+    // things like `intl.formatMessage`
+    ((object.isIdentifier() && object.node.name === 'intl') ||
+      // things like `this.props.intl.formatMessage`
+      (object.isMemberExpression() &&
+        object.get('property').node.name === 'intl'))
+  );
+}
+
 module.exports = function namespacePlugin({ types: t }) {
   return {
     pre(file) {
@@ -66,13 +96,8 @@ module.exports = function namespacePlugin({ types: t }) {
       },
 
       CallExpression(path, state) {
-        const callee = path.get('callee').node;
-
-        if (!t.isIdentifier(callee) || callee.name !== DEFINE_MESSAGES) {
-          return;
-        }
-
         const prefix = state.file.get(PREFIX);
+        const callee = path.get('callee');
 
         function processMessageObject(messageObj) {
           if (!messageObj || !messageObj.isObjectExpression()) {
@@ -91,11 +116,20 @@ module.exports = function namespacePlugin({ types: t }) {
           }
         }
 
-        path
-          .get('arguments')[0]
-          .get('properties')
-          .map(prop => prop.get('value'))
-          .forEach(processMessageObject);
+        if (callee.isIdentifier() && callee.node.name === DEFINE_MESSAGES) {
+          getMessagesObjectFromExpression(path.get('arguments')[0])
+            .get('properties')
+            .map(prop => prop.get('value'))
+            .forEach(processMessageObject);
+        } else if (isFormatMessageCall(callee)) {
+          const messageDescriptor = getMessagesObjectFromExpression(
+            path.get('arguments')[0],
+          );
+
+          if (messageDescriptor.isObjectExpression()) {
+            processMessageObject(messageDescriptor);
+          }
+        }
       },
     },
   };
