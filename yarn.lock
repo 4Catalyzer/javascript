@@ -2582,11 +2582,11 @@ babel-plugin-react-intl@^5.1.0:
     schema-utils "^2.2.0"
 
 babel-plugin-tester@^7.0.3:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/babel-plugin-tester/-/babel-plugin-tester-7.0.3.tgz#05bdc998f54393e8e1307ade0cd44cea7b102d75"
-  integrity sha512-Hd9Fqdomo9UOnVHSRU818aLkMD2bAMs4FtHPekFSr+BPJWWL9URqkxf85qAcAceS4iUn02JS+50FKRwbXRZ/dA==
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/babel-plugin-tester/-/babel-plugin-tester-7.0.4.tgz#a5e1156a69635a973de2451f0722aceb401deb86"
+  integrity sha512-ZKhOa0aaaPNQVOZjxJ4svy8lIKjHswzCNxv3WROmirlFz+5IM22hzNg+p4MGC/C3Tv3sX5JfYSKJIcUE9aPdsA==
   dependencies:
-    lodash.mergewith "^4.6.0"
+    lodash.mergewith "^4.6.2"
     strip-indent "^3.0.0"
 
 babel-preset-jest@^24.9.0:
@@ -6580,7 +6580,7 @@ lodash.isstring@^4.0.1:
   resolved "https://registry.yarnpkg.com/lodash.isstring/-/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
   integrity sha1-1SfftUVuynzJu5XV2ur4i6VKVFE=
 
-lodash.mergewith@^4.6.0:
+lodash.mergewith@^4.6.2:
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/lodash.mergewith/-/lodash.mergewith-4.6.2.tgz#617121f89ac55f59047c7aec1ccd6654c6590f55"
   integrity sha512-GK3g5RPZWTRSeLSpgP8Xhra+pnjBC56q9FZYe1d5RN3TJ35dbkGy3YqBSMbyCrlbi+CM9Z3Jk5yTL7RCsqboyQ==
