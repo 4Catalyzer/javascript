@@ -30,11 +30,11 @@ babelPluginTester({
           import { defineMessages } from 'react-intl';
           const messages = defineMessages({
             title: {
-              id: "@4c/babel-preset:title"
+              id: '@4c/babel-preset:title',
             },
             body: {
-              id: "@4c/babel-preset:body"
-            }
+              id: '@4c/babel-preset:body',
+            },
           });
           export { messages };
         `,
@@ -50,10 +50,10 @@ babelPluginTester({
       output: `
           import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
           React.createElement(FormattedMessage, {
-            id: "@4c/babel-preset:title"
+            id: '@4c/babel-preset:title',
           });
           React.createElement(FormattedHTMLMessage, {
-            id: "@4c/babel-preset:body"
+            id: '@4c/babel-preset:body',
           });
         `,
     },
@@ -68,7 +68,7 @@ babelPluginTester({
       output: `
           const intl = useIntl();
           intl.formatMessage({
-            id: "@4c/babel-preset:title"
+            id: '@4c/babel-preset:title',
           });
         `,
     },
@@ -92,8 +92,8 @@ babelPluginTester({
           import { defineMessages } from 'react-intl';
           const messages = defineMessages({
             title: {
-              id: "cool-pkg:title"
-            }
+              id: 'cool-pkg:title',
+            },
           });
           export { messages };
         `,
