@@ -16,6 +16,8 @@
     "jest": "^24.8.0"
   },
   "dependencies": {
-    "babel-jest": "^25.0.0"
+    "babel-jest": "^25.0.0",
+    "find-up": "^4.1.0",
+    "find-yarn-workspace-root": "^1.2.1"
   }
 }
