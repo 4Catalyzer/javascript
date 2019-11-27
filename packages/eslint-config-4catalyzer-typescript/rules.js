@@ -42,6 +42,8 @@ module.exports = {
   ],
   'no-useless-constructor': 'off',
   '@typescript-eslint/no-useless-constructor': 'error',
+  'no-unused-expressions': 'off',
+  '@typescript-eslint/no-unused-expressions': 'error',
   // Don't allow any sort of triple slash use here.
   '@typescript-eslint/triple-slash-reference': [
     'error',
