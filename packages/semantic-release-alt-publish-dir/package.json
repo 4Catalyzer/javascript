@@ -5,7 +5,7 @@
   "author": "Jason Quense <monastic.panic@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": ">= 8.3.0"
+    "node": ">= v8.16.2"
   },
   "scripts": {
     "test": "jest --runInBand",
@@ -30,12 +30,12 @@
     "@semantic-release/npm": "^5.1.13"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^3.0.4",
-    "@semantic-release/git": "^7.0.16",
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/git": "^7.0.18",
     "fs-extra": "^8.1.0",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
     "rimraf": "^3.0.0",
-    "semantic-release": "^15.13.21",
+    "semantic-release": "^15.13.31",
     "tempy": "^0.3.0"
   }
 }
