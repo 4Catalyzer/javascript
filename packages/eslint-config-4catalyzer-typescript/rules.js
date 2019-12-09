@@ -13,6 +13,7 @@ module.exports = {
   'import/no-unresolved': 'off',
   'import/default': 'off',
   'import/namespace': 'off',
+  'import/extensions': 'off',
 
   // Allow explicit use.
   '@typescript-eslint/ban-ts-ignore': 'off',
