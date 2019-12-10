@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@1.1.3...eslint-config-4catalyzer-typescript@1.1.4) (2019-12-10)
+
+
+### Bug Fixes
+
+* Allow importing TS without extension from JS ([#538](https://github.com/4Catalyzer/javascript/issues/538)) ([ac08c5c](https://github.com/4Catalyzer/javascript/commit/ac08c5c673a8e9eaa2249eff47c07be8f6a52430))
+
+
+
+
+
 ## [1.1.3](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@1.1.2...eslint-config-4catalyzer-typescript@1.1.3) (2019-12-10)
 
 **Note:** Version bump only for package eslint-config-4catalyzer-typescript

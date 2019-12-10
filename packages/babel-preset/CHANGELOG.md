@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [7.2.4](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.2.3...@4c/babel-preset@7.2.4) (2019-12-10)
+
+**Note:** Version bump only for package @4c/babel-preset
+
+
+
+
+
 ## [7.2.3](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.2.2...@4c/babel-preset@7.2.3) (2019-12-10)
 
 **Note:** Version bump only for package @4c/babel-preset
