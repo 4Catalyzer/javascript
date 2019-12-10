@@ -68,6 +68,12 @@ module.exports = {
 
   // We very seldom intentionally use async functions without await.
   'require-await': 'error',
+  'sort-imports': [
+    'error',
+    {
+      ignoreDeclarationSort: true,
+    },
+  ],
   'import/extensions': [
     'error',
     'ignorePackages',
@@ -80,4 +86,13 @@ module.exports = {
     },
   ],
   'import/prefer-default-export': 'off',
+  'import/order': [
+    'error',
+    {
+      'newlines-between': 'never',
+      alphabetize: {
+        order: 'asc',
+      },
+    },
+  ],
 };

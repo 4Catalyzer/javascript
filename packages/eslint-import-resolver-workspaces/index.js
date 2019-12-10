@@ -1,13 +1,12 @@
-const { extname, dirname } = require('path');
-const pkgUp = require('pkg-up');
 const fs = require('fs');
-const findWorkspaceRoot = require('find-yarn-workspace-root');
-const { createMatchPath } = require('tsconfig-paths');
+const { extname, dirname } = require('path');
+const util = require('util');
 const resolver = require('eslint-import-resolver-node');
+const findWorkspaceRoot = require('find-yarn-workspace-root');
+const pkgUp = require('pkg-up');
+const { createMatchPath } = require('tsconfig-paths');
 
-const log = require('util').debuglog(
-  'eslint-import-resolver-workspaces:resolver',
-);
+const log = util.debuglog('eslint-import-resolver-workspaces:resolver');
 
 let matchPath;
 const defaultExtensions = ['.mjs', '.js', '.ts', '.tsx', '.json'];
