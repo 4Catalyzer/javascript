@@ -66,5 +66,16 @@ module.exports = {
   ],
   // We very seldom intentionally use async functions without await.
   'require-await': 'error',
+  'import/extensions': [
+    'error',
+    'ignorePackages',
+    {
+      js: 'never',
+      mjs: 'never',
+      jsx: 'never',
+      ts: 'never',
+      tsx: 'never',
+    },
+  ],
   'import/prefer-default-export': 'off',
 };
