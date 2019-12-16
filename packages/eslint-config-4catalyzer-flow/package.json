@@ -28,7 +28,7 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "devDependencies": {
-    "eslint-plugin-flowtype": "^4.2.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-flowtype": "^4.5.2",
+    "eslint-plugin-import": "^2.19.1"
   }
 }
