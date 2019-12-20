@@ -104,14 +104,18 @@ module.exports = function namespacePlugin({ types: t }) {
             return;
           }
 
-          const idProp = messageObj
-            .get('properties')
-            .find(p => p.get('key').node.name === 'id')
-            .get('value');
+          const idProp = messageObj.get('properties').find(p => {
+            // this may be a Literal or StringLiteral depending
+            // on if the key is quoted or not
+            const keyNode = p.get('key').node;
+            return keyNode.name === 'id' || keyNode.value === 'id';
+          });
 
-          if (idProp && !idProp.node.value.startsWith(prefix)) {
-            idProp.replaceWith(
-              t.StringLiteral(`${prefix}${idProp.node.value}`), // eslint-disable-line new-cap
+          const value = idProp && idProp.get('value');
+
+          if (value && !value.node.value.startsWith(prefix)) {
+            value.replaceWith(
+              t.StringLiteral(`${prefix}${value.node.value}`), // eslint-disable-line new-cap
             );
           }
         }

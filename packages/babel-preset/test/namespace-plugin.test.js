@@ -98,5 +98,20 @@ babelPluginTester({
           export { messages };
         `,
     },
+    'quoted strings': {
+      code: `
+          const intl = useIntl()
+
+          intl.formatMessage({
+            "id": "title"
+          })
+        `,
+      output: `
+          const intl = useIntl();
+          intl.formatMessage({
+            id: '@4c/babel-preset:title',
+          });
+        `,
+    },
   },
 });
