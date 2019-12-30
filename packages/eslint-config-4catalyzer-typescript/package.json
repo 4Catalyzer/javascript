@@ -22,7 +22,7 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/eslint-plugin": "^2.13.0",
     "eslint-plugin-import": "^2.19.1"
   }
 }
