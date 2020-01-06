@@ -7,7 +7,7 @@ function preset(api, options = {}) {
   const {
     runtime,
     useBuiltIns,
-    debug,
+    debug = true,
     loose = true,
     modules = api.env() === 'test',
     development = api.env() === 'test',
@@ -16,16 +16,16 @@ function preset(api, options = {}) {
   const presets = [
     [modulesPreset, { loose }],
 
-    useBuiltIns && [
+    [
       envPreset,
       {
         debug,
         loose,
         targets: { esmodules: true },
-        exclude: [/(transform|proposal)/],
+        exclude: [/transform/],
         modules: false,
         shippedProposals: true,
-        useBuiltIns: 'usage',
+        useBuiltIns: useBuiltIns,
         corejs: 3,
       },
     ],
