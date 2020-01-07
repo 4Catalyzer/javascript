@@ -10,7 +10,13 @@
   "author": "4Catalyzer",
   "license": "MIT",
   "peerDependencies": {
-    "eslint-plugin-jest": "^22.15.1"
+    "eslint-plugin-jest": "^22.15.1",
+    "eslint-plugin-ts-expect": "^1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-ts-expect": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "eslint-plugin-jest": "^23.3.0"

@@ -12,14 +12,18 @@
   },
   "author": "4Catalyzer",
   "license": "MIT",
-  "dependencies": {
-    "@typescript-eslint/parser": "^2.0.0",
-    "babel-eslint": "^10.0.2",
-    "eslint-import-resolver-typescript": "^2.0.0"
+  "jest": {
+    "preset": "@4c/jest-preset",
+    "testEnvironment": "node"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "eslint-plugin-import": "^2.18.2"
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": "^2.0.0",
+    "babel-eslint": "^10.0.2",
+    "eslint-import-resolver-typescript": "^2.0.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.14.0",
