@@ -27,15 +27,15 @@
   },
   "dependencies": {
     "@4c/file-butler": "^4.0.0",
-    "@semantic-release/npm": "^5.1.13"
+    "@semantic-release/npm": "^6.0.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.6",
-    "@semantic-release/git": "^7.0.18",
+    "@semantic-release/git": "^8.0.0",
     "fs-extra": "^8.1.0",
     "jest": "^24.9.0",
     "rimraf": "^3.0.0",
-    "semantic-release": "^15.14.0",
+    "semantic-release": "^16.0.0",
     "tempy": "^0.3.0"
   }
 }
