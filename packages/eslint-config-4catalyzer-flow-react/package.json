@@ -31,8 +31,8 @@
     "eslint-plugin-react": "^7.14.3"
   },
   "devDependencies": {
-    "eslint-plugin-flowtype": "^4.5.3",
-    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-flowtype": "^4.6.0",
+    "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0"
   }
