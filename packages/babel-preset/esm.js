@@ -1,7 +1,21 @@
+const path = require('path');
 const envPreset = require('@babel/preset-env');
+const { loadConfig } = require('browserslist');
 const modulesPreset = require('@babel/preset-modules');
 const reactPreset = require('@babel/preset-react');
 const plugins = require('./plugins');
+
+function getTargets({ configPath, ignoreBrowserslistConfig }) {
+  if (
+    ignoreBrowserslistConfig ||
+    !loadConfig({ path: path.resolve(configPath) })
+  ) {
+    return { esmodules: true };
+  }
+
+  // nothing so preset env looks for the browserslist config
+  return undefined;
+}
 
 function preset(api, options = {}) {
   const {
@@ -9,6 +23,8 @@ function preset(api, options = {}) {
     useBuiltIns,
     debug = true,
     loose = true,
+    configPath = '.',
+    ignoreBrowserslistConfig = false,
     modules = api.env() === 'test',
     development = api.env() === 'test',
   } = options;
@@ -21,11 +37,11 @@ function preset(api, options = {}) {
       {
         debug,
         loose,
-        targets: { esmodules: true },
+        targets: getTargets({ configPath, ignoreBrowserslistConfig }),
         exclude: [/transform/],
         modules: false,
         shippedProposals: true,
-        useBuiltIns: useBuiltIns,
+        useBuiltIns,
         corejs: 3,
       },
     ],
