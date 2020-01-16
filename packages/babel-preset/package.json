@@ -1,6 +1,6 @@
 {
   "name": "@4c/babel-preset",
-  "version": "7.2.4",
+  "version": "7.3.0",
   "description": "4Catalyzer babel preset",
   "main": "index.js",
   "repository": {
@@ -32,8 +32,8 @@
     "@babel/plugin-syntax-dynamic-import": "^7.8.0",
     "@babel/plugin-transform-runtime": "^7.8.0",
     "@babel/preset-env": "^7.8.2",
-    "@babel/preset-react": "^7.8.0",
     "@babel/preset-modules": "^0.1.2",
+    "@babel/preset-react": "^7.8.0",
     "babel-plugin-dev-expression": "^0.2.2",
     "babel-plugin-react-intl": "^5.1.16",
     "browserslist": "^4.8.3",
@@ -46,7 +46,7 @@
     "babel-jest": "^24.9.0",
     "babel-plugin-tester": "^8.0.1",
     "eslint": "^6.8.0",
-    "eslint-config-4catalyzer": "^1.0.1",
+    "eslint-config-4catalyzer": "^1.0.2",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jest": "^23.6.0",

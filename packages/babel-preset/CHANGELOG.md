@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.3.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.2.4...@4c/babel-preset@7.3.0) (2020-01-16)
+
+
+### Features
+
+* add esm targeted preset ([#544](https://github.com/4Catalyzer/javascript/issues/544)) ([32cbb5b](https://github.com/4Catalyzer/javascript/commit/32cbb5b))
+
+
+
+
+
 ## [7.2.4](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.2.3...@4c/babel-preset@7.2.4) (2019-12-10)
 
 **Note:** Version bump only for package @4c/babel-preset
