@@ -17,6 +17,11 @@ function getTargets({ configPath, ignoreBrowserslistConfig }) {
   return undefined;
 }
 
+/**
+ * This is an experimental preset that uses the leaner preset-modules. It's
+ * seperate from the other one for quicker iteration and to make more clear it's
+ * not stable
+ */
 function preset(api, options = {}) {
   const {
     runtime,
