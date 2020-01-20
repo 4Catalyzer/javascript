@@ -13,8 +13,7 @@
   "lint-staged": {
     "*.js": [
       "eslint --fix",
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "prettier": {
@@ -29,7 +28,7 @@
     "find-yarn-workspace-root": "^1.2.1",
     "husky": "^4.0.10",
     "lerna": "^3.20.2",
-    "lint-staged": "^9.5.0",
+    "lint-staged": "^10.0.0",
     "prettier": "^1.19.1"
   },
   "workspaces": {
