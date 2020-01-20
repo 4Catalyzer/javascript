@@ -27,7 +27,7 @@
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-import": "^2.20.0",
     "find-yarn-workspace-root": "^1.2.1",
-    "husky": "^4.0.7",
+    "husky": "^4.0.10",
     "lerna": "^3.20.2",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1"
