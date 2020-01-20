@@ -5,7 +5,11 @@
   "files": [
     "*.json"
   ],
-  "repository": "https://github.com/javascript/tree/master/packages/tsconfig-4catalyzer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4Catalyzer/javascript",
+    "directory": "packages/tsconfig"
+  },
   "author": "4Catalyzer",
   "license": "MIT",
   "dependencies": {
