@@ -10,12 +10,12 @@
   "author": "4Catalyzer",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^25.1.0"
   },
   "peerDependencies": {
     "jest": "^24.8.0"
   },
   "dependencies": {
-    "babel-jest": "^24.9.0"
+    "babel-jest": "^25.0.0"
   }
 }
