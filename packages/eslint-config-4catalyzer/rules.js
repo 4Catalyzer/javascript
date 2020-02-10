@@ -64,6 +64,8 @@ module.exports = {
     },
     { enforceForRenamedProperties: false },
   ],
+  'prefer-const': ['error', { destructuring: 'all' }],
+
   // We very seldom intentionally use async functions without await.
   'require-await': 'error',
   'import/extensions': [
