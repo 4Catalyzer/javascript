@@ -1,5 +1,7 @@
 const pick = require('lodash/pick');
+
 const configTester = require('../../../tools/config-tester');
+
 const config = require('..');
 
 describe('react-config', () => {

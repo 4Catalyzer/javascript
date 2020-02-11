@@ -1,6 +1,7 @@
 const fs = require('fs');
 const { extname, dirname } = require('path');
 const util = require('util');
+
 const resolver = require('eslint-import-resolver-node');
 const findWorkspaceRoot = require('find-yarn-workspace-root');
 const pkgUp = require('pkg-up');

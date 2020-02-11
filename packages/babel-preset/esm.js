@@ -1,8 +1,10 @@
 const path = require('path');
+
 const envPreset = require('@babel/preset-env');
-const { loadConfig } = require('browserslist');
 const modulesPreset = require('@babel/preset-modules');
 const reactPreset = require('@babel/preset-react');
+const { loadConfig } = require('browserslist');
+
 const plugins = require('./plugins');
 
 function getTargets({ configPath, ignoreBrowserslistConfig }) {

@@ -1,4 +1,5 @@
 import babelPluginTester from 'babel-plugin-tester';
+
 import namespacePlugin from '../namespace-plugin';
 
 babelPluginTester({

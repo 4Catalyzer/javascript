@@ -89,7 +89,7 @@ module.exports = {
   'import/order': [
     'error',
     {
-      'newlines-between': 'never',
+      'newlines-between': 'always',
       alphabetize: {
         order: 'asc',
       },

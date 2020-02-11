@@ -1,10 +1,12 @@
 /* eslint-disable no-console */
 
 const path = require('path');
+
 const envPreset = require('@babel/preset-env');
 const reactPreset = require('@babel/preset-react');
 const { loadConfig } = require('browserslist');
 const pick = require('lodash/pick');
+
 const intlPreset = require('./intl-preset');
 const plugins = require('./plugins');
 
