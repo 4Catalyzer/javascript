@@ -92,7 +92,8 @@ module.exports = {
       'newlines-between': 'always',
       groups: [
         'builtin',
-        ['unknown', 'internal', 'external'],
+        ['unknown', 'external'],
+        'internal',
         ['parent', 'sibling', 'index'],
       ],
       alphabetize: {
