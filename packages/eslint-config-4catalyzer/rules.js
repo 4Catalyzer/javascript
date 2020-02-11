@@ -90,6 +90,7 @@ module.exports = {
     'error',
     {
       'newlines-between': 'always',
+      groups: ['builtin', 'external', ['parent', 'sibling', 'index']],
       alphabetize: {
         order: 'asc',
       },
