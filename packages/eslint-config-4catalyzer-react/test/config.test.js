@@ -1,6 +1,7 @@
-const pick = require('lodash/pick');
-const configTester = require('../../../tools/config-tester');
 const config = require('..');
+const pick = require('lodash/pick');
+
+const configTester = require('../../../tools/config-tester');
 
 describe('react-config', () => {
   it('sorts components correctly', () => {

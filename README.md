@@ -28,11 +28,6 @@ function renderApp() {
 
 Follow the [React Router huge-apps example](https://github.com/reactjs/react-router/tree/master/examples/huge-apps). Use `shared/` at the deepest possible level for shared modules.
 
-## Import ordering
-
-JavaScript imports should be handled by [import-sort-cli](https://www.npmjs.com/package/import-sort-cli) using
-the [4Catalyzer import sort style](/packages/import-sort/README.md).
-
 ## Line width
 
 79 characters, because [@taion](https://github.com/taion) doesn't want to have to resize the width of his buffers when switching between JavaScript and PEP 8-compliant Python.

@@ -1,4 +1,5 @@
 const { dirname } = require('path');
+
 const readPkgUp = require('read-pkg-up');
 
 const DEFINE_MESSAGES = 'defineMessages';
