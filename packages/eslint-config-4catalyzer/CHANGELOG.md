@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer@1.1.0...eslint-config-4catalyzer@1.1.1) (2020-02-13)
+
+
+### Bug Fixes
+
+* Sort CSS module imports last ([#578](https://github.com/4Catalyzer/javascript/issues/578)) ([568f90f](https://github.com/4Catalyzer/javascript/commit/568f90f))
+
+
+
+
+
 # [1.1.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer@1.0.2...eslint-config-4catalyzer@1.1.0) (2020-02-12)
 
 
