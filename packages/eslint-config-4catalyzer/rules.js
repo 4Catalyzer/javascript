@@ -85,20 +85,27 @@ module.exports = {
       tsx: 'never',
     },
   ],
-  'import/prefer-default-export': 'off',
   'import/order': [
     'error',
     {
-      'newlines-between': 'always',
       groups: [
         'builtin',
         ['unknown', 'external'],
         'internal',
         ['parent', 'sibling', 'index'],
       ],
+      pathGroups: [
+        {
+          pattern: './*.module.{css,scss,less}',
+          group: 'sibling',
+          position: 'after',
+        },
+      ],
+      'newlines-between': 'always',
       alphabetize: {
         order: 'asc',
       },
     },
   ],
+  'import/prefer-default-export': 'off',
 };
