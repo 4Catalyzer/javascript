@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/4Catalyzer/javascript/compare/@4c/jest-preset@1.4.5...@4c/jest-preset@1.5.0) (2020-02-26)
+
+
+### Features
+
+* use root mode upwards-optional for jest preset ([#532](https://github.com/4Catalyzer/javascript/issues/532)) ([cdac854](https://github.com/4Catalyzer/javascript/commit/cdac854))
+
+
+
+
+
 ## [1.4.5](https://github.com/4Catalyzer/javascript/compare/@4c/jest-preset@1.4.4...@4c/jest-preset@1.4.5) (2020-02-12)
 
 **Note:** Version bump only for package @4c/jest-preset

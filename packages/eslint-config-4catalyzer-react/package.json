@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-4catalyzer-react",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "4Catalyzer React ESLint config",
   "files": [
     "*.js"
@@ -38,7 +38,7 @@
     "eslint-plugin-react-hooks": "^1.7.0"
   },
   "devDependencies": {
-    "@4c/jest-preset": "^1.4.5",
+    "@4c/jest-preset": "^1.5.0",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
