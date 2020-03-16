@@ -4,7 +4,7 @@ describe('Preset', () => {
 
   beforeEach(() => {
     babel = require('@babel/core');
-    preset = require('../');
+    preset = require('..');
   });
 
   it('should be a valid config', () => {

@@ -4,7 +4,11 @@
     "./packages/eslint-config-4catalyzer-jest/index.js",
     "prettier"
   ],
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
-    "global-require": "off"
+    "global-require": "off",
+    "prettier/prettier": "error"
   }
 }
