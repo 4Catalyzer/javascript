@@ -41,6 +41,8 @@ describe('Prepare', () => {
       version: '1.0.1',
     });
 
+    expect(fs.existsSync(`${dir}/lib/build-output`)).toEqual(true);
+
     expect(fs.existsSync(`${dir}/lib/README.md`)).toEqual(true);
 
     const libPkg = require(`${dir}/lib/package.json`);

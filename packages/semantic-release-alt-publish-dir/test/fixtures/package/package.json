@@ -5,6 +5,9 @@
   "module": "lib/es/index.js",
   "author": "Jason Quense <monastic.panic@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "prepublishOnly": "mkdir lib && touch lib/build-output"
+  },
   "engines": {
     "node": ">= 8.3.0"
   },
