@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.7](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-alt-publish-dir@5.0.6...@4c/semantic-release-alt-publish-dir@5.0.7) (2020-03-17)
+
+
+### Bug Fixes
+
+* ensure prepublish scripts are run ([#593](https://github.com/4Catalyzer/javascript/issues/593)) ([1f16d9c](https://github.com/4Catalyzer/javascript/commit/1f16d9c))
+
+
+
+
+
 ## [5.0.6](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-alt-publish-dir@5.0.5...@4c/semantic-release-alt-publish-dir@5.0.6) (2020-02-26)
 
 **Note:** Version bump only for package @4c/semantic-release-alt-publish-dir

@@ -1,6 +1,6 @@
 {
   "name": "@4c/babel-preset",
-  "version": "7.3.3",
+  "version": "7.3.4",
   "description": "4Catalyzer babel preset",
   "main": "index.js",
   "repository": {
