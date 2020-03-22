@@ -22,7 +22,7 @@ describe('Prepare', () => {
   });
 
   afterEach(() => {
-    tmps.forEach(dir => fs.removeSync(dir));
+    tmps.forEach((dir) => fs.removeSync(dir));
     tmps = [];
   });
 
