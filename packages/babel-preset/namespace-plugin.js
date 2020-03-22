@@ -14,7 +14,7 @@ function getPrefix(state) {
 
 function referencesImport(path) {
   if (!(path.isIdentifier() || path.isJSXIdentifier())) return false;
-  return COMPONENT_NAMES.some(name =>
+  return COMPONENT_NAMES.some((name) =>
     path.referencesImport('react-intl', name),
   );
 }
@@ -85,7 +85,9 @@ module.exports = function namespacePlugin({ types: t }) {
 
         const idAttr = path
           .get('attributes')
-          .find(attr => attr.isJSXAttribute() && attr.node.name.name === 'id');
+          .find(
+            (attr) => attr.isJSXAttribute() && attr.node.name.name === 'id',
+          );
 
         if (idAttr && !idAttr.node.value.value.startsWith(prefix)) {
           idAttr
@@ -105,7 +107,7 @@ module.exports = function namespacePlugin({ types: t }) {
             return;
           }
 
-          const idProp = messageObj.get('properties').find(p => {
+          const idProp = messageObj.get('properties').find((p) => {
             // this may be a Literal or StringLiteral depending
             // on if the key is quoted or not
             const keyNode = p.get('key').node;
@@ -124,7 +126,7 @@ module.exports = function namespacePlugin({ types: t }) {
         if (callee.isIdentifier() && callee.node.name === DEFINE_MESSAGES) {
           getMessagesObjectFromExpression(path.get('arguments')[0])
             .get('properties')
-            .map(prop => prop.get('value'))
+            .map((prop) => prop.get('value'))
             .forEach(processMessageObject);
         } else if (isFormatMessageCall(callee)) {
           const messageDescriptor = getMessagesObjectFromExpression(

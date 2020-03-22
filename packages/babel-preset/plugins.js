@@ -1,4 +1,4 @@
-module.exports = options =>
+module.exports = (options) =>
   [
     options.runtime && [
       require.resolve('@babel/plugin-transform-runtime'),

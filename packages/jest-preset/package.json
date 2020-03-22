@@ -9,15 +9,15 @@
   },
   "author": "4Catalyzer",
   "license": "MIT",
-  "devDependencies": {
-    "jest": "^25.1.0"
-  },
-  "peerDependencies": {
-    "jest": "^24.8.0"
-  },
   "dependencies": {
     "babel-jest": "^25.0.0",
     "find-up": "^4.1.0",
     "find-yarn-workspace-root": "^1.2.1"
+  },
+  "peerDependencies": {
+    "jest": "^25.1.0"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
   }
 }
