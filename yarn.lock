@@ -2570,13 +2570,13 @@ babel-plugin-react-intl@^7.0.0:
     intl-messageformat-parser "^4.1.1"
     schema-utils "^2.2.0"
 
-babel-plugin-tester@^8.0.1:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-tester/-/babel-plugin-tester-8.0.1.tgz#6cffa9b9d508a567139339afc74c97c64b62f131"
-  integrity sha512-5PN7FR1oxbTiA7JUdInT+vFkgu6ckYL5moRzWf5T7hAq+QX5cbcHpoXNHu1x7SQHCEZwYMhN1HzZoqeolNaO2g==
+babel-plugin-tester@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-tester/-/babel-plugin-tester-9.0.0.tgz#583ecf8249090e316dc4aafc1eea8fa44c94af77"
+  integrity sha512-+S3VFL2eXeu0oMOQSUxAcu2QBxy1usnHJdh22Jl+SoMOyUwsFomEVwYC+ipbtkPuR4x+5Y6CRRUI7EDiy+SfBA==
   dependencies:
     lodash.mergewith "^4.6.2"
-    prettier "^1.19.1"
+    prettier "^2.0.1"
     strip-indent "^3.0.0"
 
 babel-preset-jest@^25.1.0:
@@ -7571,10 +7571,6 @@ prettier-linter-helpers@^1.0.0:
   resolved "https://registry.yarnpkg.com/prettier-linter-helpers/-/prettier-linter-helpers-1.0.0.tgz#d23d41fe1375646de2d0104d3454a3008802cf7b"
   dependencies:
     fast-diff "^1.1.2"
-
-prettier@^1.19.1:
-  version "1.19.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
 
 prettier@^2.0.1:
   version "2.0.1"
