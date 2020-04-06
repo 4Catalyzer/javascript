@@ -26,8 +26,8 @@
     "find-yarn-workspace-root": "^1.2.1",
     "husky": "^4.2.3",
     "lerna": "^3.20.2",
-    "lint-staged": "^10.0.10",
-    "prettier": "^2.0.2"
+    "lint-staged": "^10.1.2",
+    "prettier": "^2.0.3"
   },
   "workspaces": {
     "packages": [
