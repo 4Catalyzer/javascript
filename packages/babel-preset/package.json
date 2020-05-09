@@ -45,7 +45,7 @@
     "@babel/core": "^7.9.6",
     "babel-jest": "^26.0.0",
     "babel-plugin-tester": "^9.0.1",
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
     "eslint-config-4catalyzer": "^1.1.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
