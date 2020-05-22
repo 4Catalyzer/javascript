@@ -1,5 +1,4 @@
 module.exports = {
-  extends: 'plugin:@typescript-eslint/eslint-recommended',
   settings: {
     'import/extensions': ['.js', '.ts', '.tsx'],
     'import/parsers': {
