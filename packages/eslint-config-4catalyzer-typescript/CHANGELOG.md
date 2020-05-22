@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@1.1.8...eslint-config-4catalyzer-typescript@2.0.0) (2020-05-22)
+
+
+* feat!: update typescript-eslint monorepo to v3 (major) (#622) ([a296d4e](https://github.com/4Catalyzer/javascript/commit/a296d4e)), closes [#622](https://github.com/4Catalyzer/javascript/issues/622)
+
+
+### BREAKING CHANGES
+
+* Bump typescript-eslint peer dependency
+
+
+
+
+
 ## [1.1.8](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@1.1.7...eslint-config-4catalyzer-typescript@1.1.8) (2020-03-17)
 
 **Note:** Version bump only for package eslint-config-4catalyzer-typescript

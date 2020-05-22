@@ -1,6 +1,6 @@
 {
   "name": "@4c/babel-preset",
-  "version": "7.3.4",
+  "version": "7.3.5",
   "description": "4Catalyzer babel preset",
   "main": "index.js",
   "repository": {
@@ -46,7 +46,7 @@
     "babel-jest": "^26.0.1",
     "babel-plugin-tester": "^9.0.1",
     "eslint": "^7.0.0",
-    "eslint-config-4catalyzer": "^1.1.1",
+    "eslint-config-4catalyzer": "^1.1.2",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jest": "^23.13.1",
