@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@2.0.0...eslint-config-4catalyzer-typescript@2.0.1) (2020-05-22)
+
+
+### Bug Fixes
+
+* Update rules for new TS recommended ([#623](https://github.com/4Catalyzer/javascript/issues/623)) ([015d1e5](https://github.com/4Catalyzer/javascript/commit/015d1e5))
+
+
+
+
+
 # [2.0.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@1.1.8...eslint-config-4catalyzer-typescript@2.0.0) (2020-05-22)
 
 
