@@ -24,6 +24,8 @@ module.exports = {
       objectLiteralTypeAssertions: 'never',
     },
   ],
+  // ts inference is good enough, no need to explicitly set return types
+  "@typescript-eslint/explicit-module-boundary-types": 'off',
   // This seems too verbose.
   '@typescript-eslint/explicit-function-return-type': 'off',
   // Allow explicit use.
