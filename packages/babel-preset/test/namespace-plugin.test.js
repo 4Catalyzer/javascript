@@ -50,9 +50,13 @@ babelPluginTester({
         `,
       output: `
           import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
+
+          /*#__PURE__*/
           React.createElement(FormattedMessage, {
             id: '@4c/babel-preset:title',
           });
+
+          /*#__PURE__*/
           React.createElement(FormattedHTMLMessage, {
             id: '@4c/babel-preset:body',
           });
