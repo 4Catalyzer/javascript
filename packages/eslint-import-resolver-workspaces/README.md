@@ -20,4 +20,4 @@ require rebuilding dependent packages on each change.
 
 The `sources` option follows the typescript [`paths`](https://www.typescriptlang.org/docs/handbook/module-resolution.html) format for rewriting file paths.
 
-You can also specify `sources` in your root `package.json` under `workspace-souces`.
+You can also specify `sources` in your root `package.json` under `workspace-sources`.
