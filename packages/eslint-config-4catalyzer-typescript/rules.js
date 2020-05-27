@@ -26,6 +26,8 @@ module.exports = {
   ],
   // This seems too verbose.
   '@typescript-eslint/explicit-module-boundary-types': 'off',
+  camelcase: 'off',
+  '@typescript-eslint/naming-convention': 'error',
   // Allow explicit use.
   '@typescript-eslint/no-explicit-any': 'off',
   // Allow explicit use.
