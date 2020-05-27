@@ -27,7 +27,23 @@ module.exports = {
   // This seems too verbose.
   '@typescript-eslint/explicit-module-boundary-types': 'off',
   camelcase: 'off',
-  '@typescript-eslint/naming-convention': 'error',
+  // Match something like a stricter upstream camelcase.
+  '@typescript-eslint/naming-convention': [
+    'error',
+    {
+      selector: 'default',
+      format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+      leadingUnderscore: 'allow',
+    },
+    {
+      selector: 'typeLike',
+      format: ['PascalCase'],
+    },
+    {
+      selector: 'enumMember',
+      format: ['UPPER_CASE'],
+    },
+  ],
   // Allow explicit use.
   '@typescript-eslint/no-explicit-any': 'off',
   // Allow explicit use.
@@ -42,6 +58,8 @@ module.exports = {
       argsIgnorePattern: '^_',
     },
   ],
+  'no-use-before-define': 'off',
+  '@typescript-eslint/no-use-before-define': 'error',
   'no-useless-constructor': 'off',
   '@typescript-eslint/no-useless-constructor': 'error',
   'no-unused-expressions': 'off',
