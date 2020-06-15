@@ -43,7 +43,7 @@ class Foo extends React.Component {
 }
 
 export default Foo;
-`,
+`.trimStart(),
     );
 
     expect(result.errorCount).toEqual(0);
