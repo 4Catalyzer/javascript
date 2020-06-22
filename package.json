@@ -18,7 +18,7 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "eslint": "^7.2.0",
+    "eslint": "^7.3.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.21.2",
@@ -26,7 +26,7 @@
     "find-yarn-workspace-root": "^2.0.0",
     "husky": "^4.2.5",
     "lerna": "^3.22.1",
-    "lint-staged": "^10.2.10",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5"
   },
   "workspaces": {
