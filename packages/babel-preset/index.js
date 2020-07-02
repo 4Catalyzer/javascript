@@ -16,6 +16,7 @@ const PRESET_ENV_OPTIONS = [
   'loose',
   'modules',
   'debug',
+  'bugfixes'
   'include',
   'exclude',
   'useBuiltIns',
@@ -43,6 +44,7 @@ function addDefaultOptions(explicitOptions) {
     targets: undefined,
     spec: false,
     loose: true,
+    bugfixes: true,
     modules: 'commonjs',
     debug: false,
     include: [],
