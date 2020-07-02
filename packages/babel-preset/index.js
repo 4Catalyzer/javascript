@@ -16,7 +16,7 @@ const PRESET_ENV_OPTIONS = [
   'loose',
   'modules',
   'debug',
-  'bugfixes'
+  'bugfixes',
   'include',
   'exclude',
   'useBuiltIns',
