@@ -22,8 +22,8 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.4.0",
-    "@typescript-eslint/parser": "^3.4.0",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
     "eslint-plugin-import": "^2.22.0"
   }
 }
