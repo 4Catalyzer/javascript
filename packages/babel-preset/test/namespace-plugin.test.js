@@ -62,6 +62,23 @@ babelPluginTester({
           });
         `,
     },
+
+    defineMessage: {
+      code: `
+          import { defineMessage } from 'react-intl';
+
+          defineMessage({
+            id: "title"
+          })
+        `,
+      output: `
+          import { defineMessage } from 'react-intl';
+          defineMessage({
+            id: '@4c/babel-preset:title',
+          });
+        `,
+    },
+
     'intl.formatMessage': {
       code: `
           const intl = useIntl()
