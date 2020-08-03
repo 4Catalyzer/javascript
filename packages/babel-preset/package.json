@@ -42,9 +42,9 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.10.5",
-    "babel-jest": "^26.1.0",
+    "@babel/core": "^7.11.0",
+    "babel-jest": "^26.2.2",
     "babel-plugin-tester": "^9.2.0",
-    "jest-cli": "^26.1.0"
+    "jest-cli": "^26.2.2"
   }
 }
