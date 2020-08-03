@@ -39,12 +39,12 @@
   },
   "devDependencies": {
     "@4c/jest-preset": "^1.5.1",
-    "eslint": "^7.5.0",
+    "eslint": "^7.6.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
-    "jest": "^26.1.0",
+    "jest": "^26.2.2",
     "lodash": "^4.17.19",
     "react": "^16.13.1"
   }
