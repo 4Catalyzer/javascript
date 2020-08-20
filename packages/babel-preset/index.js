@@ -151,10 +151,7 @@ function preset(api, explicitOptions = {}) {
     const intlOpts =
       typeof options.intl === 'object'
         ? options.intl
-        : {
-            prefix: explicitOptions.prefix,
-            messagesDir: 'build/messages',
-          };
+        : { prefix: explicitOptions.prefix };
 
     if (!development) {
       presets.push([intlPreset, intlOpts]);
