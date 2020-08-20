@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.4.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.3.6...@4c/babel-preset@7.4.0) (2020-08-20)
+
+
+### Features
+
+* add bugfixes ([#632](https://github.com/4Catalyzer/javascript/issues/632)) ([77fcb03](https://github.com/4Catalyzer/javascript/commit/77fcb0338ad557c767f0a3a8b914c35e784a62ed))
+
+
+
+
+
 ## [7.3.6](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.3.5...@4c/babel-preset@7.3.6) (2020-05-27)
 
 
