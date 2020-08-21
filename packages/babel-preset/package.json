@@ -11,7 +11,7 @@
   "author": "4Catalyzer",
   "license": "MIT",
   "engines": {
-    "node": ">= v8.17.0"
+    "node": ">= v12.0.0"
   },
   "scripts": {
     "test": "jest --runInBand"
@@ -26,16 +26,15 @@
     "access": "public"
   },
   "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-export-default-from": "^7.10.4",
     "@babel/plugin-proposal-export-namespace-from": "^7.10.4",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.11.0",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-modules": "^0.1.2",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
     "babel-plugin-dev-expression": "^0.2.2",
-    "babel-plugin-react-intl": "^7.0.0",
+    "babel-plugin-polyfill-corejs3": "^0.0.5",
+    "babel-plugin-react-intl": "^8.1.11",
     "browserslist": "^4.14.0",
     "lodash": "^4.17.15",
     "read-pkg-up": "^7.0.1"
