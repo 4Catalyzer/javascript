@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [8.0.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.4.1...@4c/babel-preset@8.0.0) (2020-09-21)
+
+
+### Bug Fixes
+
+* don't bump intl yet ([25e871d](https://github.com/4Catalyzer/javascript/commit/25e871d998c97e98a5841301fced2549fe5198ea))
+
+
+### Features
+
+* update core preset and improve polyfill behavior ([#644](https://github.com/4Catalyzer/javascript/issues/644)) ([772c3ca](https://github.com/4Catalyzer/javascript/commit/772c3ca72336aabe755a35f832fa3dbe64850a1e))
+
+
+### BREAKING CHANGES
+
+* corejs2 is no longer supported
+* default browsers changed to "esmodules"
+
+
+
+
+
 ## [7.4.1](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@7.4.0...@4c/babel-preset@7.4.1) (2020-08-24)
 
 **Note:** Version bump only for package @4c/babel-preset

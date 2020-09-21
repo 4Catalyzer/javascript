@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@2.0.4...eslint-config-4catalyzer-typescript@3.0.0) (2020-09-21)
+
+
+### Features
+
+* update core preset and improve polyfill behavior ([#644](https://github.com/4Catalyzer/javascript/issues/644)) ([772c3ca](https://github.com/4Catalyzer/javascript/commit/772c3ca72336aabe755a35f832fa3dbe64850a1e))
+
+
+### BREAKING CHANGES
+
+* corejs2 is no longer supported
+* default browsers changed to "esmodules"
+
+
+
+
+
 ## [2.0.4](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@2.0.3...eslint-config-4catalyzer-typescript@2.0.4) (2020-08-24)
 
 **Note:** Version bump only for package eslint-config-4catalyzer-typescript
