@@ -28,13 +28,7 @@ const PRESET_ENV_OPTIONS = [
   'shippedProposals',
 ];
 
-const DEFAULT_BROWSERS = [
-  'ie >= 11',
-  'last 2 Edge versions',
-  'last 4 Chrome versions',
-  'last 4 Firefox versions',
-  'last 2 Safari versions',
-];
+const DEFAULT_BROWSERS = { esmodules: true };
 
 function addDefaultOptions(explicitOptions) {
   const options = {
