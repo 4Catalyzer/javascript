@@ -10,6 +10,10 @@ const pick = require('lodash/pick');
 const intlPreset = require('./intl-preset');
 const plugins = require('./plugins');
 
+function warn(msg) {
+  console.warn(`@4c/babel-preset: ${msg}`);
+}
+
 const PRESET_ENV_OPTIONS = [
   'targets',
   'spec',
@@ -20,73 +24,12 @@ const PRESET_ENV_OPTIONS = [
   'include',
   'exclude',
   'useBuiltIns',
-  // For this, we use envCorejs below.
-  // 'corejs',
+  'corejs',
   'forceAllTransforms',
   'configPath',
   'ignoreBrowserslistConfig',
   'shippedProposals',
 ];
-
-const DEFAULT_BROWSERS = [
-  'ie >= 11',
-  'last 2 Edge versions',
-  'last 4 Chrome versions',
-  'last 4 Firefox versions',
-  'last 2 Safari versions',
-];
-
-function addDefaultOptions(explicitOptions) {
-  const options = {
-    target: 'web', // 'web-app' | 'node'
-    development: false,
-
-    targets: undefined,
-    spec: false,
-    loose: true,
-    bugfixes: true,
-    modules: 'commonjs',
-    debug: false,
-    include: [],
-    exclude: null, // Defaulted below.
-    useBuiltIns: false,
-    envCorejs: null,
-    forceAllTransforms: false,
-    configPath: '.',
-    ignoreBrowserslistConfig: false,
-    shippedProposals: true,
-
-    runtime: false,
-    corejs: false,
-    intl: false,
-
-    ...explicitOptions,
-  };
-
-  if (options.useBuiltIns) {
-    options.envCorejs = options.envCorejs || options.corejs || 3;
-  }
-
-  if (options.corejs && options.envCorejs !== options.corejs) {
-    console.warn(
-      '@4c/babel-preset: You have a mismatch between requested core-js versions.\n' +
-        `preset-env requests v${options.envCorejs} while runtime is v${options.corejs}. ` +
-        'Make sure `options.corejs` is empty or matches `options.envCorejs`.',
-    );
-  }
-
-  if (!options.exclude) {
-    options.exclude =
-      options.envCorejs === 2
-        ? [
-            // Seems to be added by default with minimum benefit.
-            'web.dom.iterable',
-          ]
-        : [];
-  }
-
-  return options;
-}
 
 function getTargets({
   development,
@@ -106,7 +49,7 @@ function getTargets({
     ignoreBrowserslistConfig ||
     !loadConfig({ path: path.resolve(configPath) })
   ) {
-    return targets || DEFAULT_BROWSERS;
+    return targets || { esmodules: true };
   }
 
   // We don't run browserslist ourself b/c that would require doing a bunch of
@@ -115,11 +58,140 @@ function getTargets({
   return targets || undefined;
 }
 
+function addDefaultOptions(explicitOptions) {
+  const options = {
+    target: 'web', // 'web-app' | 'node'
+    development: false,
+
+    targets: undefined,
+    spec: false,
+    loose: true,
+    bugfixes: true,
+    modules: 'commonjs',
+    debug: false,
+    include: [],
+    exclude: [],
+
+    forceAllTransforms: false,
+    configPath: '.',
+    ignoreBrowserslistConfig: false,
+    shippedProposals: true,
+
+    includePolyfills: false,
+
+    runtime: false,
+    corejs: false,
+    intl: false,
+
+    ...explicitOptions,
+  };
+
+  options.targets = getTargets(options);
+
+  if (options.includePolyfills) {
+    // e.g `{ includePolyfills: 'usage-global' }`
+    if (typeof options.includePolyfills === 'string')
+      options.includePolyfills = { method: options.includePolyfills };
+
+    options.includePolyfills = {
+      ignoreBrowserslistConfig: options.ignoreBrowserslistConfig,
+      method: options.includePolyfills,
+      shippedProposals: options.shippedProposals,
+      targets: options.targets,
+      ...options.includePolyfills,
+    };
+  }
+
+  // Enforce a good config, preventing corejs in preset-env as well
+  // as the polyfill plugin
+  if (options.includePolyfills) {
+    if (options.corejs || options.useBuiltIns) {
+      warn(
+        `The preset-env options corejs and useBuiltIns were provided along with includePolyfills. Do not include any polyfill related preset-env options with \`includePolyfills\` they are incompatible with each other.`,
+      );
+    }
+  } else if (options.corejs || options.useBuiltIns) {
+    warn(
+      `Use includePolyfills instead of the corejs and useBuiltIns options for including polyfills`,
+    );
+  }
+
+  // Why are we setting these? WELL, useBuiltIns does two things:
+  //
+  // - Adds corejs polyfills for detected features
+  // - Uses native API's for runtime (helper) code
+  //
+  // We want the latter behavior so that things like `_extends` aren't added to the
+  // code when Object.assign is supported for all browsers. HOWEVER, we DO NOT
+  // want preset-env to include polyfills for these, that is handled (if requested)
+  // by `includePolyfills`. SO we enable useBuiltIns, but exclude ALL polyfills from
+  // the transforms so they aren't added.
+  options.corejs = 3;
+  options.useBuiltIns = 'usage';
+  options.exclude.push(/^(es|es6|es7|esnext|web)\./);
+
+  return options;
+}
+
+/**
+ *
+ * ## Compilation Targets
+ * The babel preset considers three different compile "targets" that encompass
+ * common babel usage environments:
+ *
+ * - web libraries
+ * - web apps
+ * - NodeJS libraries or services
+ *
+ * Each has different optimal configuration.
+ *
+ * ### Web Libraries
+ *
+ * Libraries that are used as dependences in web apps. Libs should generally not
+ * include polyfills, globally or otherwise. Require users provide their own for
+ * things that are mostly points of browser compatibility. Users should bring their
+ * own Promise, or Map/Set polyfills. The small exception to this is for platform
+ * features that are proposals or poorly implements across engines. First consider if
+ * they are needed at all. If required, they should be included _manually_ as part
+ * of the bundle, not included automatically by the preset. Overall opinions around
+ * browser support should be left to the consumer if possible.
+ *
+ * Libraries generally produce babel output targeting CommonJS as well as ES modules.
+ *
+ * ### Web Apps
+ *
+ * As the final compilation target, web apps have the most opinion around them.
+ *
+ * They should provide all polyfills as appropriate for their level of browser support,
+ * which should be defined in a browserslist config file. By default the `web-app`
+ * target:
+ *  - turns off `module` compilation, leaving it to webpack in order to benefit from
+ *    dependency graph optimizations, such as treeshaking.
+ *  - turns on Polyfilling by 'usage-global' for everything that needs it
+ *  - Turns on babel/runtime to consolidate common helper code
+ *
+ * ### NodeJS
+ *
+ * For node services or libraries, the preset is streamlined to only compile to
+ * a Node 12 (or latest LTS). In addition, polyfilling is not enabled and should
+ * be configured based on the situation (i.e. not for libraries).
+ *
+ * ## Browser Support
+ *
+ * By default we target modern browsers that support `esm` syntax. The reason being
+ * is it allows clever conditional loading of smaller bundles to newer browsers. It
+ * also provides a nice line that produces minimal compiled es6 code. For all
+ * browsers that support esm they also support:
+ *
+ *  - async/await
+ *  - generators
+ *  - arrow functions
+ *  - const/let
+ *  - classes
+ */
 function preset(api, explicitOptions = {}) {
   const options = addDefaultOptions(explicitOptions);
   const { target, development } = options;
-
-  options.targets = getTargets(options);
 
   // In a web app, assume we are using Webpack to handle modules, and use the
   // runtime for Babel helpers.
@@ -128,6 +200,10 @@ function preset(api, explicitOptions = {}) {
       explicitOptions.runtime == null ? true : explicitOptions.runtime;
     options.modules =
       explicitOptions.modules == null ? false : explicitOptions.modules;
+    options.includePolyfills =
+      explicitOptions.includePolyfills == null
+        ? 'usage-global'
+        : explicitOptions.includePolyfills;
   }
 
   // unless the user explicitly set modules, change the default to
@@ -137,13 +213,7 @@ function preset(api, explicitOptions = {}) {
   }
 
   const presets = [
-    [
-      envPreset,
-      {
-        ...pick(options, PRESET_ENV_OPTIONS),
-        corejs: options.envCorejs,
-      },
-    ],
+    [envPreset, pick(options, PRESET_ENV_OPTIONS)],
     [reactPreset, { development }],
   ];
 
