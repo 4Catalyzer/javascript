@@ -88,17 +88,21 @@ function addDefaultOptions(explicitOptions) {
 
   options.targets = getTargets(options);
 
-  if (options.includePolyfills) {
+  const polyfill = options.includePolyfills || options.target === 'web-app';
+
+  if (polyfill) {
     // e.g `{ includePolyfills: 'usage-global' }`
-    if (typeof options.includePolyfills === 'string')
-      options.includePolyfills = { method: options.includePolyfills };
+    const explicitPolyfill =
+      typeof options.includePolyfills === 'string'
+        ? { method: options.includePolyfills }
+        : options.includePolyfills;
 
     options.includePolyfills = {
       ignoreBrowserslistConfig: options.ignoreBrowserslistConfig,
-      method: options.includePolyfills,
+      method: 'usage-global',
       shippedProposals: options.shippedProposals,
       targets: options.targets,
-      ...options.includePolyfills,
+      ...explicitPolyfill,
     };
   }
 
@@ -200,10 +204,6 @@ function preset(api, explicitOptions = {}) {
       explicitOptions.runtime == null ? true : explicitOptions.runtime;
     options.modules =
       explicitOptions.modules == null ? false : explicitOptions.modules;
-    options.includePolyfills =
-      explicitOptions.includePolyfills == null
-        ? 'usage-global'
-        : explicitOptions.includePolyfills;
   }
 
   // unless the user explicitly set modules, change the default to

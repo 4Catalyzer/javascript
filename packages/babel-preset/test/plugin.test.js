@@ -124,6 +124,15 @@ describe('Preset', () => {
       expect(result).not.toContain('es.array');
     });
 
+    it("doesn't break whithout options", () => {
+      const result = transformCode(builtInCode, {
+        target: 'web-app',
+      });
+
+      expect(result).toContain('core-js/modules/es.promise.all-settled');
+      expect(result).toContain('core-js/modules/es.promise.finally');
+    });
+
     it('it polyfills all the things', () => {
       const result = transformCode(builtInCode, {
         includePolyfills: {
