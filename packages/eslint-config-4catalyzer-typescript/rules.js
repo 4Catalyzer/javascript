@@ -14,6 +14,15 @@ module.exports = {
   'import/default': 'off',
   'import/namespace': 'off',
 
+  'no-shadow': 'off',
+  '@typescript-eslint/no-shadow': [
+    'error',
+    {
+      ignoreTypeValueShadow: true,
+      ignoreFunctionTypeParameterNameValueShadow: true,
+    },
+  ],
+
   // Allow explicit use.
   '@typescript-eslint/ban-ts-comment': 'off',
   '@typescript-eslint/consistent-type-assertions': [
