@@ -28,6 +28,6 @@
     "eslint-plugin-import": "^2.18.2"
   },
   "devDependencies": {
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.1"
   }
 }
