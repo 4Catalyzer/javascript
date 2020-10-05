@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-4catalyzer",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "4Catalyzer ESLint config",
   "files": [
     "*.js"
