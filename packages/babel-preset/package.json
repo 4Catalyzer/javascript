@@ -40,8 +40,8 @@
     "read-pkg-up": "^7.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.11.6",
-    "@babel/core": "^7.11.6",
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
     "babel-jest": "^26.5.2",
     "babel-plugin-tester": "^9.2.0",
     "jest-cli": "^26.5.3"
