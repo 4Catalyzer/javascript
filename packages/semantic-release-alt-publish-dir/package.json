@@ -28,7 +28,7 @@
   "dependencies": {
     "@4c/file-butler": "^4.1.0",
     "@semantic-release/npm": "^7.0.0",
-    "execa": "^4.0.3",
+    "execa": "^5.0.0",
     "read-pkg-up": "^7.0.1"
   },
   "devDependencies": {
