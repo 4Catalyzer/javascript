@@ -124,9 +124,19 @@ describe('Preset', () => {
       expect(result).not.toContain('es.array');
     });
 
-    it("doesn't break whithout options", () => {
+    it("doesn't break without options", () => {
       const result = transformCode(builtInCode, {
         target: 'web-app',
+      });
+
+      expect(result).toContain('core-js/modules/es.promise.all-settled');
+      expect(result).toContain('core-js/modules/es.promise.finally');
+    });
+
+    it("doesn't break with options", () => {
+      const result = transformCode(builtInCode, {
+        target: 'web-app',
+        includePolyfills: 'usage-global',
       });
 
       expect(result).toContain('core-js/modules/es.promise.all-settled');
