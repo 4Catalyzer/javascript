@@ -1,6 +1,6 @@
 {
   "name": "@4c/jest-preset",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "main": "index.js",
   "repository": {
     "type": "git",

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.14](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-config@2.0.13...@4c/semantic-release-config@2.0.14) (2020-12-10)
+
+**Note:** Version bump only for package @4c/semantic-release-config
+
+
+
+
+
 ## [2.0.13](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-config@2.0.12...@4c/semantic-release-config@2.0.13) (2020-10-05)
 
 **Note:** Version bump only for package @4c/semantic-release-config

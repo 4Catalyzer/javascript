@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer@1.1.4...eslint-config-4catalyzer@1.1.5) (2020-12-10)
+
+
+### Bug Fixes
+
+* disable opinionated style rules ([02b4796](https://github.com/4Catalyzer/javascript/commit/02b479615e7855902841d83662ed786b7875f7c2))
+
+
+
+
+
 ## [1.1.4](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer@1.1.3...eslint-config-4catalyzer@1.1.4) (2020-10-05)
 
 **Note:** Version bump only for package eslint-config-4catalyzer
