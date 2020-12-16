@@ -223,7 +223,6 @@ function preset(api, explicitOptions = {}) {
         ? options.intl
         : {
             prefix: explicitOptions.prefix,
-            messagesDir: 'build/messages',
           };
 
     if (!development) {
