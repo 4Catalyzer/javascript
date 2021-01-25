@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.3](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@8.0.2...@4c/babel-preset@8.0.3) (2021-01-25)
+
+
+### Bug Fixes
+
+* need to use 7.x of babel-plugin-react-intl ([#675](https://github.com/4Catalyzer/javascript/issues/675)) ([7cf8084](https://github.com/4Catalyzer/javascript/commit/7cf8084b6b36b9f23713b81becaebe4d88f9435e))
+
+
+
+
+
 ## [8.0.2](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@8.0.1...@4c/babel-preset@8.0.2) (2020-12-10)
 
 **Note:** Version bump only for package @4c/babel-preset

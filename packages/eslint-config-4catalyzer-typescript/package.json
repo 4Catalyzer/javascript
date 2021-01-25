@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-4catalyzer-typescript",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "main": "index.js",
   "files": [
     "*.js"
