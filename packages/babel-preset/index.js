@@ -87,10 +87,12 @@ function addDefaultOptions(explicitOptions) {
   };
 
   options.targets = getTargets(options);
+  options.includePolyfills =
+    explicitOptions.includePolyfills == null
+      ? options.target === 'web-app'
+      : explicitOptions.includePolyfills;
 
-  const polyfill = options.includePolyfills || options.target === 'web-app';
-
-  if (polyfill) {
+  if (options.includePolyfills) {
     // e.g `{ includePolyfills: 'usage-global' }`
     const explicitPolyfill =
       typeof options.includePolyfills === 'string'

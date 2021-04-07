@@ -5,10 +5,8 @@
     "lint": "eslint packages --ignore-path .gitignore",
     "test": "npm run lint && lerna run test"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   },
   "lint-staged": {
     "*.js": "eslint --fix"
@@ -24,7 +22,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.3.0",
     "find-yarn-workspace-root": "^2.0.0",
-    "husky": "^5.0.9",
+    "hookem": "^1.0.2",
     "lerna": "^3.22.1",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1"
