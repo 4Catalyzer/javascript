@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.0.4](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@8.0.3...@4c/babel-preset@8.0.4) (2021-04-07)
+
+
+### Bug Fixes
+
+* includePolyfill option toggling ([9d57722](https://github.com/4Catalyzer/javascript/commit/9d577229b311c5eef53675c1d3cd0d345dc7773b))
+
+
+
+
+
 ## [8.0.3](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@8.0.2...@4c/babel-preset@8.0.3) (2021-01-25)
 
 
