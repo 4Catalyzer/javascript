@@ -23,7 +23,7 @@
     "eslint-plugin-prettier": "^3.3.0",
     "find-yarn-workspace-root": "^2.0.0",
     "hookem": "^1.0.2",
-    "lerna": "^3.22.1",
+    "lerna": "^4.0.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.2.1"
   },
