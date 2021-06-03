@@ -6,6 +6,7 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
     "lib": ["es2019"],
+    "isolatedModules": true,
     "module": "esnext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
