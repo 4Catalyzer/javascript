@@ -16,16 +16,16 @@
     "trailingComma": "all"
   },
   "devDependencies": {
-    "eslint": "^7.15.0",
+    "eslint": "^7.27.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.0.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
     "find-yarn-workspace-root": "^2.0.0",
-    "hookem": "^1.0.2",
-    "lerna": "^3.22.1",
+    "hookem": "^1.0.6",
+    "lerna": "^4.0.0",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.3.0"
   },
   "workspaces": {
     "packages": [
