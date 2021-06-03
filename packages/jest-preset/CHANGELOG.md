@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/4Catalyzer/javascript/compare/@4c/jest-preset@1.5.4...@4c/jest-preset@1.6.0) (2021-06-03)
+
+
+### Features
+
+* bump deps ([#687](https://github.com/4Catalyzer/javascript/issues/687)) ([cc4ea32](https://github.com/4Catalyzer/javascript/commit/cc4ea327ffeaebc1dfdb2cc7868578e01938a72e))
+
+
+
+
+
 ## [1.5.4](https://github.com/4Catalyzer/javascript/compare/@4c/jest-preset@1.5.3...@4c/jest-preset@1.5.4) (2020-12-10)
 
 **Note:** Version bump only for package @4c/jest-preset

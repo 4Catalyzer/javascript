@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@3.0.3...eslint-config-4catalyzer-typescript@3.1.0) (2021-06-03)
+
+
+### Features
+
+* bump deps ([#687](https://github.com/4Catalyzer/javascript/issues/687)) ([cc4ea32](https://github.com/4Catalyzer/javascript/commit/cc4ea327ffeaebc1dfdb2cc7868578e01938a72e))
+
+
+
+
+
 ## [3.0.3](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@3.0.2...eslint-config-4catalyzer-typescript@3.0.3) (2021-01-25)
 
 **Note:** Version bump only for package eslint-config-4catalyzer-typescript

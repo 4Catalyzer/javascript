@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-config@2.0.14...@4c/semantic-release-config@2.1.0) (2021-06-03)
+
+
+### Features
+
+* bump deps ([#687](https://github.com/4Catalyzer/javascript/issues/687)) ([cc4ea32](https://github.com/4Catalyzer/javascript/commit/cc4ea327ffeaebc1dfdb2cc7868578e01938a72e))
+
+
+
+
+
 ## [2.0.14](https://github.com/4Catalyzer/javascript/compare/@4c/semantic-release-config@2.0.13...@4c/semantic-release-config@2.0.14) (2020-12-10)
 
 **Note:** Version bump only for package @4c/semantic-release-config

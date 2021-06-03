@@ -1,6 +1,6 @@
 {
   "name": "@4c/semantic-release-config",
-  "version": "2.0.14",
+  "version": "2.1.0",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
   "author": "4Catalyzer",
   "license": "MIT",
   "dependencies": {
-    "@4c/semantic-release-alt-publish-dir": "^5.0.14",
+    "@4c/semantic-release-alt-publish-dir": "^5.1.0",
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
     "@semantic-release/github": "^7.2.3",
