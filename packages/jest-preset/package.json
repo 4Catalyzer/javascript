@@ -10,7 +10,7 @@
   "author": "4Catalyzer",
   "license": "MIT",
   "dependencies": {
-    "babel-jest": "^26.1.0",
+    "babel-jest": "^27.0.2",
     "find-up": "^5.0.0",
     "find-yarn-workspace-root": "^2.0.0"
   },
@@ -18,6 +18,6 @@
     "jest": "^25.1.0"
   },
   "devDependencies": {
-    "jest": "^26.6.3"
+    "jest": "^27.0.4"
   }
 }
