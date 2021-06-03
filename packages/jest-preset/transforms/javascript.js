@@ -1,4 +1,4 @@
-const babelJest = require('babel-jest');
+const babelJest = require('babel-jest').default;
 const findWorkspacesRoot = require('find-yarn-workspace-root');
 
 let isWorkspaces = false;
