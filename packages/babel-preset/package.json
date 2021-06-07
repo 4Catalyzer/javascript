@@ -34,7 +34,7 @@
     "@babel/preset-react": "^7.13.13",
     "babel-plugin-dev-expression": "^0.2.2",
     "babel-plugin-polyfill-corejs3": "^0.2.2",
-    "babel-plugin-react-intl": "^8.2.25",
+    "babel-plugin-react-intl": "^7.9.4",
     "browserslist": "^4.16.6",
     "lodash": "^4.17.21",
     "read-pkg-up": "^7.0.1"
