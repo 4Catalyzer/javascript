@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.1](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@8.1.0...@4c/babel-preset@8.1.1) (2021-06-07)
+
+
+### Bug Fixes
+
+* react-intl-dep ([01b3d05](https://github.com/4Catalyzer/javascript/commit/01b3d0539c4ca536cf02809fc3a9c01d13443363))
+
+
+
+
+
 # [8.1.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@8.0.4...@4c/babel-preset@8.1.0) (2021-06-03)
 
 
