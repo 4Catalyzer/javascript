@@ -11,6 +11,10 @@ module.exports = {
       depth: 25,
     },
   ],
+
+  // this rule is dumb
+  'react/jsx-no-bind': 'off',
+
   // It's clearer to use required even on props with defaults to indicate
   // non-nullability.
   'react/default-props-match-prop-types': [
