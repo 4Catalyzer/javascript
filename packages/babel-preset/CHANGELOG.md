@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [8.1.2](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@8.1.1...@4c/babel-preset@8.1.2) (2021-09-16)
+
+
+### Bug Fixes
+
+* turn off dumb rule ([81d8683](https://github.com/4Catalyzer/javascript/commit/81d8683336235b9bded4a6c3e9d4d27c7e4431b3))
+
+
+
+
+
 ## [8.1.1](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@8.1.0...@4c/babel-preset@8.1.1) (2021-06-07)
 
 

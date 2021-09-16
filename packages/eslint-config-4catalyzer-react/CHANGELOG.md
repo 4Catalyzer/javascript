@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@1.1.0...eslint-config-4catalyzer-react@1.1.1) (2021-09-16)
+
+
+### Bug Fixes
+
+* turn off dumb rule ([81d8683](https://github.com/4Catalyzer/javascript/commit/81d8683336235b9bded4a6c3e9d4d27c7e4431b3))
+
+
+
+
+
 # [1.1.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@1.0.13...eslint-config-4catalyzer-react@1.1.0) (2021-06-03)
 
 
