@@ -37,7 +37,7 @@
     "babel-plugin-react-intl": "^7.9.4",
     "browserslist": "^4.17.0",
     "lodash": "^4.17.21",
-    "read-pkg-up": "^7.0.1"
+    "read-pkg-up": "^8.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
