@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [9.0.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@8.1.2...@4c/babel-preset@9.0.0) (2021-10-07)
+
+
+### Features
+
+* use automatic jsx runtime by default ([e797773](https://github.com/4Catalyzer/javascript/commit/e797773d67e33ef827d9a0d7382b6a9f8b4d4de8))
+
+
+### BREAKING CHANGES
+
+* default to new runtime react >= 17 set reactRuntime: 'classic' to turn off.
+
+
+
+
+
 ## [8.1.2](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@8.1.1...@4c/babel-preset@8.1.2) (2021-09-16)
 
 
