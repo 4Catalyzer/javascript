@@ -62,6 +62,7 @@ function addDefaultOptions(explicitOptions) {
   const options = {
     target: 'web', // 'web-app' | 'node'
     development: false,
+    reactRuntime: 'automatic',
 
     targets: undefined,
     spec: false,
@@ -197,7 +198,7 @@ function addDefaultOptions(explicitOptions) {
  */
 function preset(api, explicitOptions = {}) {
   const options = addDefaultOptions(explicitOptions);
-  const { target, development } = options;
+  const { target, development, reactRuntime } = options;
 
   // In a web app, assume we are using Webpack to handle modules, and use the
   // runtime for Babel helpers.
@@ -216,7 +217,7 @@ function preset(api, explicitOptions = {}) {
 
   const presets = [
     [envPreset, pick(options, PRESET_ENV_OPTIONS)],
-    [reactPreset, { development }],
+    [reactPreset, { development, runtime: reactRuntime }],
   ];
 
   if (options.intl) {

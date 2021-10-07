@@ -23,6 +23,43 @@ describe('Preset', () => {
     expect(opts.plugins).not.toHaveLength(0);
   });
 
+  it('should compile using automatic JSX runtime', () => {
+    expect(
+      transformCode(
+        `
+          const d = <><div className='foo' /></>
+        `,
+      ),
+    ).toMatchInlineSnapshot(`
+      "\\"use strict\\";
+
+      var _jsxRuntime = require(\\"react/jsx-runtime\\");
+
+      const d = /*#__PURE__*/(0, _jsxRuntime.jsx)(_jsxRuntime.Fragment, {
+        children: /*#__PURE__*/(0, _jsxRuntime.jsx)(\\"div\\", {
+          className: \\"foo\\"
+        })
+      });"
+    `);
+  });
+
+  it('should compile using classic JSX runtime', () => {
+    expect(
+      transformCode(
+        `
+          const d = <><div className='foo' /></>
+        `,
+        { reactRuntime: 'classic' },
+      ),
+    ).toMatchInlineSnapshot(`
+      "\\"use strict\\";
+
+      const d = /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(\\"div\\", {
+        className: \\"foo\\"
+      }));"
+    `);
+  });
+
   it('should compile for modern browsers', () => {
     expect(
       transformCode(
@@ -65,14 +102,14 @@ describe('Preset', () => {
 
       async function baz() {
         /* compiles but preserves native awaits */
-        var _iteratorNormalCompletion = true;
+        var _iteratorAbruptCompletion = false;
         var _didIteratorError = false;
 
         var _iteratorError;
 
         try {
-          for (var _iterator = _asyncIterator(iter()), _step, _value; _step = await _iterator.next(), _iteratorNormalCompletion = _step.done, _value = await _step.value, !_iteratorNormalCompletion; _iteratorNormalCompletion = true) {
-            let foo = _value;
+          for (var _iterator = _asyncIterator(iter()), _step; _iteratorAbruptCompletion = !(_step = await _iterator.next()).done; _iteratorAbruptCompletion = false) {
+            let foo = _step.value;
             continue;
           }
         } catch (err) {
@@ -80,7 +117,7 @@ describe('Preset', () => {
           _iteratorError = err;
         } finally {
           try {
-            if (!_iteratorNormalCompletion && _iterator.return != null) {
+            if (_iteratorAbruptCompletion && _iterator.return != null) {
               await _iterator.return();
             }
           } finally {
