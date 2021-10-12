@@ -10,6 +10,7 @@ module.exports = {
     },
   ],
   'no-continue': 'off',
+  'no-param-reassign': 'off',
   'no-mixed-operators': [
     'error',
     {
