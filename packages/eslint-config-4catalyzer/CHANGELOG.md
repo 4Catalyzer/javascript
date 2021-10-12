@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer@1.2.1...eslint-config-4catalyzer@1.3.0) (2021-10-12)
+
+
+### Features
+
+* disable param reassign without asking permission ([f5f2dcb](https://github.com/4Catalyzer/javascript/commit/f5f2dcb9e2dc0476ef1c997be346d7af6be5d0c1))
+
+
+
+
+
 ## [1.2.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer@1.2.0...eslint-config-4catalyzer@1.2.1) (2021-09-16)
 
 
