@@ -13,7 +13,7 @@
   "author": "4Catalyzer",
   "license": "MIT",
   "dependencies": {
-    "babel-eslint": "^10.0.3",
+    "@babel/eslint-parser": "^7.16.3",
     "eslint-import-resolver-typescript": "^2.5.0"
   },
   "peerDependencies": {
