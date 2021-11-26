@@ -4,8 +4,8 @@ module.exports = {
     'import/parsers': {
       [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx'],
       // needed for typescript files importing js, since the configured parser
-      // will be ts not babel-eslint for the host file
-      [require.resolve('babel-eslint')]: ['.js'],
+      // will be ts not @babel/eslint-parser for the host file
+      [require.resolve('@babel/eslint-parser')]: ['.js'],
     },
     'import/resolver': {
       node: {
