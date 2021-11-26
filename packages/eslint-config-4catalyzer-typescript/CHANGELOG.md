@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@3.1.2...eslint-config-4catalyzer@4.0.0) (2021-11-26)
+
+
+### Features
+
+* eslint v8 support
+
+
 ## [3.1.2](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-typescript@3.1.1...eslint-config-4catalyzer-typescript@3.1.2) (2021-10-07)
 
 **Note:** Version bump only for package eslint-config-4catalyzer-typescript

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer@1.3.0...eslint-config-4catalyzer@2.0.0) (2021-11-26)
+
+
+### Features
+
+* eslint v8 support
+
+
 # [1.3.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer@1.2.1...eslint-config-4catalyzer@1.3.0) (2021-10-12)
 
 
