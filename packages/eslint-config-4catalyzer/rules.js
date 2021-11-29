@@ -1,4 +1,5 @@
 module.exports = {
+  'default-param-last': 'off',
   'arrow-body-style': 'off',
   'prefer-arrow-callback': 'off',
   'class-methods-use-this': 'off',

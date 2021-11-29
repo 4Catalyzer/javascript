@@ -17,15 +17,15 @@
   },
   "devDependencies": {
     "eslint": "^8.3.0",
-    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
     "find-yarn-workspace-root": "^2.0.0",
-    "hookem": "^1.0.9",
+    "hookem": "^2.0.1",
     "lerna": "^4.0.0",
     "lint-staged": "^12.1.2",
-    "prettier": "^2.4.1"
+    "prettier": "^2.5.0"
   },
   "workspaces": {
     "packages": [

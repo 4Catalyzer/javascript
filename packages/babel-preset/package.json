@@ -26,25 +26,25 @@
     "access": "public"
   },
   "dependencies": {
-    "@babel/plugin-proposal-export-default-from": "^7.14.5",
-    "@babel/plugin-proposal-export-namespace-from": "^7.14.5",
+    "@babel/plugin-proposal-export-default-from": "^7.16.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.16.0",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.15.0",
-    "@babel/preset-env": "^7.15.6",
-    "@babel/preset-react": "^7.14.5",
-    "babel-plugin-dev-expression": "^0.2.2",
-    "babel-plugin-polyfill-corejs3": "^0.2.4",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "babel-plugin-dev-expression": "^0.2.3",
+    "babel-plugin-polyfill-corejs3": "^0.4.0",
     "babel-plugin-react-intl": "^7.9.4",
-    "browserslist": "^4.17.0",
+    "browserslist": "^4.18.1",
     "lodash": "^4.17.21",
     "read-pkg-up": "^7.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.15.7",
-    "@babel/core": "^7.15.8",
-    "babel-jest": "^27.2.4",
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "babel-jest": "^27.4.0",
     "babel-plugin-tester": "^10.1.0",
-    "hookem": "^1.0.9",
-    "jest-cli": "^27.2.4"
+    "hookem": "^2.0.1",
+    "jest-cli": "^27.4.0"
   }
 }
