@@ -12,6 +12,12 @@ module.exports = {
     },
   ],
 
+  // We don't care which kind of function you use
+  'react/function-component-definition': 'off',
+
+  // This is useful in places like Typescript where string does not satisfy the expected return type of JSX.Element. A common workaround is to wrap the variable holding a string in a fragment and expression.
+  'react/jsx-no-useless-fragment': ['error', { allowExpressions: true }],
+
   // this rule is dumb
   'react/jsx-no-bind': 'off',
 

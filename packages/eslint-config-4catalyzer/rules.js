@@ -3,6 +3,7 @@ module.exports = {
   'arrow-body-style': 'off',
   'prefer-arrow-callback': 'off',
   'class-methods-use-this': 'off',
+  'no-promise-executor-return': 'off',
   'max-len': [
     'error',
     79,
