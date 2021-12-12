@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@1.2.0...eslint-config-4catalyzer-react@1.2.1) (2021-12-12)
+
+
+### Bug Fixes
+
+* clean up some of the new rules ([#707](https://github.com/4Catalyzer/javascript/issues/707)) ([5426510](https://github.com/4Catalyzer/javascript/commit/5426510c7e3e5cd720cdf8d3353a755f17156ecb))
+
+
+
+
+
 # [1.2.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@1.1.3...eslint-config-4catalyzer-react@1.2.0) (2021-11-29)
 
 

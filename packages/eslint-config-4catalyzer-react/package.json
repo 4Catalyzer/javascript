@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-4catalyzer-react",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "4Catalyzer React ESLint config",
   "files": [
     "*.js"
@@ -24,7 +24,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "eslint-config-4catalyzer": "^1.4.0",
+    "eslint-config-4catalyzer": "^1.4.1",
     "eslint-config-airbnb": "^19.0.1"
   },
   "peerDependencies": {
