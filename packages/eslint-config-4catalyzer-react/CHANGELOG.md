@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@1.2.1...eslint-config-4catalyzer-react@1.2.2) (2021-12-21)
+
+
+### Bug Fixes
+
+* loosen unstable components ([cc80709](https://github.com/4Catalyzer/javascript/commit/cc8070933fdbada30ab8c17746431d94c0ce8c4d))
+
+
+
+
+
 ## [1.2.1](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-react@1.2.0...eslint-config-4catalyzer-react@1.2.1) (2021-12-12)
 
 
