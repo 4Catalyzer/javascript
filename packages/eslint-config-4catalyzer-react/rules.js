@@ -12,6 +12,9 @@ module.exports = {
     },
   ],
 
+  // Too many components take functions that look like Components as props
+  'react/no-unstable-nested-components': ['error', { allowAsProps: true }],
+
   // We don't care which kind of function you use
   'react/function-component-definition': 'off',
 
