@@ -17,7 +17,7 @@ A generic config meant to be extended for specific use-cases
 
 ```js
 {
-  "extends": "@4c/tsconfig"
+  "extends": "@4c/tsconfig/base.json"
 }
 ```
 
