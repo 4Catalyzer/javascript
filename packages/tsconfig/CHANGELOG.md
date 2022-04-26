@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/4Catalyzer/javascript/compare/@4c/tsconfig@0.4.0...@4c/tsconfig@0.4.1) (2022-04-26)
+
+**Note:** Version bump only for package @4c/tsconfig
+
+
+
+
+
 # [0.4.0](https://github.com/4Catalyzer/javascript/compare/@4c/tsconfig@0.3.1...@4c/tsconfig@0.4.0) (2021-06-03)
 
 
