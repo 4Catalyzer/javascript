@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.0.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@9.1.0...@4c/babel-preset@10.0.0) (2022-05-18)
+
+
+### Features
+
+* finally upgrade to formatjs plugin ([3b400ea](https://github.com/4Catalyzer/javascript/commit/3b400ea79b8378da029e4db0425c92861fd62a7f))
+
+
+### BREAKING CHANGES
+
+* intl settings, prefix must be provided to be used, otherwise defaults to generating ids when not present
+
+
+
+
+
 # [9.1.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@9.0.0...@4c/babel-preset@9.1.0) (2021-11-29)
 
 
