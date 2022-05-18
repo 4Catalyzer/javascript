@@ -32,9 +32,10 @@
     "@babel/plugin-transform-runtime": "^7.16.4",
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
+    "@formatjs/ts-transformer": "^3.9.4",
     "babel-plugin-dev-expression": "^0.2.3",
+    "babel-plugin-formatjs": "^10.3.20",
     "babel-plugin-polyfill-corejs3": "^0.4.0",
-    "babel-plugin-react-intl": "^7.9.4",
     "browserslist": "^4.18.1",
     "lodash": "^4.17.21",
     "read-pkg-up": "^7.0.1"
@@ -43,7 +44,6 @@
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
     "babel-jest": "^27.4.0",
-    "babel-plugin-tester": "^10.1.0",
     "hookem": "^2.0.1",
     "jest-cli": "^27.4.0"
   }
