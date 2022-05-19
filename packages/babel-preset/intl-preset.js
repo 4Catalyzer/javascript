@@ -10,6 +10,7 @@ module.exports = function intlPreset(_, options = {}) {
     messagesDir,
     prefix,
     idInterpolationPattern = '[sha512:contenthash:base64:6]',
+    extractMessages = true,
     ...rest
   } = options;
 
@@ -40,7 +41,7 @@ module.exports = function intlPreset(_, options = {}) {
           overrideIdFn,
           ...rest,
           onMsgExtracted(filename, messages) {
-            if (!messages?.length) return;
+            if (!messages?.length || !extractMessages) return;
 
             if (!filename.startsWith(workspaceRoot)) {
               throw new Error(

@@ -229,6 +229,11 @@ function preset(api, explicitOptions = {}) {
             messagesDir: 'build/messages',
           };
 
+    // unless explict, don't extract messages in dev mode
+    if (development && intlOpts.extractMessages == null) {
+      intlOpts.extractMessages = false;
+    }
+
     presets.push([intlPreset, intlOpts]);
   }
 
