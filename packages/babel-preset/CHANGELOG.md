@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.1.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@10.0.1...@4c/babel-preset@10.1.0) (2022-05-19)
+
+
+### Features
+
+* enable toggling message extraction ([18b809b](https://github.com/4Catalyzer/javascript/commit/18b809b1d15a03cc469e6dd31b17fa277cdb76bd))
+
+
+
+
+
 ## [10.0.1](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@10.0.0...@4c/babel-preset@10.0.1) (2022-05-19)
 
 
