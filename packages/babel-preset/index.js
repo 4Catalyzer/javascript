@@ -229,9 +229,7 @@ function preset(api, explicitOptions = {}) {
             messagesDir: 'build/messages',
           };
 
-    if (!development) {
-      presets.push([intlPreset, intlOpts]);
-    }
+    presets.push([intlPreset, intlOpts]);
   }
 
   return {
