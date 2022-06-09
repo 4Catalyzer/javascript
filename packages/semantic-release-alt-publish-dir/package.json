@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@4c/file-butler": "^4.2.2",
-    "@semantic-release/npm": "^8.0.3",
+    "@semantic-release/npm": "^9.0.1",
     "execa": "^5.1.1",
     "read-pkg-up": "^7.0.1"
   },
@@ -37,7 +37,7 @@
     "fs-extra": "^10.0.0",
     "jest": "^27.4.0",
     "rimraf": "^3.0.2",
-    "semantic-release": "^18.0.1",
+    "semantic-release": "^19.0.3",
     "tempy": "^1.0.1"
   }
 }
