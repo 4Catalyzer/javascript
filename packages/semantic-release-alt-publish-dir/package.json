@@ -37,7 +37,7 @@
     "fs-extra": "^10.0.0",
     "jest": "^27.4.0",
     "rimraf": "^3.0.2",
-    "semantic-release": "^18.0.1",
+    "semantic-release": "^19.0.0",
     "tempy": "^1.0.1"
   }
 }
