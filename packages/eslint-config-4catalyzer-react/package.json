@@ -42,6 +42,6 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "jest": "^27.4.0",
     "lodash": "^4.17.21",
-    "react": "^17.0.2"
+    "react": "^18.2.0"
   }
 }
