@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [10.2.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@10.1.0...@4c/babel-preset@10.2.0) (2022-08-10)
+
+
+### Features
+
+* bump dependencies ([9da3fd5](https://github.com/4Catalyzer/javascript/commit/9da3fd57aa743d010e4cd054c934096cd698fc5d))
+
+
+
+
+
 # [10.1.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@10.0.1...@4c/babel-preset@10.1.0) (2022-05-19)
 
 

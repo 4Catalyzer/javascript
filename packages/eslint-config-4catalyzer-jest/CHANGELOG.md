@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-jest@2.2.0...eslint-config-4catalyzer-jest@2.3.0) (2022-08-10)
+
+
+### Features
+
+* bump dependencies ([9da3fd5](https://github.com/4Catalyzer/javascript/commit/9da3fd57aa743d010e4cd054c934096cd698fc5d))
+
+
+
+
+
 # [2.2.0](https://github.com/4Catalyzer/javascript/compare/eslint-config-4catalyzer-jest@2.1.2...eslint-config-4catalyzer-jest@2.2.0) (2021-11-29)
 
 
