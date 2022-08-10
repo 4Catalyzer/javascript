@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/4Catalyzer/javascript/compare/@4c/jest-preset@1.8.0...@4c/jest-preset@1.7.1) (2022-08-10)
+
+
+### Bug Fixes
+
+* jest transforms ([217a828](https://github.com/4Catalyzer/javascript/commit/217a828e803e2b0ba09c1d8ee40af4911d65404a))
+
+
+
+
+
 # [1.8.0](https://github.com/4Catalyzer/javascript/compare/@4c/jest-preset@1.7.0...@4c/jest-preset@1.8.0) (2022-08-10)
 
 
