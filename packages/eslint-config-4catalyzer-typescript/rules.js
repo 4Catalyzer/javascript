@@ -40,18 +40,18 @@ module.exports = {
   '@typescript-eslint/naming-convention': [
     'error',
     {
-      "selector": [
-        "classProperty",
-        "objectLiteralProperty",
-        "typeProperty",
-        "classMethod",
-        "objectLiteralMethod",
-        "typeMethod",
-        "accessor",
-        "enumMember"
+      selector: [
+        'classProperty',
+        'objectLiteralProperty',
+        'typeProperty',
+        'classMethod',
+        'objectLiteralMethod',
+        'typeMethod',
+        'accessor',
+        'enumMember',
       ],
-      "format": null,
-      "modifiers": ["requiresQuotes"]
+      format: null,
+      modifiers: ['requiresQuotes'],
     },
     {
       selector: 'default',

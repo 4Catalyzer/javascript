@@ -10,6 +10,7 @@ const loosePolyfills = [
   /^es\.array\.index-of/,
   /^es\.array\.reverse/,
   /^es\.array\.last-index-of/,
+  /^es\.array\.includes/,
   /^es\.object\.assign/,
   /^es\.array\.iterator/,
   /^es\.string\.match/,

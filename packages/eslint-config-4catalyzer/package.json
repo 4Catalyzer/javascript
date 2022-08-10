@@ -21,13 +21,13 @@
   },
   "homepage": "https://github.com/4Catalyzer/javascript#readme",
   "dependencies": {
-    "@babel/eslint-parser": "^7.16.3",
+    "@babel/eslint-parser": "^7.18.9",
     "eslint-config-airbnb-base": "^15.0.0"
   },
   "peerDependencies": {
     "eslint-plugin-import": "^2.18.2"
   },
   "devDependencies": {
-    "eslint-plugin-import": "^2.25.3"
+    "eslint-plugin-import": "^2.26.0"
   }
 }
