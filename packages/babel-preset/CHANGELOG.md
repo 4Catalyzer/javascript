@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [10.2.1](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@10.2.0...@4c/babel-preset@10.2.1) (2022-08-29)
+
+
+### Bug Fixes
+
+* throw duplicate error on extraction ([7fc244a](https://github.com/4Catalyzer/javascript/commit/7fc244a2a21be48c7b0f3282e3f5664043dc7034))
+
+
+
+
+
 # [10.2.0](https://github.com/4Catalyzer/javascript/compare/@4c/babel-preset@10.1.0...@4c/babel-preset@10.2.0) (2022-08-10)
 
 
