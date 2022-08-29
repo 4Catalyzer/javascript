@@ -3,6 +3,30 @@ const path = require('path');
 
 const { interpolateName } = require('@formatjs/ts-transformer');
 const intlPlugin = require('babel-plugin-formatjs').default;
+const stringify = require('fast-json-stable-stringify');
+
+function mergeDuplicates(messages) {
+  const seen = new Map();
+
+  return messages.filter((message) => {
+    const other = seen.get(message.id);
+
+    seen.set(message.id, message);
+
+    if (!other) return true;
+
+    if (
+      stringify(message.description) !== stringify(other.description) ||
+      message.defaultMessage !== other.defaultMessage
+    ) {
+      throw new Error(
+        `Duplicate message id: "${message.id}", but the \`description\` and/or \`defaultMessage\` are different.`,
+      );
+    }
+    // if they are the same, filter this one out
+    return false;
+  });
+}
 
 module.exports = function intlPreset(_, options = {}) {
   const {
@@ -55,6 +79,8 @@ module.exports = function intlPreset(_, options = {}) {
             );
 
             mkdirSync(path.join(messagesDir, dir), { recursive: true });
+
+            messages = mergeDuplicates(messages);
 
             writeFileSync(
               path.join(messagesDir, dir, `${name}.json`),

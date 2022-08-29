@@ -37,6 +37,7 @@
     "babel-plugin-formatjs": "^10.3.25",
     "babel-plugin-polyfill-corejs3": "^0.5.3",
     "browserslist": "^4.21.3",
+    "fast-json-stable-stringify": "^2.1.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
