@@ -12,7 +12,7 @@
   "dependencies": {
     "eslint-import-resolver-node": "^0.3.6",
     "find-yarn-workspace-root": "^2.0.0",
-    "pkg-up": "^3.1.0",
+    "pkg-up": "^4.0.0",
     "tsconfig-paths": "^4.1.0"
   }
 }
