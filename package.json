@@ -2,7 +2,7 @@
   "private": true,
   "name": "javascript",
   "scripts": {
-    "lint": "eslint packages --ignore-path .gitignore",
+    "lint": "eslint packages",
     "test": "npm run lint && lerna run test"
   },
   "gitHooks": {
