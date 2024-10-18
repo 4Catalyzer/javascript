@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@4c/jest-preset": "^1.8.0",
-    "eslint": "^8.21.0",
+    "eslint": "^9.13.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.30.1",
