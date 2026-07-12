@@ -44,7 +44,7 @@
     "@babel/cli": "^7.18.10",
     "@babel/core": "^7.18.10",
     "babel-jest": "^28.1.3",
-    "hookem": "^2.0.1",
+    "hookem": "^3.0.4",
     "jest-cli": "^28.1.3"
   }
 }
